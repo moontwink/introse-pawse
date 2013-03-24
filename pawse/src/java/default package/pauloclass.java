@@ -8,5 +8,7 @@
  * @author gilpaulo
  */
 public class pauloclass {
-    
+    public int one(){
+        return 1;
+    }
 }
