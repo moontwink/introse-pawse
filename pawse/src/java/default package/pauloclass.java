@@ -8,5 +8,8 @@
  * @author gilpaulo
  */
 public class pauloclass {
-    
+    int i;
+    public pauloclass(int i){
+        this.i=i;
+    }
 }
