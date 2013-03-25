@@ -12,6 +12,7 @@ public class Participant {
     private int IDno;
     private int Age;
     private int CSOAid;
+    private int shit;
     private String Name;
     private String Course;
 
