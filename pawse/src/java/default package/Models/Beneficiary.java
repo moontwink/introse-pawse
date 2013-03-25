@@ -10,4 +10,6 @@ package Models;
  */
 public class Beneficiary {
     
+    private String name;
+    
 }
