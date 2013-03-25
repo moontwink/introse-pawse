@@ -13,5 +13,5 @@ public class Beneficiary {
     private String name;
     private String address;
     private String telephone;
-    
+    private String deletethis;
 }
