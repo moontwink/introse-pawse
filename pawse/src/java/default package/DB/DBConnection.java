@@ -28,7 +28,7 @@ public abstract class DBConnection {
                 pWord = "chykuri";
                 SQLdriver  = "com.mysql.jdbc.Driver";
                 SQLurl  = "jdbc:mysql://localhost:3306/outracker";
-               
+               //test sss
             break;
         }
         return new DBConnectionSetter();
