@@ -28,12 +28,12 @@
 			<li><a href="index.jsp"><span>Homepage</span></a></li>
 			<li><span>Beneficiary</span>
 				<ul>
-					<li class="first"> <a href="viewBeneficiary.jsp">View Beneficiaries</a> </li>
+					<li class="first"> <a href="genViewBeneficiary.jsp">View Beneficiaries</a> </li>
 					<li> <a href="#">Search Beneficiary</a> </li>
 					<li class="last"> <a href="#">Feedback</a> </li>
 				</ul>
 			</li>
-			<li class="current_page_item"><a href="csoa_form.jsp"><span>CSOA Form</span></a></li>
+			<li class="current_page_item"><a href="#"><span>CSOA Form</span></a></li>
 			<li><a href="#"><span>COSCA</span></a></li>
 			<li><span>sign in</span>
 				<ul>
