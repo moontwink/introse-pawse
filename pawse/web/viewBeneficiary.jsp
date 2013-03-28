@@ -101,7 +101,8 @@
                                             
                                             <table>
                                                 <%
-                                                    ArrayList<Beneficiary> s = BeneficiaryDAOsetter.getAllBeneficiaries(); 
+                                                    BeneficiaryDAOsetter dao = new BeneficiaryDAOsetter();
+                                                    ArrayList<Beneficiary> s = dao.getAllBeneficiaries();
                                                     for(Beneficiary p : s){
                                                 %>
                                                 <tr>

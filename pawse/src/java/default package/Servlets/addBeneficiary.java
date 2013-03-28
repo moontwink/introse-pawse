@@ -5,6 +5,7 @@
 package Servlets;
 
 import Models.Beneficiary;
+import DAO.BeneficiaryDAOsetter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -43,6 +44,10 @@ public class addBeneficiary extends HttpServlet {
             
             if(beneficiary == null){
                 response.sendRedirect("addBeneficiary.jsp");
+            }else{
+                BeneficiaryDAOsetter dao = new BeneficiaryDAOsetter();
+                dao.addBeneficiary(beneficiary);
+                response.sendRedirect("viewBeneficiary.jsp");
             }
             
             /* TODO output your page here. You may use following sample code. */

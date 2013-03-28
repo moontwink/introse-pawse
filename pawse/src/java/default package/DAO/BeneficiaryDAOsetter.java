@@ -59,7 +59,7 @@ public class BeneficiaryDAOsetter extends BeneficiaryDAO {
      
     }
 
-    public static ArrayList<Beneficiary> getAllBeneficiaries() {
+    public ArrayList<Beneficiary> getAllBeneficiaries() {
         ArrayList<Beneficiary> results = new ArrayList<Beneficiary>();
         Beneficiary b;
         
