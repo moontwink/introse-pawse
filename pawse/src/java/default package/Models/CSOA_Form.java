@@ -16,8 +16,12 @@ public class CSOA_Form {
     private String activityTitle;
     private Beneficiary beneficiary;
     private double expense;
-    private Faculty faculty;
-    private Accomplisher accomplisher;
+    private String faculty;
+    private String facultyCellNo;
+    private String accomplisher;
+    private String accomplisherDesignation;
+    private String accomplisherNo;
+    private String accomplisherEmail;
     private String objectives;
     private String programFlow;
     private String status;
@@ -110,29 +114,85 @@ public class CSOA_Form {
     /**
      * @return the faculty
      */
-    public Faculty getFaculty() {
+    public String getFaculty() {
         return faculty;
     }
 
     /**
      * @param faculty the faculty to set
      */
-    public void setFaculty(Faculty faculty) {
+    public void setFaculty(String faculty) {
         this.faculty = faculty;
+    }
+
+    /**
+     * @return the facultyCellNo
+     */
+    public String getFacultyCellNo() {
+        return facultyCellNo;
+    }
+
+    /**
+     * @param facultyCellNo the facultyCellNo to set
+     */
+    public void setFacultyCellNo(String facultyCellNo) {
+        this.facultyCellNo = facultyCellNo;
     }
 
     /**
      * @return the accomplisher
      */
-    public Accomplisher getAccomplisher() {
+    public String getAccomplisher() {
         return accomplisher;
     }
 
     /**
      * @param accomplisher the accomplisher to set
      */
-    public void setAccomplisher(Accomplisher accomplisher) {
+    public void setAccomplisher(String accomplisher) {
         this.accomplisher = accomplisher;
+    }
+
+    /**
+     * @return the accomplisherDesignation
+     */
+    public String getAccomplisherDesignation() {
+        return accomplisherDesignation;
+    }
+
+    /**
+     * @param accomplisherDesignation the accomplisherDesignation to set
+     */
+    public void setAccomplisherDesignation(String accomplisherDesignation) {
+        this.accomplisherDesignation = accomplisherDesignation;
+    }
+
+    /**
+     * @return the accomplisherNo
+     */
+    public String getAccomplisherNo() {
+        return accomplisherNo;
+    }
+
+    /**
+     * @param accomplisherNo the accomplisherNo to set
+     */
+    public void setAccomplisherNo(String accomplisherNo) {
+        this.accomplisherNo = accomplisherNo;
+    }
+
+    /**
+     * @return the accomplisherEmail
+     */
+    public String getAccomplisherEmail() {
+        return accomplisherEmail;
+    }
+
+    /**
+     * @param accomplisherEmail the accomplisherEmail to set
+     */
+    public void setAccomplisherEmail(String accomplisherEmail) {
+        this.accomplisherEmail = accomplisherEmail;
     }
 
     /**
@@ -190,5 +250,7 @@ public class CSOA_Form {
     public void setApprovedBy(Coordinator approvedBy) {
         this.approvedBy = approvedBy;
     }
+
+
     
 }

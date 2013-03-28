@@ -14,6 +14,9 @@ public class SQLDAOsetter extends SQLDAO {
     public BeneficiaryDAO createBeneficiaryDAO() {
         return new BeneficiaryDAOsetter();
     }
+    public CSOA_FormDAO createCSOA_FormDAO() {
+        return new CSOA_FormDAOsetter();
+    }
     
    
 
