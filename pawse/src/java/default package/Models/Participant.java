@@ -13,7 +13,7 @@ public class Participant {
     private String Name;
     private int Age;
     private String Course;
-    private String csfID;
+    private CSOA_Form csfID;
 
     /**
      * @return the IDno
@@ -74,16 +74,18 @@ public class Participant {
     /**
      * @return the csfID
      */
-    public String getCsfID() {
+    public CSOA_Form getCsfID() {
         return csfID;
     }
 
     /**
      * @param csfID the csfID to set
      */
-    public void setCsfID(String csfID) {
+    public void setCsfID(CSOA_Form csfID) {
         this.csfID = csfID;
     }
+
+
     
     
 
