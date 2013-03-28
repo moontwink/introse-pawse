@@ -27,10 +27,10 @@ public class CSOA_FormDAOsetter extends CSOA_FormDAO {
             PreparedStatement pstmt = conn.prepareStatement("insert into csoa_form(ActivityType,Date_filed,SponsoringOrganization,TitleOfActivity,ActivityDate,Beneficiary,TotalProjectedExpense,Faculty,Faculty_Number,Accomplisher,Accomplisher_Designation,Accomplisher_Number,Accomplisher_Email,Objectives,ProgramFlow,Status) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);");
      
             pstmt.setString(1, csoa_form.getActivityType());
-            pstmt.setDate(2, csoa_form.getDateFiled());
+            pstmt.setString(2, csoa_form.getDateFiled());
             pstmt.setString(3, csoa_form.getSponsor().getName());
             pstmt.setString(4, csoa_form.getActivityTitle());
-            pstmt.setDate(5, csoa_form.getDate());
+            pstmt.setString(5, csoa_form.getDate());
             
             
             pstmt.setString(6, csoa_form.getBeneficiary().getName());
