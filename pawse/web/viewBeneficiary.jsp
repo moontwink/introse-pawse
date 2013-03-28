@@ -46,7 +46,7 @@
 					<li class="last"> <a href="#">Feedback</a> </li>
 				</ul>
 			</li>
-			<li><a href="csoa_form.jsp"><span>CSOA Form</span></a></li>
+			<li><a href=""><span>CSOA Form</span></a></li>
 			<li><a href="#"><span>COSCA</span></a></li>
 			<li><span>sign out</span>
 				<ul>
