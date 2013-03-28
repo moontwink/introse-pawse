@@ -31,8 +31,6 @@ public class CSOA_Form {
     private String programFlow;
     private String status;
     private Coordinator approvedBy;
-     private String beginDate;
-    private String endDate;
     private String beginTime;
     private String endTime;
 
@@ -274,33 +272,6 @@ public class CSOA_Form {
         this.approvedBy = approvedBy;
     }
 
-    /**
-     * @return the beginDate
-     */
-    public String getBeginDate() {
-        return beginDate;
-    }
-
-    /**
-     * @param beginDate the beginDate to set
-     */
-    public void setBeginDate(String beginDate) {
-        this.beginDate = beginDate;
-    }
-
-    /**
-     * @return the endDate
-     */
-    public String getEndDate() {
-        return endDate;
-    }
-
-    /**
-     * @param endDate the endDate to set
-     */
-    public void setEndDate(String endDate) {
-        this.endDate = endDate;
-    }
 
     /**
      * @return the beginTime
