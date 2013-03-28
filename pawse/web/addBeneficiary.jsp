@@ -96,19 +96,19 @@
 					<p class="meta">Posted by <a href="#">COSCA</a> on March 28, 2013</p>
 					<div class="beneficiaryform">
                                             
-                                            <form>
+                                            <form name ="addBeneficiary" action ="addBeneficiary" method="post">
                                             <table>
                                                 <tr>
                                                     <td>Name</td>
-                                                    <td><input type = "text"/></td>
+                                                    <td><input name ="beneficiaryName" type = "text"/></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Address</td>
-                                                    <td><textarea name ="objectives" rows ="4" cols ="40"></textarea></td>
+                                                    <td><textarea name ="address" rows ="4" cols ="40"></textarea></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Telephone</td>
-                                                    <td><input type ="text"/></td>
+                                                    <td><input name="telephone" type ="text"/></td>
                                                 </tr>
                                                 <tr>
                                                     <td></td>

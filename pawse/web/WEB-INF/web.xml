@@ -4,13 +4,19 @@
         <servlet-name>Logging</servlet-name>
         <servlet-class>Servlets.Logging</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>addBeneficiary</servlet-name>
+        <servlet-class>Servlets.addBeneficiary</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Logging</servlet-name>
         <url-pattern>/Logging</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>addBeneficiary</servlet-name>
+        <url-pattern>/addBeneficiary</url-pattern>
+    </servlet-mapping>
     <session-config>
-        <session-timeout>
-            30
-        </session-timeout>
+        <session-timeout>30</session-timeout>
     </session-config>
 </web-app>
