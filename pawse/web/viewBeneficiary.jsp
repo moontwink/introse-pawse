@@ -37,12 +37,12 @@
 	<!-- end #header -->
 	<div id="menu-wrapper">
 		<ul id="menu">
-			<li class="current_page_item"><a href="#"><span>Homepage</span></a></li>
-			<li><span>Beneficiary</span>
+			<li><a href="index.jsp"><span>Homepage</span></a></li>
+			<li class="current_page_item"><span>Beneficiary</span>
 				<ul>
 					<li class="first"> <a href="addBeneficiary.jsp">Add Beneficiary</a> </li>
 					<li> <a href="#">Remove Beneficiary</a> </li>
-                                        <li> <a href="viewBeneficiary.jsp">View Beneficiaries</a> </li>
+                                        <li class="current_page_item"> <a href="viewBeneficiary.jsp">View Beneficiaries</a> </li>
 					<li class="last"> <a href="#">Feedback</a> </li>
 				</ul>
 			</li>

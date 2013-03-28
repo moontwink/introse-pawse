@@ -34,8 +34,8 @@
 	<!-- end #header -->
 	<div id="menu-wrapper">
 		<ul id="menu">
-			<li class="current_page_item"><a href="#"><span>Homepage</span></a></li>
-			<li><span>Beneficiary</span>
+			<li><a href="#"><span>Homepage</span></a></li>
+			<li class="current_page_item"><span>Beneficiary</span>
 				<ul>
 					<li class="first"> <a href="addBeneficiary.jsp">Add Beneficiary</a> </li>
 					<li> <a href="#">Remove Beneficiary</a> </li>
