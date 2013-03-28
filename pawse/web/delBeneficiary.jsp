@@ -1,9 +1,12 @@
 <%-- 
-    Document   : addBeneficiary
-    Created on : 03 29, 13, 1:20:41 AM
+    Document   : delBeneficiary
+    Created on : 03 29, 13, 2:44:04 AM
     Author     : Nancy
 --%>
 
+<%@page import="java.util.ArrayList"%>
+<%@page import="Models.Beneficiary"%>
+<%@page import="DAO.BeneficiaryDAOsetter"%>
 <%@page import="Models.Coordinator"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -92,14 +95,24 @@
 			</script>
 				<!--START BENEFICIARY FORM SECTION-->
 				<div class="post">
-					<h2 class="title"><a href="#"></a> Add Beneficiary </h2>
+					<h2 class="title"><a href="#"></a> Remove Beneficiary </h2>
 					<p class="meta">Posted by <a href="#">COSCA</a> on March 28, 2013</p>
-					<div class="beneficiaryform">
+					<div class="delBeneficiary">
                                             <form name ="addBeneficiary" action ="addBeneficiary" method="post">
                                             <table>
                                                 <tr>
-                                                    <td>Name</td>
-                                                    <td><input name ="beneficiaryName" type = "text"/></td>
+                                                    <td>Beneficiary</td>
+                                                    <td>
+                                                        <select>
+                                                            <%
+                                                                BeneficiaryDAOsetter dao = new BeneficiaryDAOsetter();
+                                                                ArrayList<Beneficiary> results = dao.getAllBeneficiaries();
+                                                                for(Beneficiary b : results){
+                                                            %>
+                                                            <option value ="<%=b.getName()%>"><%=b.getName()%></option>
+                                                            <%}%>
+                                                        </select>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>Address</td>

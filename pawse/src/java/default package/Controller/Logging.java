@@ -16,6 +16,7 @@ import javax.servlet.http.HttpSession;
 import Models.Coordinator;
 import DAO.CoordinatorDAO; //For the mean time because only coordinator contains the username and password as of now.
 import DAO.SQLDAO;
+import Models.StudentOrganization;
 
 
 /**
@@ -49,7 +50,7 @@ public class Logging extends HttpServlet {
             String password = request.getParameter("password");
             
             SQLDAO myDAOFactory = SQLDAO.getInstance(SQLDAO.MYSQL);
-            UserDAO uDAO = myDAOFactory.createUserDAO();
+            //UserDAO uDAO = myDAOFactory.createUserDAO();
             if(username == null || password == null){
                 response.sendRedirect("Login.jsp");
             }
