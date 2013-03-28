@@ -10,19 +10,11 @@ package Models;
  */
 public class Participant {
     private int IDno;
-    private int Age;
-    private int CSOAid;
     private String Name;
+    private int Age;
     private String Course;
+    private String csfID;
 
-    
-     public Participant(int IDno, int Age, int CSOAid, String Name, String Course){
-         this.IDno = IDno;
-         this.Age = Age;
-         this.CSOAid = CSOAid;
-         this.Name = Name;
-         this.Course = Course;
-     }
     /**
      * @return the IDno
      */
@@ -35,34 +27,6 @@ public class Participant {
      */
     public void setIDno(int IDno) {
         this.IDno = IDno;
-    }
-
-    /**
-     * @return the Age
-     */
-    public int getAge() {
-        return Age;
-    }
-
-    /**
-     * @param Age the Age to set
-     */
-    public void setAge(int Age) {
-        this.Age = Age;
-    }
-
-    /**
-     * @return the CSOAid
-     */
-    public int getCSOAid() {
-        return CSOAid;
-    }
-
-    /**
-     * @param CSOAid the CSOAid to set
-     */
-    public void setCSOAid(int CSOAid) {
-        this.CSOAid = CSOAid;
     }
 
     /**
@@ -80,6 +44,20 @@ public class Participant {
     }
 
     /**
+     * @return the Age
+     */
+    public int getAge() {
+        return Age;
+    }
+
+    /**
+     * @param Age the Age to set
+     */
+    public void setAge(int Age) {
+        this.Age = Age;
+    }
+
+    /**
      * @return the Course
      */
     public String getCourse() {
@@ -92,4 +70,21 @@ public class Participant {
     public void setCourse(String Course) {
         this.Course = Course;
     }
+
+    /**
+     * @return the csfID
+     */
+    public String getCsfID() {
+        return csfID;
+    }
+
+    /**
+     * @param csfID the csfID to set
+     */
+    public void setCsfID(String csfID) {
+        this.csfID = csfID;
+    }
+    
+    
+
 }
