@@ -28,9 +28,9 @@
 			<li><a href="index.jsp"><span>Homepage</span></a></li>
 			<li><span>Beneficiary</span>
 				<ul>
-					<li class="first"> <a href="index">Maecenas luctus lectus</a> </li>
-					<li> <a href="search">Integer gravida</a> </li>
-					<li class="last"> <a href="about">Feedback</a> </li>
+					<li class="first"> <a href="viewBeneficiary.jsp">View Beneficiaries</a> </li>
+					<li> <a href="#">Search Beneficiary</a> </li>
+					<li class="last"> <a href="#">Feedback</a> </li>
 				</ul>
 			</li>
 			<li class="current_page_item"><a href="#"><span>CSOA Form</span></a></li>
@@ -38,8 +38,8 @@
                         <li><a href="#"><span>Contact</span></a></li>
 			<li><span>sign in</span>
 				<ul>
-					<li class="first"> <a href="index">Log in</a> </li>
-					<li class="last"> <a href="about">Create Account</a> </li>
+					<li class="first"> <a href="Login.jsp">Log in</a> </li>
+					<li class="last"> <a href="#">Create Account</a> </li>
 				</ul>
 			</li>
 		</ul>
@@ -201,22 +201,6 @@
 				</div>
                             <!--END CSOA FORM SECTION-->
                             
-				<div class="post">
-					<h2 class="title"><a href="#">Lorem ipsum sed aliquam</a></h2>
-					<p class="meta">Posted by <a href="#">Someone</a> on April 19, 2012
-						&nbsp;&bull;&nbsp; <a href="#" class="comments">Comments (64)</a> &nbsp;&bull;&nbsp; <a href="#" class="permalink">Full article</a></p>
-					<div class="entry">
-						<p>Sed lacus. Donec lectus. Nullam pretium nibh ut turpis. Nam bibendum. In nulla tortor, elementum vel, tempor at, varius non, purus. Mauris vitae nisl nec metus placerat consectetuer. Donec ipsum. Proin imperdiet est. Phasellus <a href="#">dapibus semper urna</a>. Pellentesque ornare, consectetuer nisl felis ac diam. Sed lacus. Donec lectus. Nullam pretium nibh ut turpis. Nam bibendum. Mauris vitae nisl nec metus placerat consectetuer. </p>
-					</div>
-				</div>
-				<div class="post">
-					<h2 class="title"><a href="#">Phasellus pellentesque turpis </a></h2>
-					<p class="meta">Posted by <a href="#">Someone</a> on April 15, 2012
-						&nbsp;&bull;&nbsp; <a href="#" class="comments">Comments (64)</a> &nbsp;&bull;&nbsp; <a href="#" class="permalink">Full article</a></p>
-					<div class="entry">
-						<p>Sed lacus. Donec lectus. Nullam pretium nibh ut turpis. Nam bibendum. In nulla tortor, elementum vel, tempor at, varius non, purus. Mauris vitae nisl nec metus placerat consectetuer. Donec ipsum. Proin imperdiet est. Pellentesque ornare, orci in consectetuer hendrerit, urna elit eleifend nunc. Donec ipsum. Proin imperdiet est. Pellentesque ornare, orci in consectetuer hendrerit, urna elit eleifend nunc.</p>
-					</div>
-				</div>
 				<div style="clear: both;">&nbsp;</div>
 			</div>
 		</div>
@@ -225,40 +209,23 @@
 			<div id="sidebar">
 				<ul>
 					<li>
-						<h2>Aliquam tempus</h2>
-						<p>Mauris vitae nisl nec metus placerat perdiet est. Phasellus dapibus semper consectetuer hendrerit.</p>
+						<h2>Tracking</h2>
+						<p></p>
 					</li>
 					<li>
-						<h2>Categories</h2>
+						<h2>Feedback</h2>
 						<ul>
-							<li><a href="#">Aliquam libero</a></li>
-							<li><a href="#">Consectetuer adipiscing elit</a></li>
-							<li><a href="#">Metus aliquam pellentesque</a></li>
-							<li><a href="#">Suspendisse iaculis mauris</a></li>
-							<li><a href="#">Urnanet non molestie semper</a></li>
-							<li><a href="#">Proin gravida orci porttitor</a></li>
+							<li><a href="#">View Feedback</a></li>
+							<li><a href="#">Submit Feedback</a></li>
 						</ul>
 					</li>
 					<li>
-						<h2>Blogroll</h2>
+						<h2>Contact COSCA</h2>
 						<ul>
-							<li><a href="#">Aliquam libero</a></li>
-							<li><a href="#">Consectetuer adipiscing elit</a></li>
-							<li><a href="#">Metus aliquam pellentesque</a></li>
-							<li><a href="#">Suspendisse iaculis mauris</a></li>
-							<li><a href="#">Urnanet non molestie semper</a></li>
-							<li><a href="#">Proin gravida orci porttitor</a></li>
-						</ul>
-					</li>
-					<li>
-						<h2>Archives</h2>
-						<ul>
-							<li><a href="#">Aliquam libero</a></li>
-							<li><a href="#">Consectetuer adipiscing elit</a></li>
-							<li><a href="#">Metus aliquam pellentesque</a></li>
-							<li><a href="#">Suspendisse iaculis mauris</a></li>
-							<li><a href="#">Urnanet non molestie semper</a></li>
-							<li><a href="#">Proin gravida orci porttitor</a></li>
+                                                        <li><strong>Joseph Rosal</strong></li>
+							<li>Coordinator for Community Engagement</li>
+							<li>(0922)899-2558</li>
+                                                        <li>rosalj@dlsu.edu.ph</li>
 						</ul>
 					</li>
 				</ul>

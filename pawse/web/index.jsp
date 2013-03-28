@@ -29,8 +29,8 @@
 			<li><span>Beneficiary</span>
 				<ul>
 					<li class="first"> <a href="viewBeneficiary.jsp">View Beneficiaries</a> </li>
-					<li> <a href="searchBeneficiary.jsp">Search Beneficiary</a> </li>
-					<li class="last"> <a href="">Feedback</a> </li>
+					<li> <a href="#">Search Beneficiary</a> </li>
+					<li class="last"> <a href="#">Feedback</a> </li>
 				</ul>
 			</li>
 			<li><a href="csoa_form.jsp"><span>CSOA Form</span></a></li>
@@ -38,7 +38,7 @@
 			<li><span>sign in</span>
 				<ul>
 					<li class="first"> <a href="Login.jsp">Log in</a> </li>
-					<li class="last"> <a href="">Create Account</a> </li>
+					<li class="last"> <a href="#">Create Account</a> </li>
 				</ul>
 			</li>
 		</ul>
