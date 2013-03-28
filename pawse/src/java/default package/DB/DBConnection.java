@@ -4,8 +4,8 @@
  */
 package DB;
 
-import java.sql.Connection;
 import DAO.SQLDAO;
+import java.sql.Connection;
 
 /**
  *
