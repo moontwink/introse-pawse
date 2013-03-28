@@ -4,6 +4,8 @@
  */
 package Models;
 
+import java.sql.Date;
+
 /**
  *
  * @author Nancy
@@ -11,15 +13,18 @@ package Models;
 public class CSOA_Form {
     
     private int idCSF;
-    private String date;
+    private Date date;
+    private Date dateFiled;
     private StudentOrganization sponsor;
     private String activityTitle;
+    private String activityType;
     private Beneficiary beneficiary;
     private double expense;
-    private String faculty;
-    private String facultyCellNo;
-    private String accomplisher;
+    private String faculty_name;
+    private int faculty_cellno;
+    
     private String accomplisherDesignation;
+    private String accomplisher;
     private String accomplisherNo;
     private String accomplisherEmail;
     private String objectives;
@@ -44,14 +49,14 @@ public class CSOA_Form {
     /**
      * @return the date
      */
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
     /**
      * @param date the date to set
      */
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
@@ -111,34 +116,9 @@ public class CSOA_Form {
         this.expense = expense;
     }
 
-    /**
-     * @return the faculty
-     */
-    public String getFaculty() {
-        return faculty;
-    }
 
-    /**
-     * @param faculty the faculty to set
-     */
-    public void setFaculty(String faculty) {
-        this.faculty = faculty;
-    }
 
-    /**
-     * @return the facultyCellNo
-     */
-    public String getFacultyCellNo() {
-        return facultyCellNo;
-    }
-
-    /**
-     * @param facultyCellNo the facultyCellNo to set
-     */
-    public void setFacultyCellNo(String facultyCellNo) {
-        this.facultyCellNo = facultyCellNo;
-    }
-
+   
     /**
      * @return the accomplisher
      */
@@ -249,6 +229,64 @@ public class CSOA_Form {
      */
     public void setApprovedBy(Coordinator approvedBy) {
         this.approvedBy = approvedBy;
+    }
+
+    /**
+     * @return the activityType
+     */
+    public String getActivityType() {
+        return activityType;
+    }
+
+    /**
+     * @param activityType the activityType to set
+     */
+    public void setActivityType(String activityType) {
+        this.activityType = activityType;
+    }
+
+    /**
+     * @return the dateFiled
+     */
+    public Date getDateFiled() {
+        return dateFiled;
+    }
+
+    /**
+     * @param dateFiled the dateFiled to set
+     */
+    public void setDateFiled(Date dateFiled) {
+        this.dateFiled = dateFiled;
+    }
+
+
+
+    /**
+     * @return the faculty_name
+     */
+    public String getFaculty_name() {
+        return faculty_name;
+    }
+
+    /**
+     * @param faculty_name the faculty_name to set
+     */
+    public void setFaculty_name(String faculty_name) {
+        this.faculty_name = faculty_name;
+    }
+
+    /**
+     * @return the faculty_cellno
+     */
+    public int getFaculty_cellno() {
+        return faculty_cellno;
+    }
+
+    /**
+     * @param faculty_cellno the faculty_cellno to set
+     */
+    public void setFaculty_cellno(int faculty_cellno) {
+        this.faculty_cellno = faculty_cellno;
     }
 
 
