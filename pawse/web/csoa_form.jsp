@@ -28,9 +28,9 @@
 			<li><a href="index.jsp"><span>Homepage</span></a></li>
 			<li><span>Beneficiary</span>
 				<ul>
-					<li class="first"> <a href="index">Maecenas luctus lectus</a> </li>
-					<li> <a href="search">Integer gravida</a> </li>
-					<li class="last"> <a href="about">Feedback</a> </li>
+					<li class="first"> <a href="viewBeneficiary.jsp">View Beneficiaries</a> </li>
+					<li> <a href="#">Search Beneficiary</a> </li>
+					<li class="last"> <a href="#">Feedback</a> </li>
 				</ul>
 			</li>
 			<li class="current_page_item"><a href="#"><span>CSOA Form</span></a></li>
@@ -38,8 +38,8 @@
                         <li><a href="#"><span>Contact</span></a></li>
 			<li><span>sign in</span>
 				<ul>
-					<li class="first"> <a href="index">Log in</a> </li>
-					<li class="last"> <a href="about">Create Account</a> </li>
+					<li class="first"> <a href="Login.jsp">Log in</a> </li>
+					<li class="last"> <a href="#">Create Account</a> </li>
 				</ul>
 			</li>
 		</ul>
@@ -225,40 +225,23 @@
 			<div id="sidebar">
 				<ul>
 					<li>
-						<h2>Aliquam tempus</h2>
-						<p>Mauris vitae nisl nec metus placerat perdiet est. Phasellus dapibus semper consectetuer hendrerit.</p>
+						<h2>Tracking</h2>
+						<p></p>
 					</li>
 					<li>
-						<h2>Categories</h2>
+						<h2>Feedback</h2>
 						<ul>
-							<li><a href="#">Aliquam libero</a></li>
-							<li><a href="#">Consectetuer adipiscing elit</a></li>
-							<li><a href="#">Metus aliquam pellentesque</a></li>
-							<li><a href="#">Suspendisse iaculis mauris</a></li>
-							<li><a href="#">Urnanet non molestie semper</a></li>
-							<li><a href="#">Proin gravida orci porttitor</a></li>
+							<li><a href="#">View Feedback</a></li>
+							<li><a href="#">Submit Feedback</a></li>
 						</ul>
 					</li>
 					<li>
-						<h2>Blogroll</h2>
+						<h2>Contact COSCA</h2>
 						<ul>
-							<li><a href="#">Aliquam libero</a></li>
-							<li><a href="#">Consectetuer adipiscing elit</a></li>
-							<li><a href="#">Metus aliquam pellentesque</a></li>
-							<li><a href="#">Suspendisse iaculis mauris</a></li>
-							<li><a href="#">Urnanet non molestie semper</a></li>
-							<li><a href="#">Proin gravida orci porttitor</a></li>
-						</ul>
-					</li>
-					<li>
-						<h2>Archives</h2>
-						<ul>
-							<li><a href="#">Aliquam libero</a></li>
-							<li><a href="#">Consectetuer adipiscing elit</a></li>
-							<li><a href="#">Metus aliquam pellentesque</a></li>
-							<li><a href="#">Suspendisse iaculis mauris</a></li>
-							<li><a href="#">Urnanet non molestie semper</a></li>
-							<li><a href="#">Proin gravida orci porttitor</a></li>
+                                                        <li><strong>Joseph Rosal</strong></li>
+							<li>Coordinator for Community Engagement</li>
+							<li>(0922)899-2558</li>
+                                                        <li>rosalj@dlsu.edu.ph</li>
 						</ul>
 					</li>
 				</ul>

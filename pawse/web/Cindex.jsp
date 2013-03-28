@@ -31,18 +31,18 @@
 			<li class="current_page_item"><a href="#"><span>Homepage</span></a></li>
 			<li><span>Beneficiary</span>
 				<ul>
-					<li class="first"> <a href="">Add Beneficiary</a> </li>
-					<li> <a href="">Remove Beneficiary</a> </li>
+					<li class="first"> <a href="addBeneficiary.jsp">Add Beneficiary</a> </li>
+					<li> <a href="#">Remove Beneficiary</a> </li>
                                         <li> <a href="viewBeneficiary.jsp">View Beneficiaries</a> </li>
-					<li class="last"> <a href="">Feedback</a> </li>
+					<li class="last"> <a href="#">Feedback</a> </li>
 				</ul>
 			</li>
 			<li><a href="csoa_form.jsp"><span>CSOA Form</span></a></li>
 			<li><a href="#"><span>COSCA</span></a></li>
 			<li><span>sign out</span>
 				<ul>
-					<li class="first"> <a href="Login.jsp">Log out</a> </li>
-					<li class="last"> <a href="">Create Account</a> </li>
+					<li class="first"> <a href="index.jsp">Log out</a> </li>
+					<li class="last"> <a href="#">Create Account</a> </li>
 				</ul>
 			</li>
 		</ul>
@@ -117,8 +117,7 @@
 					<li>
 						<h2>Tracking</h2>
 						<p>You are currently logged in as: 
-                                                    <%=c.getUsername()%>
-                                                <%--insert user info here--%>
+                                                    <strong><%=c.getUsername()%></strong>
                                                 </p>
 					</li>
 					<li>
