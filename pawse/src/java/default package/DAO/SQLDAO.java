@@ -20,6 +20,7 @@ public abstract class SQLDAO {
         return null;
     }
     
- 
+   public abstract BeneficiaryDAO createBeneficiaryDAO();
+    
     
 }

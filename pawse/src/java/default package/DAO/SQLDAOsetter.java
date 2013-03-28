@@ -9,10 +9,12 @@ package DAO;
  * @author MigzMeizter
  */
 public class SQLDAOsetter extends SQLDAO {
+
+    @Override
+    public BeneficiaryDAO createBeneficiaryDAO() {
+        return new BeneficiaryDAOsetter();
+    }
     
    
-  /* public UserDAO createUserDAO() {
-        return new UserDAOsetter();
-    } */   
 
 }
