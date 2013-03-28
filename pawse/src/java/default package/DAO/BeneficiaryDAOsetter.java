@@ -59,8 +59,7 @@ public class BeneficiaryDAOsetter extends BeneficiaryDAO {
      
     }
 
-    @Override
-    public ArrayList<Beneficiary> getAllBeneficiaries() {
+    public static ArrayList<Beneficiary> getAllBeneficiaries() {
         ArrayList<Beneficiary> results = new ArrayList<Beneficiary>();
         Beneficiary b;
         
