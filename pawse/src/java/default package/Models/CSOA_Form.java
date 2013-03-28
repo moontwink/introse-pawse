@@ -17,6 +17,7 @@ public class CSOA_Form {
     private StudentOrganization sponsor;
     private String activityTitle;
     private String activityType;
+    private String activityDate;
     private Beneficiary beneficiary;
     private double expense;
     private String faculty_name;
@@ -327,6 +328,20 @@ public class CSOA_Form {
      */
     public void setEndTime(String endTime) {
         this.endTime = endTime;
+    }
+
+    /**
+     * @return the activityDate
+     */
+    public String getActivityDate() {
+        return activityDate;
+    }
+
+    /**
+     * @param activityDate the activityDate to set
+     */
+    public void setActivityDate(String activityDate) {
+        this.activityDate = activityDate;
     }
 
    
