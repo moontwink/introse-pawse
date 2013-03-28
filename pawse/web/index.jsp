@@ -4,7 +4,7 @@
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>Boldness2 by FCT</title>
+<title>Outracker</title>
 <link href="http://fonts.googleapis.com/css?family=Abel" rel="stylesheet" type="text/css" />
 <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
 <script type="text/javascript" src="./js/jquery-1.7.1.min.js"></script>
