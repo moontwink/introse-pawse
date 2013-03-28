@@ -31,7 +31,7 @@
 	<!-- end #header -->
 	<div id="menu-wrapper">
 		<ul id="menu">
-			<li class="current_page_item"><a href="index.jsp"><span>Homepage</span></a></li>
+			<li><a href="index.jsp"><span>Homepage</span></a></li>
 			<li><span>Beneficiary</span>
 				<ul>
 					<li class="first"> <a href="viewBeneficiary.jsp">View Beneficiaries</a> </li>
@@ -41,7 +41,7 @@
 			</li>
 			<li><a href="csoa_form.jsp"><span>CSOA Form</span></a></li>
 			<li><a href="#"><span>COSCA</span></a></li>
-			<li><span>sign in</span>
+			<li class="current_page_item"><span>sign in</span>
 				<ul>
 					<li class="first"> <a href="Login.jsp">Log in</a> </li>
 					<li class="last"> <a href="#">Create Account</a> </li>
