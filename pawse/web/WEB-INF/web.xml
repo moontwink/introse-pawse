@@ -2,11 +2,27 @@
 <web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
     <servlet>
         <servlet-name>Logging</servlet-name>
-        <servlet-class>Servlets.Logging</servlet-class>
+        <servlet-class>Controller.Logging</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CoordinatorDAO</servlet-name>
+        <servlet-class>DAO.CoordinatorDAO</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CoordinatorDAOsetter</servlet-name>
+        <servlet-class>DAO.CoordinatorDAOsetter</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Logging</servlet-name>
         <url-pattern>/Logging</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CoordinatorDAO</servlet-name>
+        <url-pattern>/CoordinatorDAO</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CoordinatorDAOsetter</servlet-name>
+        <url-pattern>/CoordinatorDAOsetter</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

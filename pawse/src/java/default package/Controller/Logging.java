@@ -2,10 +2,10 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package Servlets;
+package Controller;
 
-import Models.Coordinator;
-import Models.StudentOrganization;
+
+//import Models.StudentOrganization;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -13,6 +13,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import Models.Coordinator;
+import DAO.CoordinatorDAO; //For the mean time because only coordinator contains the username and password as of now.
+import DAO.SQLDAO;
+
 
 /**
  *
@@ -34,13 +38,18 @@ public class Logging extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        HttpSession session = request.getSession();
+     
         
         try {
+            
+            HttpSession session = request.getSession();
+            Coordinator coor = (Coordinator) session.getAttribute("coor");
+            
             String username = request.getParameter("username");
             String password = request.getParameter("password");
             
-            
+            SQLDAO myDAOFactory = SQLDAO.getInstance(SQLDAO.MYSQL);
+            UserDAO uDAO = myDAOFactory.createUserDAO();
             if(username == null || password == null){
                 response.sendRedirect("Login.jsp");
             }
