@@ -5,6 +5,7 @@
 package DAO;
 
 import Models.Beneficiary;
+import java.util.ArrayList;
 
 /**
  *
@@ -14,6 +15,7 @@ public abstract class BeneficiaryDAO{
 
    public abstract void addBeneficiary(Beneficiary beneficiary);
    public abstract void editBeneficiary(Beneficiary beneficiary);
+   //public abstract ArrayList<Beneficiary> getAllBeneficiaries();
 
    
 }
