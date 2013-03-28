@@ -17,7 +17,7 @@
 	<div id="header-wrapper">
 		<div id="header">
 			<div id="logo">
-				<h1><a href="#">Outracker</a> v.01</h1>
+				<h1><a href="#">Outracker</a> v.1</h1>
 				<p>web system by <a href="#">PAWSE</a></p>
 			</div>
 		</div>
@@ -83,11 +83,11 @@
 				});
 			</script>
 				<div class="post">
-					<h2 class="title"><a href="#">Welcome to Outracker</a> v.01</h2>
+					<h2 class="title"><a href="#">Welcome to Outracker</a> v.YOLO1</h2>
 					<p class="meta">Posted by <a href="#">Someone</a> on April 22, 2012
 						&nbsp;&bull;&nbsp; <a href="#" class="comments">Comments (64)</a> &nbsp;&bull;&nbsp; <a href="#" class="permalink">Full article</a></p>
 					<div class="entry">
-						<p>This is <strong>Boldness</strong> v.2, a free, fully standards-compliant CSS template designed by <a href="#">FCT</a>.  The picture in this template is from <a href="#"><strong>FotoGrph</strong></a>.The gallery slider and popup gallery used in this template is powered by <strong><a href="#">Poptrox</a></strong> and <strong><a href="#">nodethirtythree.com</a></strong>. Dropdown menu is powered by <a href="#"><strong>nodethirtythree.com</strong></a>. This free template is released under a <a href="#">Creative Commons Attributions 3.0</a> license, so you’re pretty much free to do whatever you want with it (even use it commercially) provided you keep the links in the footer intact. Aside from that, have fun with it :)</p>
+						<p>This is <strong>Boldness</strong> v.2, a free, fully standards-compliant CSS template designed by <a href="#">FCT</a>.  The picture in this template is from <a href="#"><strong>FotoGrph</strong></a>.The gallery slider and popup gallery used in this template is powered by <strong><a href="#">Poptrox</a></strong> and <strong><a href="#">nodethirtythree.com</a></strong>. Dropdown menu is powered by <a href="#"><strong>nodethirtythree.com</strong></a>. This free template is released under a <a href="#">Creative Commons Attributions 3.0</a> license, so you?re pretty much free to do whatever you want with it (even use it commercially) provided you keep the links in the footer intact. Aside from that, have fun with it :)</p>
 						<p>Sed lacus. Donec lectus. Nullam pretium nibh ut turpis. Nam bibendum. In nulla tortor, elementum ipsum. Proin imperdiet est. Phasellus dapibus semper urna. Pellentesque ornare, orci in felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus egestas at sem.</p>
 					</div>
 				</div>
