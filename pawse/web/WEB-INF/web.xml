@@ -17,8 +17,14 @@
         <servlet-class>Servlets.addBeneficiary</servlet-class>
     </servlet>
     <servlet>
+
+        <servlet-name>HomeView</servlet-name>
+        <servlet-class>Controller.HomeView</servlet-class>
+</servlet>
+    <servlet>
         <servlet-name>delBeneficiary</servlet-name>
         <servlet-class>Controller.delBeneficiary</servlet-class>
+
     </servlet>
     <servlet-mapping>
         <servlet-name>Logging</servlet-name>
@@ -36,6 +42,11 @@
         <servlet-name>CoordinatorDAOsetter</servlet-name>
         <url-pattern>/CoordinatorDAOsetter</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+
+        <servlet-name>HomeView</servlet-name>
+        <url-pattern>/HomeView</url-pattern>
+</servlet-mapping>
     <servlet-mapping>
         <servlet-name>delBeneficiary</servlet-name>
         <url-pattern>/delBeneficiary</url-pattern>

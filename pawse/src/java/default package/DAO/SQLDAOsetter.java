@@ -17,6 +17,11 @@ public class SQLDAOsetter extends SQLDAO {
     public CSOA_FormDAO createCSOA_FormDAO() {
         return new CSOA_FormDAOsetter();
     }
+
+    @Override
+    public CoordinatorDAO createCoordinatorDAO() {
+    return new CoordinatorDAOsetter();
+    }
     
    
 
