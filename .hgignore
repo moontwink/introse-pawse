@@ -3,7 +3,6 @@
 \.chg\..*$
 \.rej$
 \.conflict\~$
-\.xml$
 \.properties$
 \.mf$
 DBConnection\.java
