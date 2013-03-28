@@ -12,6 +12,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import Models.Beneficiary;
 import DB.DBConnection;
+import java.util.ArrayList;
 
 
 /**
@@ -56,6 +57,35 @@ public class BeneficiaryDAOsetter extends BeneficiaryDAO {
             Logger.getLogger(BeneficiaryDAOsetter.class.getName()).log(Level.SEVERE, null, ex);
         }
      
+    }
+
+    @Override
+    public ArrayList<Beneficiary> getAllBeneficiaries() {
+        ArrayList<Beneficiary> results = new ArrayList<Beneficiary>();
+        Beneficiary b;
+        
+        try {
+            DBConnection myFactory = DBConnection.getInstance(SQLDAO.MYSQL);
+            Connection conn = myFactory.getConnection();
+            PreparedStatement pstmt = conn.prepareStatement("Select * FROM `Beneficiary`");
+            ResultSet rs = pstmt.executeQuery();
+            
+            while(rs.next()){
+                b = new Beneficiary();
+                b.setName(rs.getString(1));
+                b.setTelephone(rs.getString(2));
+                b.setAddress(rs.getString(3));
+                
+                results.add(b);
+            }
+            
+            conn.close();
+           
+        } catch (SQLException ex) {
+            Logger.getLogger(BeneficiaryDAOsetter.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return results;
     }
 
     
