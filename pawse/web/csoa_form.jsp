@@ -142,10 +142,6 @@
                                                     <td><input type ="date"/></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Time of Activity</td>
-                                                    <td><input type ="time"/></td>
-                                                </tr>
-                                                <tr>
                                                     <td>Beneficiary</td>
                                                     <td><select name ="studentorg"></select>
                                                         <!--//get list of beneficiaries in sql--></td>
@@ -186,6 +182,8 @@
                                                     <td>Program Flow</td>
                                                     <td><textarea name ="objectives" rows ="4" cols ="40"></textarea></td>
                                                 </tr>
+                                                <tr><td><label>Begin Time:</label></td><td><input name = "beginTime" type = 'time' value=""></td></tr>
+                                                <tr><td><label>End Time:</label></td><td><input name = "endTime" type = 'time' value=""></td></tr>
                                                 <tr>
                                                     <td></td>
                                                     <td></td>
