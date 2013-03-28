@@ -25,7 +25,7 @@ public abstract class DBConnection {
             case SQLDAO.MYSQL: 
                 
                 uName  = "root";
-                pWord = "chykUri*";
+                pWord = "krishiapalma";
                 SQLdriver  = "com.mysql.jdbc.Driver";
                 SQLurl  = "jdbc:mysql://localhost:3306/outracker";
                //test sss
