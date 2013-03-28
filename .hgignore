@@ -5,4 +5,9 @@
 \.conflict\~$
 \.properties$
 \.mf$
-DBConnection\.java
+DBConnection\.java$
+build\.xml$
+ant-deploy\.xml$
+build\-impl\.xml$
+project\.xml$
+context\.xml$
