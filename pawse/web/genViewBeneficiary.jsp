@@ -1,9 +1,12 @@
 <%-- 
-    Document   : addBeneficiary
-    Created on : 03 29, 13, 1:20:41 AM
+    Document   : viewBeneficiary
+    Created on : 03 28, 13, 11:43:12 PM
     Author     : Nancy
 --%>
 
+<%@page import="java.util.ArrayList"%>
+<%@page import="DAO.BeneficiaryDAOsetter"%>
+<%@page import="Models.Beneficiary"%>
 <%@page import="Models.Coordinator"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -34,12 +37,11 @@
 	<!-- end #header -->
 	<div id="menu-wrapper">
 		<ul id="menu">
-			<li><a href="#"><span>Homepage</span></a></li>
+			<li><a href="index.jsp"><span>Homepage</span></a></li>
 			<li class="current_page_item"><span>Beneficiary</span>
 				<ul>
-					<li class="first"> <a href="addBeneficiary.jsp">Add Beneficiary</a> </li>
-					<li> <a href="delBeneficiary.jsp">Remove Beneficiary</a> </li>
-                                        <li> <a href="viewBeneficiary.jsp">View Beneficiaries</a> </li>
+					<li class="first"> <a href="viewBeneficiary.jsp">View Beneficiaries</a> </li>
+					<li> <a href="#">Search Beneficiary</a> </li>
 					<li class="last"> <a href="#">Feedback</a> </li>
 				</ul>
 			</li>
@@ -90,34 +92,31 @@
 					popupPadding: 20
 				});
 			</script>
-				<!--START BENEFICIARY FORM SECTION-->
+				<!--START VIEW BENEFICIARY SECTION-->
 				<div class="post">
-					<h2 class="title"><a href="#"></a> Add Beneficiary </h2>
-					<p class="meta">Posted by <a href="#">COSCA</a> on March 28, 2013</p>
-					<div class="beneficiaryform">
-                                            <form name ="addBeneficiary" action ="addBeneficiary" method="post">
+					<h2 class="title"><a href="#"></a> View Beneficiaries </h2>
+					<p class="meta">Posted by <a href="#">COSCA</a> as of March 28, 2013</p>
+					<div class="beneficiaries">
+                                            
                                             <table>
+                                                <%
+                                                    BeneficiaryDAOsetter dao = new BeneficiaryDAOsetter();
+                                                    ArrayList<Beneficiary> s = dao.getAllBeneficiaries();
+                                                    for(Beneficiary p : s){
+                                                %>
                                                 <tr>
-                                                    <td>Name</td>
-                                                    <td><input name ="beneficiaryName" type = "text"/></td>
+                                                    <td><%=s.indexOf(p)+1%></td>
+                                                    <td><%=p.getName()%></td>
+                                                    <td><%=p.getAddress()%></td>
                                                 </tr>
-                                                <tr>
-                                                    <td>Address</td>
-                                                    <td><textarea name ="address" rows ="4" cols ="40"></textarea></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Telephone</td>
-                                                    <td><input name="telephone" type ="text"/></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td><input type ="submit"/></td>
-                                                </tr>
-                                            </table>      
-                                            </form>
+
+                                                <%}%>
+                                                
+                                            </table>    
+                                            
                                         </div>
 				</div>
-                            <!--END BENEFICIARY FORM SECTION-->
+                            <!--END VIEW BENEFICIARY SECTION-->
                             
 				<div style="clear: both;">&nbsp;</div>
 			</div>
