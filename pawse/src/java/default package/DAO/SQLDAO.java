@@ -21,6 +21,7 @@ public abstract class SQLDAO {
     }
     
    public abstract BeneficiaryDAO createBeneficiaryDAO();
+
     
     
 }
