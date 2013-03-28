@@ -33,6 +33,7 @@
 				<ul>
 					<li class="first"> <a href="">Add Beneficiary</a> </li>
 					<li> <a href="">Remove Beneficiary</a> </li>
+                                        <li> <a href="viewBeneficiary.jsp">View Beneficiaries</a> </li>
 					<li class="last"> <a href="">Feedback</a> </li>
 				</ul>
 			</li>
