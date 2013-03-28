@@ -15,7 +15,7 @@ public abstract class BeneficiaryDAO{
 
    public abstract void addBeneficiary(Beneficiary beneficiary);
    public abstract void editBeneficiary(Beneficiary beneficiary);
-   public abstract ArrayList<Beneficiary> getAllBeneficiaries();
+   //public abstract ArrayList<Beneficiary> getAllBeneficiaries();
 
    
 }

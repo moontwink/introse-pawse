@@ -18,10 +18,10 @@
         <h1>Hello World!</h1>
         <select>
             <%
-                ArrayList<Beneficiary> s = BeneficiaryDAOsetter.getAllBeneficiaries(); //?????????
+                ArrayList<Beneficiary> s = BeneficiaryDAOsetter.getAllBeneficiaries(); 
                 for(Beneficiary p : s){
             %>
-            <option value ="<%=p.getUsername()%>"><%=p.getUsername()%></option>
+            <option value ="<%=p.getName()%>"><%=p.getName()%></option>
 
             <%}%>
         </select>
