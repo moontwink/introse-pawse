@@ -13,8 +13,7 @@ import java.sql.Date;
 public class CSOA_Form {
     
     private int idCSF;
-    private Date date;
-    private Date dateFiled;
+    private String dateFiled;
     private StudentOrganization sponsor;
     private String activityTitle;
     private String activityType;
@@ -31,6 +30,10 @@ public class CSOA_Form {
     private String programFlow;
     private String status;
     private Coordinator approvedBy;
+     private String beginDate;
+    private String endDate;
+    private String beginTime;
+    private String endTime;
 
     /**
      * @return the idCSF
@@ -47,17 +50,17 @@ public class CSOA_Form {
     }
 
     /**
-     * @return the date
+     * @return the dateFiled
      */
-    public Date getDate() {
-        return date;
+    public String getDateFiled() {
+        return dateFiled;
     }
 
     /**
-     * @param date the date to set
+     * @param dateFiled the dateFiled to set
      */
-    public void setDate(Date date) {
-        this.date = date;
+    public void setDateFiled(String dateFiled) {
+        this.dateFiled = dateFiled;
     }
 
     /**
@@ -89,6 +92,20 @@ public class CSOA_Form {
     }
 
     /**
+     * @return the activityType
+     */
+    public String getActivityType() {
+        return activityType;
+    }
+
+    /**
+     * @param activityType the activityType to set
+     */
+    public void setActivityType(String activityType) {
+        this.activityType = activityType;
+    }
+
+    /**
      * @return the beneficiary
      */
     public Beneficiary getBeneficiary() {
@@ -116,21 +133,32 @@ public class CSOA_Form {
         this.expense = expense;
     }
 
-
-
-   
     /**
-     * @return the accomplisher
+     * @return the faculty_name
      */
-    public String getAccomplisher() {
-        return accomplisher;
+    public String getFaculty_name() {
+        return faculty_name;
     }
 
     /**
-     * @param accomplisher the accomplisher to set
+     * @param faculty_name the faculty_name to set
      */
-    public void setAccomplisher(String accomplisher) {
-        this.accomplisher = accomplisher;
+    public void setFaculty_name(String faculty_name) {
+        this.faculty_name = faculty_name;
+    }
+
+    /**
+     * @return the faculty_cellno
+     */
+    public int getFaculty_cellno() {
+        return faculty_cellno;
+    }
+
+    /**
+     * @param faculty_cellno the faculty_cellno to set
+     */
+    public void setFaculty_cellno(int faculty_cellno) {
+        this.faculty_cellno = faculty_cellno;
     }
 
     /**
@@ -145,6 +173,20 @@ public class CSOA_Form {
      */
     public void setAccomplisherDesignation(String accomplisherDesignation) {
         this.accomplisherDesignation = accomplisherDesignation;
+    }
+
+    /**
+     * @return the accomplisher
+     */
+    public String getAccomplisher() {
+        return accomplisher;
+    }
+
+    /**
+     * @param accomplisher the accomplisher to set
+     */
+    public void setAccomplisher(String accomplisher) {
+        this.accomplisher = accomplisher;
     }
 
     /**
@@ -232,62 +274,62 @@ public class CSOA_Form {
     }
 
     /**
-     * @return the activityType
+     * @return the beginDate
      */
-    public String getActivityType() {
-        return activityType;
+    public String getBeginDate() {
+        return beginDate;
     }
 
     /**
-     * @param activityType the activityType to set
+     * @param beginDate the beginDate to set
      */
-    public void setActivityType(String activityType) {
-        this.activityType = activityType;
+    public void setBeginDate(String beginDate) {
+        this.beginDate = beginDate;
     }
 
     /**
-     * @return the dateFiled
+     * @return the endDate
      */
-    public Date getDateFiled() {
-        return dateFiled;
+    public String getEndDate() {
+        return endDate;
     }
 
     /**
-     * @param dateFiled the dateFiled to set
+     * @param endDate the endDate to set
      */
-    public void setDateFiled(Date dateFiled) {
-        this.dateFiled = dateFiled;
-    }
-
-
-
-    /**
-     * @return the faculty_name
-     */
-    public String getFaculty_name() {
-        return faculty_name;
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
     }
 
     /**
-     * @param faculty_name the faculty_name to set
+     * @return the beginTime
      */
-    public void setFaculty_name(String faculty_name) {
-        this.faculty_name = faculty_name;
+    public String getBeginTime() {
+        return beginTime;
     }
 
     /**
-     * @return the faculty_cellno
+     * @param beginTime the beginTime to set
      */
-    public int getFaculty_cellno() {
-        return faculty_cellno;
+    public void setBeginTime(String beginTime) {
+        this.beginTime = beginTime;
     }
 
     /**
-     * @param faculty_cellno the faculty_cellno to set
+     * @return the endTime
      */
-    public void setFaculty_cellno(int faculty_cellno) {
-        this.faculty_cellno = faculty_cellno;
+    public String getEndTime() {
+        return endTime;
     }
+
+    /**
+     * @param endTime the endTime to set
+     */
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+    }
+
+   
 
 
     
