@@ -16,6 +16,10 @@
         <servlet-name>addBeneficiary</servlet-name>
         <servlet-class>Servlets.addBeneficiary</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>delBeneficiary</servlet-name>
+        <servlet-class>Controller.delBeneficiary</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Logging</servlet-name>
         <url-pattern>/Logging</url-pattern>
@@ -23,7 +27,7 @@
     <servlet-mapping>
         <servlet-name>CoordinatorDAO</servlet-name>
         <url-pattern>/CoordinatorDAO</url-pattern>
-    </servlet-mapping>        
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>addBeneficiary</servlet-name>
         <url-pattern>/addBeneficiary</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>CoordinatorDAOsetter</servlet-name>
         <url-pattern>/CoordinatorDAOsetter</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>delBeneficiary</servlet-name>
+        <url-pattern>/delBeneficiary</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>
