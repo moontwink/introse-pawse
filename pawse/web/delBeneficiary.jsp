@@ -98,12 +98,12 @@
 					<h2 class="title"><a href="#"></a> Remove Beneficiary </h2>
 					<p class="meta">Posted by <a href="#">COSCA</a> on March 28, 2013</p>
 					<div class="delBeneficiary">
-                                            <form name ="addBeneficiary" action ="addBeneficiary" method="post">
+                                            <form name ="delBeneficiary" action ="delBeneficiary" method="post">
                                             <table>
                                                 <tr>
                                                     <td>Beneficiary</td>
                                                     <td>
-                                                        <select>
+                                                        <select name ="delBenefit">
                                                             <%
                                                                 BeneficiaryDAOsetter dao = new BeneficiaryDAOsetter();
                                                                 ArrayList<Beneficiary> results = dao.getAllBeneficiaries();
@@ -115,16 +115,8 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Address</td>
-                                                    <td><textarea name ="address" rows ="4" cols ="40"></textarea></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Telephone</td>
-                                                    <td><input name="telephone" type ="text"/></td>
-                                                </tr>
-                                                <tr>
                                                     <td></td>
-                                                    <td><input type ="submit"/></td>
+                                                    <td><input type ="submit" value="Remove"/></td>
                                                 </tr>
                                             </table>      
                                             </form>

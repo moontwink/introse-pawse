@@ -87,5 +87,21 @@ public class BeneficiaryDAOsetter extends BeneficiaryDAO {
         return results;
     }
 
+    @Override
+    public void deleteBeneficiary(String name) {
+        try {
+            // TODO code application logic here
+            DBConnection myFactory = DBConnection.getInstance(SQLDAO.MYSQL);
+            Connection conn = myFactory.getConnection();
+            PreparedStatement pstmt = conn.prepareStatement("DELETE FROM `Beneficiary` where BeneficiaryName= '?'");
+            pstmt.setString(1, name);
+            pstmt.executeUpdate();
+            conn.close();
+           
+        } catch (SQLException ex) {
+            Logger.getLogger(BeneficiaryDAOsetter.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
     
 }

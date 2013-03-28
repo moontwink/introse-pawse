@@ -2,9 +2,8 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package Servlets;
+package Controller;
 
-import Models.Beneficiary;
 import DAO.BeneficiaryDAOsetter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -18,7 +17,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author Nancy
  */
-public class addBeneficiary extends HttpServlet {
+public class delBeneficiary extends HttpServlet {
 
     /**
      * Processes requests for both HTTP
@@ -37,18 +36,11 @@ public class addBeneficiary extends HttpServlet {
         HttpSession session = request.getSession();
         
         try {
-            Beneficiary beneficiary = new Beneficiary();
-            beneficiary.setName(request.getParameter("beneficiaryName"));
-            beneficiary.setAddress(request.getParameter("address"));
-            beneficiary.setTelephone(request.getParameter("telephone"));
+            String name = request.getParameter("delBenefit");
             
-            if(beneficiary == null){
-                response.sendRedirect("addBeneficiary.jsp");
-            }else{
-                BeneficiaryDAOsetter dao = new BeneficiaryDAOsetter();
-                dao.addBeneficiary(beneficiary);
-                response.sendRedirect("viewBeneficiary.jsp");
-            }
+            BeneficiaryDAOsetter dao = new BeneficiaryDAOsetter();
+            dao.deleteBeneficiary(name);
+            response.sendRedirect("viewBeneficiary.jsp");
             
         } finally {            
             out.close();
