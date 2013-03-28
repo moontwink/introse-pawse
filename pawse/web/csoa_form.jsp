@@ -201,22 +201,6 @@
 				</div>
                             <!--END CSOA FORM SECTION-->
                             
-				<div class="post">
-					<h2 class="title"><a href="#">Lorem ipsum sed aliquam</a></h2>
-					<p class="meta">Posted by <a href="#">Someone</a> on April 19, 2012
-						&nbsp;&bull;&nbsp; <a href="#" class="comments">Comments (64)</a> &nbsp;&bull;&nbsp; <a href="#" class="permalink">Full article</a></p>
-					<div class="entry">
-						<p>Sed lacus. Donec lectus. Nullam pretium nibh ut turpis. Nam bibendum. In nulla tortor, elementum vel, tempor at, varius non, purus. Mauris vitae nisl nec metus placerat consectetuer. Donec ipsum. Proin imperdiet est. Phasellus <a href="#">dapibus semper urna</a>. Pellentesque ornare, consectetuer nisl felis ac diam. Sed lacus. Donec lectus. Nullam pretium nibh ut turpis. Nam bibendum. Mauris vitae nisl nec metus placerat consectetuer. </p>
-					</div>
-				</div>
-				<div class="post">
-					<h2 class="title"><a href="#">Phasellus pellentesque turpis </a></h2>
-					<p class="meta">Posted by <a href="#">Someone</a> on April 15, 2012
-						&nbsp;&bull;&nbsp; <a href="#" class="comments">Comments (64)</a> &nbsp;&bull;&nbsp; <a href="#" class="permalink">Full article</a></p>
-					<div class="entry">
-						<p>Sed lacus. Donec lectus. Nullam pretium nibh ut turpis. Nam bibendum. In nulla tortor, elementum vel, tempor at, varius non, purus. Mauris vitae nisl nec metus placerat consectetuer. Donec ipsum. Proin imperdiet est. Pellentesque ornare, orci in consectetuer hendrerit, urna elit eleifend nunc. Donec ipsum. Proin imperdiet est. Pellentesque ornare, orci in consectetuer hendrerit, urna elit eleifend nunc.</p>
-					</div>
-				</div>
 				<div style="clear: both;">&nbsp;</div>
 			</div>
 		</div>
