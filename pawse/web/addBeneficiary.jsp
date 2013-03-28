@@ -94,7 +94,7 @@
 				<div class="post">
 					<h2 class="title"><a href="#"></a> Add Beneficiary </h2>
 					<p class="meta">Posted by <a href="#">COSCA</a> on March 28, 2013</p>
-					<div class="csoaform">
+					<div class="beneficiaryform">
                                             
                                             <form>
                                             <table>
