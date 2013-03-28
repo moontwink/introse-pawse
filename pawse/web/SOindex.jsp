@@ -35,9 +35,9 @@
 			</li>
 			<li><a href="csoa_form.jsp"><span>CSOA Form</span></a></li>
 			<li><a href="#"><span>COSCA</span></a></li>
-			<li><span>sign in</span>
+			<li><span>sign out</span>
 				<ul>
-					<li class="first"> <a href="Login.jsp">Log in</a> </li>
+					<li class="first"> <a href="Login.jsp">Log out</a> </li>
 					<li class="last"> <a href="about">Create Account</a> </li>
 				</ul>
 			</li>
@@ -112,7 +112,9 @@
 				<ul>
 					<li>
 						<h2>Tracking</h2>
-						<p></p>
+						<p>You are currently logged in as: 
+                                                <%--insert user info here--%>
+                                                </p>
 					</li>
 					<li>
 						<h2>Feedback</h2>

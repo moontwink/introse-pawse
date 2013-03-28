@@ -4,6 +4,8 @@
  */
 package Models;
 
+import java.sql.Date;
+
 /**
  *
  * @author Nancy
@@ -11,21 +13,27 @@ package Models;
 public class CSOA_Form {
     
     private int idCSF;
-    private String date;
+    private String dateFiled;
     private StudentOrganization sponsor;
     private String activityTitle;
+    private String activityType;
     private Beneficiary beneficiary;
     private double expense;
-    private String faculty;
-    private String facultyCellNo;
-    private String accomplisher;
+    private String faculty_name;
+    private int faculty_cellno;
+    
     private String accomplisherDesignation;
+    private String accomplisher;
     private String accomplisherNo;
     private String accomplisherEmail;
     private String objectives;
     private String programFlow;
     private String status;
     private Coordinator approvedBy;
+     private String beginDate;
+    private String endDate;
+    private String beginTime;
+    private String endTime;
 
     /**
      * @return the idCSF
@@ -42,17 +50,17 @@ public class CSOA_Form {
     }
 
     /**
-     * @return the date
+     * @return the dateFiled
      */
-    public String getDate() {
-        return date;
+    public String getDateFiled() {
+        return dateFiled;
     }
 
     /**
-     * @param date the date to set
+     * @param dateFiled the dateFiled to set
      */
-    public void setDate(String date) {
-        this.date = date;
+    public void setDateFiled(String dateFiled) {
+        this.dateFiled = dateFiled;
     }
 
     /**
@@ -84,6 +92,20 @@ public class CSOA_Form {
     }
 
     /**
+     * @return the activityType
+     */
+    public String getActivityType() {
+        return activityType;
+    }
+
+    /**
+     * @param activityType the activityType to set
+     */
+    public void setActivityType(String activityType) {
+        this.activityType = activityType;
+    }
+
+    /**
      * @return the beneficiary
      */
     public Beneficiary getBeneficiary() {
@@ -112,45 +134,31 @@ public class CSOA_Form {
     }
 
     /**
-     * @return the faculty
+     * @return the faculty_name
      */
-    public String getFaculty() {
-        return faculty;
+    public String getFaculty_name() {
+        return faculty_name;
     }
 
     /**
-     * @param faculty the faculty to set
+     * @param faculty_name the faculty_name to set
      */
-    public void setFaculty(String faculty) {
-        this.faculty = faculty;
+    public void setFaculty_name(String faculty_name) {
+        this.faculty_name = faculty_name;
     }
 
     /**
-     * @return the facultyCellNo
+     * @return the faculty_cellno
      */
-    public String getFacultyCellNo() {
-        return facultyCellNo;
+    public int getFaculty_cellno() {
+        return faculty_cellno;
     }
 
     /**
-     * @param facultyCellNo the facultyCellNo to set
+     * @param faculty_cellno the faculty_cellno to set
      */
-    public void setFacultyCellNo(String facultyCellNo) {
-        this.facultyCellNo = facultyCellNo;
-    }
-
-    /**
-     * @return the accomplisher
-     */
-    public String getAccomplisher() {
-        return accomplisher;
-    }
-
-    /**
-     * @param accomplisher the accomplisher to set
-     */
-    public void setAccomplisher(String accomplisher) {
-        this.accomplisher = accomplisher;
+    public void setFaculty_cellno(int faculty_cellno) {
+        this.faculty_cellno = faculty_cellno;
     }
 
     /**
@@ -165,6 +173,20 @@ public class CSOA_Form {
      */
     public void setAccomplisherDesignation(String accomplisherDesignation) {
         this.accomplisherDesignation = accomplisherDesignation;
+    }
+
+    /**
+     * @return the accomplisher
+     */
+    public String getAccomplisher() {
+        return accomplisher;
+    }
+
+    /**
+     * @param accomplisher the accomplisher to set
+     */
+    public void setAccomplisher(String accomplisher) {
+        this.accomplisher = accomplisher;
     }
 
     /**
@@ -250,6 +272,64 @@ public class CSOA_Form {
     public void setApprovedBy(Coordinator approvedBy) {
         this.approvedBy = approvedBy;
     }
+
+    /**
+     * @return the beginDate
+     */
+    public String getBeginDate() {
+        return beginDate;
+    }
+
+    /**
+     * @param beginDate the beginDate to set
+     */
+    public void setBeginDate(String beginDate) {
+        this.beginDate = beginDate;
+    }
+
+    /**
+     * @return the endDate
+     */
+    public String getEndDate() {
+        return endDate;
+    }
+
+    /**
+     * @param endDate the endDate to set
+     */
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
+    }
+
+    /**
+     * @return the beginTime
+     */
+    public String getBeginTime() {
+        return beginTime;
+    }
+
+    /**
+     * @param beginTime the beginTime to set
+     */
+    public void setBeginTime(String beginTime) {
+        this.beginTime = beginTime;
+    }
+
+    /**
+     * @return the endTime
+     */
+    public String getEndTime() {
+        return endTime;
+    }
+
+    /**
+     * @param endTime the endTime to set
+     */
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+    }
+
+   
 
 
     
