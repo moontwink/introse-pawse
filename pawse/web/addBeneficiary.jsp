@@ -60,6 +60,7 @@
 	<div id="page">
 		<div id="content"><div class="ic"></div>
 			<div class="contentbg">
+                            <%--
 				<div id="slider">
 					<div class="viewer">
 						<div class="reel">
@@ -90,6 +91,7 @@
 					popupPadding: 20
 				});
 			</script>
+                            --%>
 				<!--START BENEFICIARY FORM SECTION-->
 				<div class="post">
 					<h2 class="title"><a href="#"></a> Add Beneficiary </h2>
@@ -99,15 +101,15 @@
                                             <table>
                                                 <tr>
                                                     <td>Name</td>
-                                                    <td><input name ="beneficiaryName" type = "text"/></td>
+                                                    <td><input name ="beneficiaryName" type = "text" required="true"/></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Address</td>
-                                                    <td><textarea name ="address" rows ="4" cols ="40"></textarea></td>
+                                                    <td><textarea name ="address" rows ="4" cols ="40" required ="true"></textarea></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Telephone</td>
-                                                    <td><input name="telephone" type ="text"/></td>
+                                                    <td><input name="telephone" type ="text" required="true"/></td>
                                                 </tr>
                                                 <tr>
                                                     <td></td>

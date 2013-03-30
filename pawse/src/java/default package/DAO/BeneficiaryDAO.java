@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public abstract class BeneficiaryDAO{
 
-   public abstract void addBeneficiary(Beneficiary beneficiary);
+   public abstract Boolean addBeneficiary(Beneficiary beneficiary);
    public abstract void editBeneficiary(Beneficiary beneficiary);
    public abstract void deleteBeneficiary(String name);
    public abstract ArrayList<Beneficiary> getAllBeneficiaries();

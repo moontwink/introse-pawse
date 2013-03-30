@@ -1,3 +1,10 @@
+<%-- 
+    Document   : Cindex
+    Created on : 03 28, 13, 10:34:46 PM
+    Author     : Nancy
+    **Note: this is the index for ADMIN (COSCA)
+--%>
+
 <%@page import="Models.Coordinator"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

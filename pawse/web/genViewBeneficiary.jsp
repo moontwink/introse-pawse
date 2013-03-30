@@ -1,7 +1,8 @@
 <%-- 
-    Document   : viewBeneficiary
+    Document   : genViewBeneficiary
     Created on : 03 28, 13, 11:43:12 PM
     Author     : Nancy
+    **Note: this is the viewBeneficiary for GENERAL USERS 
 --%>
 
 <%@page import="java.util.ArrayList"%>

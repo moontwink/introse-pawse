@@ -2,6 +2,7 @@
     Document   : viewBeneficiary
     Created on : 03 28, 13, 11:43:12 PM
     Author     : Nancy
+    **Note: this is the viewBeneficiary for ADMIN (COSCA/Coordinator)
 --%>
 
 <%@page import="java.util.ArrayList"%>
@@ -63,6 +64,7 @@
 	<div id="page">
 		<div id="content"><div class="ic"></div>
 			<div class="contentbg">
+                            <%--
 				<div id="slider">
 					<div class="viewer">
 						<div class="reel">
@@ -93,20 +95,26 @@
 					popupPadding: 20
 				});
 			</script>
+                            --%>
 				<!--START VIEW BENEFICIARY SECTION-->
 				<div class="post">
 					<h2 class="title"><a href="#"></a> View Beneficiaries </h2>
-					<p class="meta">Posted by <a href="#">COSCA</a> as of March 28, 2013</p>
+					<p class="meta">Updated by <a href="#">COSCA</a> as of March 28, 2013</p>
 					<div class="beneficiaries">
                                             
                                             <table>
+                                                <tr class ="benefitTable">
+                                                    <td>__#__</td>
+                                                    <td>_________BENEFICIARY NAME_________</td>
+                                                    <td>________________ADDRESS________________</td>
+                                                </tr>
                                                 <%
                                                     BeneficiaryDAOsetter dao = new BeneficiaryDAOsetter();
                                                     ArrayList<Beneficiary> s = dao.getAllBeneficiaries();
                                                     for(Beneficiary p : s){
                                                 %>
-                                                <tr>
-                                                    <td><%=s.indexOf(p)+1%></td>
+                                                <tr class ="benefitCol">
+                                                    <td class ="benefitCol"><%=s.indexOf(p)+1%></td>
                                                     <td><%=p.getName()%></td>
                                                     <td><%=p.getAddress()%></td>
                                                 </tr>
