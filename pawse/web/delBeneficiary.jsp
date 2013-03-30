@@ -99,7 +99,7 @@
 				<div class="post">
 					<h2 class="title"><a href="#"></a> Remove Beneficiary </h2>
 					<p class="meta">Posted by <a href="#">COSCA</a> on March 28, 2013</p>
-					<div class="delBeneficiary">
+					<div class="entry">
                                             <form name ="delBeneficiary" action ="delBeneficiary" method="post">
                                             <table>
                                                 <tr><td><strong>**select a beneficiary to remove**</strong></td></tr>

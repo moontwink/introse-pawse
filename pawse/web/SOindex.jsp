@@ -35,12 +35,12 @@
 	<!-- end #header -->
 	<div id="menu-wrapper">
 		<ul id="menu">
-			<li class="current_page_item"><a href="#"><span>Homepage</span></a></li>
+			<li class="current_page_item"><a href="SOindex.jsp"><span>Homepage</span></a></li>
 			<li><span>Beneficiary</span>
 				<ul>
-					<li class="first"> <a href="index">Maecenas luctus lectus</a> </li>
-					<li> <a href="search">Integer gravida</a> </li>
-					<li class="last"> <a href="about">Feedback</a> </li>
+					<li class="first"> <a href="soViewBeneficiary.jsp">View Beneficiaries</a> </li>
+					<li> <a href="#">Search Beneficiary</a> </li>
+					<li class="last"> <a href="#">Feedback</a> </li>
 				</ul>
 			</li>
 			<li><a href="csoa_form.jsp"><span>CSOA Form</span></a></li>
@@ -48,7 +48,7 @@
 			<li><span>sign out</span>
 				<ul>
 					<li class="first"> <a href="Login.jsp">Log out</a> </li>
-					<li class="last"> <a href="about">Create Account</a> </li>
+					<li class="last"> <a href="createAccount.jsp">Create Account</a> </li>
 				</ul>
 			</li>
 		</ul>

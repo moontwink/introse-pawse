@@ -100,7 +100,7 @@
 				<div class="post">
 					<h2 class="title"><a href="#"></a> View Beneficiaries </h2>
 					<p class="meta">Updated by <a href="#">COSCA</a> as of March 28, 2013</p>
-					<div class="beneficiaries">
+					<div class="entry">
                                             
                                             <table>
                                                 <tr class ="benefitTable">
