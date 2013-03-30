@@ -12,8 +12,8 @@ import Models.StudentOrganization;
  */
 public abstract class StudentOrgDAO {
 
-    public abstract void addStudentOrganization(StudentOrganization so);
-
+    public abstract Boolean addStudentOrganization(StudentOrganization so);
     public abstract void editStudentOrganization(StudentOrganization so);
+    public abstract StudentOrganization findStudentOrg(String username);
     
 }

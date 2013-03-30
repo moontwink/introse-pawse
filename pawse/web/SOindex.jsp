@@ -5,6 +5,7 @@
     **Note: this is the index for Student Organizations
 --%>
 
+<%@page import="Models.StudentOrganization"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -20,6 +21,8 @@
 <script type="text/javascript" src="./js/jquery.poptrox-1.0.js"></script>
 </head>
 <body>
+    
+    <%StudentOrganization user = (StudentOrganization)session.getAttribute("user");%>
 <div id="wrapper">
 	<div id="header-wrapper">
 		<div id="header">
@@ -119,8 +122,8 @@
 				<ul>
 					<li>
 						<h2>Tracking</h2>
-						<p>You are currently logged in as: 
-                                                <%--insert user info here--%>
+                                                <p>You are currently logged in as: <br/>
+                                                    <center class ="accountname"><a href ="editAccount.jsp"><%=user.getName()%></a></center>
                                                 </p>
 					</li>
 					<li>

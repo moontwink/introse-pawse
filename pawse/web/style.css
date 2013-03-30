@@ -492,3 +492,22 @@ img.aligncenter {
     text-align: center;
     letter-spacing: 1.5px;
 }
+
+.errormsg {
+    color: red;
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: bolder;
+}
+
+.accountname a{
+    color: darkmagenta;
+    font-size: 15px;
+    letter-spacing: 3px;
+    font-weight: bolder;
+}
+
+.accountname a:hover {
+    color: tomato;
+    letter-spacing: 2px;
+}

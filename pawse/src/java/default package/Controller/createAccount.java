@@ -2,23 +2,22 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package Servlets;
+package Controller;
 
-import Models.Beneficiary;
-import DAO.BeneficiaryDAOsetter;
+import DAO.StudentOrgDAOsetter;
+import Models.StudentOrganization;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author Nancy
  */
-public class addBeneficiary extends HttpServlet {
+public class createAccount extends HttpServlet {
 
     /**
      * Processes requests for both HTTP
@@ -34,23 +33,18 @@ public class addBeneficiary extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        HttpSession session = request.getSession();
-        
         try {
-            Beneficiary beneficiary = new Beneficiary();
-            beneficiary.setName(request.getParameter("beneficiaryName"));
-            beneficiary.setAddress(request.getParameter("address"));
-            beneficiary.setTelephone(request.getParameter("telephone"));
+            StudentOrganization so = new StudentOrganization();
+            so.setName(request.getParameter("orgname"));
+            so.setUsername(request.getParameter("orgusername"));
+            so.setPassword(request.getParameter("orgpassword"));
             
-            session.setAttribute("", out);
-            BeneficiaryDAOsetter dao = new BeneficiaryDAOsetter();
-            if(dao.addBeneficiary(beneficiary)){
-                response.sendRedirect("error-msg/ExistingBeneficiary.jsp");
+            StudentOrgDAOsetter dao = new StudentOrgDAOsetter();
+            if(dao.addStudentOrganization(so)){
+                response.sendRedirect("ExistingOrg.jsp");
+            }else{
+                response.sendRedirect("index.jsp");
             }
-            else{
-                response.sendRedirect("viewBeneficiary.jsp");
-            }
-            
             
         } finally {            
             out.close();
