@@ -13,7 +13,7 @@ import Models.StudentOrganization;
 public abstract class StudentOrgDAO {
 
     public abstract Boolean addStudentOrganization(StudentOrganization so);
-    public abstract void editStudentOrganization(StudentOrganization so);
+    public abstract Boolean editStudentOrganization(StudentOrganization so);
     public abstract StudentOrganization findStudentOrg(String username);
     
 }

@@ -123,8 +123,8 @@
 				<ul>
 					<li>
 						<h2>Tracking</h2>
-						<p>You are currently logged in as: 
-                                                    <strong><%=user.getUsername()%></strong>
+						<p>You are currently logged in as: <br/>
+                                                    <center class ="accountname"><%=user.getUsername()%></center>
                                                 </p>
 					</li>
 					<li>
