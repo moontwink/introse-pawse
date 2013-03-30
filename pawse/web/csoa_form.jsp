@@ -4,6 +4,11 @@
     Author     : Nancy
 --%>
 
+<%@page import="java.util.ArrayList"%>
+<%@page import="Models.Beneficiary"%>
+<%@page import="Models.Beneficiary"%>
+<%@page import="DAO.BeneficiaryDAOsetter"%>
+<%@page import="Models.StudentOrganization"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -19,6 +24,7 @@
 <script type="text/javascript" src="./js/jquery.poptrox-1.0.js"></script>
 </head>
 <body>
+    <%StudentOrganization user = (StudentOrganization)session.getAttribute("user");%>
 <div id="wrapper">
 	<div id="header-wrapper">
 		<div id="header">
@@ -135,8 +141,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Sponsoring Organization</td>
-                                                    <td><select name ="studentorg"></select>
-                                                        <!--//get list of student orgs in sql--></td>
+                                                    <td><input type ="text" value ="<%=user.getName()%>" readonly="true"/></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Title of Activity</td>
@@ -148,8 +153,16 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Beneficiary</td>
-                                                    <td><select name ="studentorg"></select>
-                                                        <!--//get list of beneficiaries in sql--></td>
+                                                    <td><select name ="studentorg">
+                                                            <%
+                                                                BeneficiaryDAOsetter dao = new BeneficiaryDAOsetter();
+                                                                ArrayList<Beneficiary> results = dao.getAllBeneficiaries();
+                                                                for(Beneficiary b : results){
+                                                            %>
+                                                            <option value ="<%=b.getName()%>" title="<%=b.getAddress()%>"><%=b.getName()%></option>
+                                                            <%}%>
+                                                        </select>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>Total Projected Expense</td>
@@ -215,7 +228,9 @@
 				<ul>
 					<li>
 						<h2>Tracking</h2>
-						<p></p>
+						<p>You are currently logged in as: <br/>
+                                                    <center class ="accountname"><a href ="editAccount.jsp"><%=user.getName()%></a></center>
+                                                </p>
 					</li>
 					<li>
 						<h2>Feedback</h2>
