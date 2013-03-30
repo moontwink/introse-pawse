@@ -1,6 +1,6 @@
 <%-- 
-    Document   : Login
-    Created on : 03 28, 13, 10:34:46 PM
+    Document   : createAccount
+    Created on : 03 30, 13, 10:47:42 PM
     Author     : Nancy
 --%>
 
@@ -61,12 +61,16 @@
 			<div class="contentbg">
 				
 				<div class="post">
-					<h2 class="title"><a href="#">Login</a></h2>
+					<h2 class="title"><a href="#">Create Account</a></h2>
 					<div class="entry">
-						<form name="login" action="Logging" method="post">
+						<form name="createaccount" action="Create" method="post">
                                                 <table align="center">
                                                     <tr>
-                                                        <td>Username: </td>
+                                                        <td>Organization Name </td>
+                                                        <td><input type="text" name="username" required ="required"><br/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Username (limit to 16 chars) </td>
                                                         <td><input type="text" name="username" required ="required"><br/></td>
                                                     </tr>
                                                     <tr>

@@ -46,7 +46,7 @@
 			<li><span>sign in</span>
 				<ul>
 					<li class="first"> <a href="Login.jsp">Log in</a> </li>
-					<li class="last"> <a href="#">Create Account</a> </li>
+					<li class="last"> <a href="createAccount.jsp">Create Account</a> </li>
 				</ul>
 			</li>
 		</ul>

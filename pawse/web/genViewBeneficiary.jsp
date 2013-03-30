@@ -100,13 +100,18 @@
 					<div class="beneficiaries">
                                             
                                             <table>
+                                                <tr class ="benefitTable">
+                                                    <td>__#__</td>
+                                                    <td>_________BENEFICIARY NAME_________</td>
+                                                    <td>________________ADDRESS________________</td>
+                                                </tr>
                                                 <%
                                                     BeneficiaryDAOsetter dao = new BeneficiaryDAOsetter();
                                                     ArrayList<Beneficiary> s = dao.getAllBeneficiaries();
                                                     for(Beneficiary p : s){
                                                 %>
-                                                <tr>
-                                                    <td><%=s.indexOf(p)+1%></td>
+                                                <tr class ="benefitCol">
+                                                    <td class ="benefitCol"><%=s.indexOf(p)+1%></td>
                                                     <td><%=p.getName()%></td>
                                                     <td><%=p.getAddress()%></td>
                                                 </tr>
