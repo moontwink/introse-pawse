@@ -48,7 +48,7 @@
 			<li><span>sign out</span>
 				<ul>
 					<li class="first"> <a href="Login.jsp">Log out</a> </li>
-					<li class="last"> <a href="createAccount.jsp">Create Account</a> </li>
+					<li class="last"> <a href="editAccount.jsp">View/Edit Account</a> </li>
 				</ul>
 			</li>
 		</ul>

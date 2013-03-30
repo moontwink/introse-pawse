@@ -28,6 +28,10 @@
         <servlet-name>createAccount</servlet-name>
         <servlet-class>Controller.createAccount</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>editAccount</servlet-name>
+        <servlet-class>Controller.editAccount</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Logging</servlet-name>
         <url-pattern>/Logging</url-pattern>
@@ -55,6 +59,10 @@
     <servlet-mapping>
         <servlet-name>createAccount</servlet-name>
         <url-pattern>/createAccount</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>editAccount</servlet-name>
+        <url-pattern>/editAccount</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

@@ -41,9 +41,23 @@ public class StudentOrgDAOsetter extends StudentOrgDAO {
     }
 
     @Override
-    public void editStudentOrganization(StudentOrganization so){
-        
-        
+    public Boolean editStudentOrganization(StudentOrganization so){
+        try{
+            DBConnection MyFactory = DBConnection.getInstance(SQLDAO.MYSQL);
+            Connection connection = MyFactory.getConnection();
+            PreparedStatement ps = connection.prepareStatement("UPDATE `studentorganization` SET username = ?, password = ? WHERE orgname = ?");
+            
+            ps.setString(1, so.getUsername());
+            ps.setString(2, so.getPassword());
+            ps.setString(3, so.getName());
+            ps.executeUpdate();
+            connection.close();
+            
+        }catch(SQLException ex){
+            Logger.getLogger(StudentOrgDAOsetter.class.getName()).log(Level.SEVERE, null, ex);
+            return true;
+        }
+        return false;
     }
 
     @Override

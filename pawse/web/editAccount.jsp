@@ -102,7 +102,7 @@
                                                 <table align="center">
                                                     <tr>
                                                         <td>Organization Name </td>
-                                                        <td><input type="text" name="orgname" required ="required" value="<%=user.getName()%>"/><br/></td>
+                                                        <td><input readonly="true" name="orgname" value="<%=user.getName()%>"/><br/></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Username (limit to 16 chars) </td>
@@ -131,8 +131,8 @@
 				<ul>
 					<li>
 						<h2>Tracking</h2>
-						<p>You are currently logged in as: 
-                                                    <strong><%=c.getUsername()%></strong>
+						<p>You are currently logged in as: <br/>
+                                                    <center class ="accountname"><a href ="editAccount.jsp"><%=user.getName()%></a></center>
                                                 </p>
 					</li>
 					<li>
