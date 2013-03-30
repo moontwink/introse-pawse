@@ -22,7 +22,7 @@
 </head>
 <body>
     
-    <%Coordinator c = (Coordinator)session.getAttribute("user");%>
+    <%Coordinator user = (Coordinator)session.getAttribute("user");%>
 <div id="wrapper">
 	<div id="header-wrapper">
 		<div id="header">
@@ -124,7 +124,7 @@
 					<li>
 						<h2>Tracking</h2>
 						<p>You are currently logged in as: 
-                                                    <strong><%=c.getUsername()%></strong>
+                                                    <strong><%=user.getUsername()%></strong>
                                                 </p>
 					</li>
 					<li>

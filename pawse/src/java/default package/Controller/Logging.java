@@ -16,6 +16,7 @@ import javax.servlet.http.HttpSession;
 import Models.Coordinator;
 import DAO.CoordinatorDAO; //For the mean time because only coordinator contains the username and password as of now.
 import DAO.SQLDAO;
+import DAO.StudentOrgDAOsetter;
 import Models.StudentOrganization;
 
 
@@ -39,34 +40,34 @@ public class Logging extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-     
+        HttpSession session = request.getSession();
         
         try {
             
-            HttpSession session = request.getSession();
-            Coordinator coor = (Coordinator) session.getAttribute("coor");
+            //Coordinator coor = (Coordinator) session.getAttribute("coor");
             
             String username = request.getParameter("username");
             String password = request.getParameter("password");
             
-            SQLDAO myDAOFactory = SQLDAO.getInstance(SQLDAO.MYSQL);
+            //SQLDAO myDAOFactory = SQLDAO.getInstance(SQLDAO.MYSQL);
             //UserDAO uDAO = myDAOFactory.createUserDAO();
             if(username == null || password == null){
                 response.sendRedirect("Login.jsp");
             }
             
-            else{
-                
-                if(username.equals("admin") && password.equals("12345")){
+            if(username.equals("admin") && password.equals("12345")){
                     Coordinator c = new Coordinator();
                     c.setUsername(username);
                     c.setPassword(password);
                     session.setAttribute("user", c);
                     response.sendRedirect("Cindex.jsp");
-                } else if (username.equals(username) && password.equals(0)) {
-                    StudentOrganization so = new StudentOrganization();
-                    so.setUsername(username);
-                    so.setPassword(password);
+                }
+            
+            else{
+                StudentOrgDAOsetter dao = new StudentOrgDAOsetter();
+                StudentOrganization so = dao.findStudentOrg(username);
+                
+                 if(so != null && password.equals(so.getPassword())) {
                     session.setAttribute("user", so);
                     response.sendRedirect("SOindex.jsp");
                 } else {

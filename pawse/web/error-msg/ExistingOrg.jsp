@@ -1,12 +1,11 @@
 <%-- 
-    Document   : createAccount
-    Created on : 03 30, 13, 10:47:42 PM
+    Document   : ExistingOrg
+    Created on : 03 30, 13, 11:58:05 PM
     Author     : Nancy
 --%>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
 <%@page import="Models.Coordinator"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="keywords" content="" />
@@ -14,14 +13,15 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Outracker</title>
 <link href="http://fonts.googleapis.com/css?family=Abel" rel="stylesheet" type="text/css" />
-<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
-<script type="text/javascript" src="./js/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="./js/jquery.slidertron-1.0.js"></script>
-<script type="text/javascript" src="./js/jquery.dropotron-1.0.js"></script>
-<script type="text/javascript" src="./js/jquery.poptrox-1.0.js"></script>
+<link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.slidertron-1.0.js"></script>
+<script type="text/javascript" src="../js/jquery.dropotron-1.0.js"></script>
+<script type="text/javascript" src="../js/jquery.poptrox-1.0.js"></script>
 </head>
 <body>
     
+    <%Coordinator c = (Coordinator)session.getAttribute("user");%>
 <div id="wrapper">
 	<div id="header-wrapper">
 		<div id="header">
@@ -34,20 +34,21 @@
 	<!-- end #header -->
 	<div id="menu-wrapper">
 		<ul id="menu">
-			<li><a href="index.jsp"><span>Homepage</span></a></li>
-			<li><span>Beneficiary</span>
+			<li><a href="../Cindex.jsp"><span>Homepage</span></a></li>
+			<li class="current_page_item"><span>Beneficiary</span>
 				<ul>
-					<li class="first"> <a href="genViewBeneficiary.jsp">View Beneficiaries</a> </li>
-					<li> <a href="#">Search Beneficiary</a> </li>
+					<li class="first"> <a href="../addBeneficiary.jsp">Add Beneficiary</a> </li>
+					<li> <a href="../delBeneficiary.jsp">Remove Beneficiary</a> </li>
+                                        <li> <a href="../viewBeneficiary.jsp">View Beneficiaries</a> </li>
 					<li class="last"> <a href="#">Feedback</a> </li>
 				</ul>
 			</li>
-			<li><a href="csoa_form.jsp"><span>CSOA Form</span></a></li>
+			<li><a href=""><span>CSOA Form</span></a></li>
 			<li><a href="#"><span>COSCA</span></a></li>
-			<li class="current_page_item"><span>sign in</span>
+			<li><span>sign out</span>
 				<ul>
-					<li class="first"> <a href="Login.jsp">Log in</a> </li>
-					<li class="last"> <a href="#">Create Account</a> </li>
+					<li class="first"> <a href="../index.jsp">Log out</a> </li>
+					<li class="last"> <a href="../createAccount.jsp">Create Account</a> </li>
 				</ul>
 			</li>
 		</ul>
@@ -59,12 +60,47 @@
 	<div id="page">
 		<div id="content"><div class="ic"></div>
 			<div class="contentbg">
+                            <%--
+				<div id="slider">
+					<div class="viewer">
+						<div class="reel">
+							<div id="gallery">
+								<div class="slide"> <a href="images/pics01.jpg"><img src="images/pics01.jpg" width="590" height="300" alt="" /></a> </div>
+								<div class="slide"> <a href="images/pics02.jpg"><img src="images/pics02.jpg" width="590" height="300" alt="" /></a> </div>
+								<div class="slide"> <a href="images/pics03.jpg"><img src="images/pics03.jpg" width="590" height="300" alt="" /></a> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<script type="text/javascript">
+				$('#slider').slidertron({
+					viewerSelector: '.viewer',
+					reelSelector: '.viewer .reel',
+					slidesSelector: '.viewer .reel .slide',
+					advanceDelay: 3000,
+					speed: 'slow'
+				});
+			</script>
+				<script type="text/javascript">
+				$('#gallery').poptrox({
+					overlayColor: '#222222',
+					overlayOpacity: 0.75,
+					popupCloserBackgroundColor: '#560969',
+					popupBackgroundColor: '#FFFFFF',
+					popupTextColor: '#aaaaaa',
+					popupPadding: 20
+				});
+			</script>
+                            --%>
 				<!--START CREATE ACCOUNT FORM SECTION-->
 				<div class="post">
 					<h2 class="title"><a href="#">Create Account</a></h2>
 					<div class="entry">
-						<form name="createaccount" action="createAccount" method="post">
+						<form name="createaccount" action="../createAccount" method="post">
                                                 <table align="center">
+                                                    <tr>
+                                                        <td class ="errormsg" colspan="2">**that account already exists**</td>
+                                                    </tr>
                                                     <tr>
                                                         <td>Organization Name </td>
                                                         <td><input type="text" name="orgname" required ="required"><br/></td>
@@ -85,7 +121,8 @@
                                             </form>
                                         </div>
 				</div>
-                                <!--START CREATE ACCOUNT FORM SECTION-->
+                            <!--END CREATE ACCOUNT FORM SECTION-->
+                            
 				<div style="clear: both;">&nbsp;</div>
 			</div>
 		</div>
@@ -95,7 +132,9 @@
 				<ul>
 					<li>
 						<h2>Tracking</h2>
-						<p></p>
+						<p>You are currently logged in as: 
+                                                    <strong><%=c.getUsername()%></strong>
+                                                </p>
 					</li>
 					<li>
 						<h2>Feedback</h2>
