@@ -22,21 +22,24 @@ import java.util.ArrayList;
 public class BeneficiaryDAOsetter extends BeneficiaryDAO {
 
     @Override
-    public void addBeneficiary(Beneficiary beneficiary) {
+    public Boolean addBeneficiary(Beneficiary beneficiary) {
          try {
             // TODO code application logic here
             DBConnection myFactory = DBConnection.getInstance(SQLDAO.MYSQL);
             Connection conn = myFactory.getConnection();
             PreparedStatement pstmt = conn.prepareStatement("insert into beneficiary(BeneficiaryName,BeneficiaryNumber,BeneficiaryAddress)VALUES(?,?,?)");
             pstmt.setString(1, beneficiary.getName());
-            pstmt.setString(2, beneficiary.getAddress());
-            pstmt.setString(3, beneficiary.getTelephone());
+            pstmt.setString(2, beneficiary.getTelephone());
+            pstmt.setString(3, beneficiary.getAddress());
             pstmt.executeUpdate();
             conn.close();
+            
            
         } catch (SQLException ex) {
             Logger.getLogger(BeneficiaryDAOsetter.class.getName()).log(Level.SEVERE, null, ex);
+            return true;
         }
+         return false;
      
     }
 
@@ -48,8 +51,8 @@ public class BeneficiaryDAOsetter extends BeneficiaryDAO {
             Connection conn = myFactory.getConnection();
             PreparedStatement pstmt = conn.prepareStatement("update beneficiary set BeneficiaryName=?,BeneficiaryNumber=?,BeneficiaryAddress=? where BeneficiaryName=?");
            pstmt.setString(1, beneficiary.getName());
-            pstmt.setString(2, beneficiary.getAddress());
-            pstmt.setString(3, beneficiary.getTelephone());
+            pstmt.setString(2, beneficiary.getTelephone());
+            pstmt.setString(3, beneficiary.getAddress());
             pstmt.executeUpdate();
             conn.close();
            
@@ -93,7 +96,7 @@ public class BeneficiaryDAOsetter extends BeneficiaryDAO {
             // TODO code application logic here
             DBConnection myFactory = DBConnection.getInstance(SQLDAO.MYSQL);
             Connection conn = myFactory.getConnection();
-            PreparedStatement pstmt = conn.prepareStatement("DELETE FROM `Beneficiary` where BeneficiaryName= '?'");
+            PreparedStatement pstmt = conn.prepareStatement("DELETE FROM `beneficiary` where BeneficiaryName= ?");
             pstmt.setString(1, name);
             pstmt.executeUpdate();
             conn.close();

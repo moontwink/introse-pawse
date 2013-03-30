@@ -477,3 +477,18 @@ img.aligncenter {
 	width: 590px;
 	height: 300px;
 }
+
+.benefitTable {
+    font-size: 13px;
+    color: red;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.benefitCol {
+    font-size: 14px;
+    color: green;
+    font-weight: lighter;
+    text-align: center;
+    letter-spacing: 1.5px;
+}

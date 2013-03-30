@@ -42,13 +42,15 @@ public class addBeneficiary extends HttpServlet {
             beneficiary.setAddress(request.getParameter("address"));
             beneficiary.setTelephone(request.getParameter("telephone"));
             
-            if(beneficiary == null){
+            request.setAttribute("errormsg", "out");
+            BeneficiaryDAOsetter dao = new BeneficiaryDAOsetter();
+            if(dao.addBeneficiary(beneficiary)){
                 response.sendRedirect("addBeneficiary.jsp");
-            }else{
-                BeneficiaryDAOsetter dao = new BeneficiaryDAOsetter();
-                dao.addBeneficiary(beneficiary);
+            }
+            else{
                 response.sendRedirect("viewBeneficiary.jsp");
             }
+            
             
         } finally {            
             out.close();

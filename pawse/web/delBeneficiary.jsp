@@ -63,6 +63,7 @@
 	<div id="page">
 		<div id="content"><div class="ic"></div>
 			<div class="contentbg">
+                            <%--
 				<div id="slider">
 					<div class="viewer">
 						<div class="reel">
@@ -93,6 +94,7 @@
 					popupPadding: 20
 				});
 			</script>
+                            --%>
 				<!--START BENEFICIARY FORM SECTION-->
 				<div class="post">
 					<h2 class="title"><a href="#"></a> Remove Beneficiary </h2>
@@ -100,7 +102,9 @@
 					<div class="delBeneficiary">
                                             <form name ="delBeneficiary" action ="delBeneficiary" method="post">
                                             <table>
+                                                <tr><td><strong>**select a beneficiary to remove**</strong></td></tr>
                                                 <tr>
+                                                    
                                                     <td>Beneficiary</td>
                                                     <td>
                                                         <select name ="delBenefit">
@@ -109,7 +113,7 @@
                                                                 ArrayList<Beneficiary> results = dao.getAllBeneficiaries();
                                                                 for(Beneficiary b : results){
                                                             %>
-                                                            <option value ="<%=b.getName()%>"><%=b.getName()%></option>
+                                                            <option value ="<%=b.getName()%>" title="<%=b.getAddress()%>"><%=b.getName()%></option>
                                                             <%}%>
                                                         </select>
                                                     </td>
