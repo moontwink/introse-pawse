@@ -2,9 +2,10 @@
     Document   : genViewBeneficiary
     Created on : 03 28, 13, 11:43:12 PM
     Author     : Nancy
-    **Note: this is the viewBeneficiary for GENERAL USERS 
+    **Note: this is the viewBeneficiary for Student Organizations
 --%>
 
+<%@page import="Models.StudentOrganization"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="DAO.BeneficiaryDAOsetter"%>
 <%@page import="Models.Beneficiary"%>
@@ -23,6 +24,8 @@
 <script type="text/javascript" src="./js/jquery.poptrox-1.0.js"></script>
 </head>
 <body>
+    
+    <%StudentOrganization user = (StudentOrganization)session.getAttribute("user");%>
 <div id="wrapper">
 	<div id="header-wrapper">
 		<div id="header">
@@ -35,20 +38,20 @@
 	<!-- end #header -->
 	<div id="menu-wrapper">
 		<ul id="menu">
-			<li><a href="index.jsp"><span>Homepage</span></a></li>
+			<li><a href="SOindex.jsp"><span>Homepage</span></a></li>
 			<li class="current_page_item"><span>Beneficiary</span>
 				<ul>
-					<li class="first"> <a href="viewBeneficiary.jsp">View Beneficiaries</a> </li>
+					<li class="first"> <a href="soViewBeneficiary.jsp">View Beneficiaries</a> </li>
 					<li> <a href="#">Search Beneficiary</a> </li>
 					<li class="last"> <a href="#">Feedback</a> </li>
 				</ul>
 			</li>
 			<li><a href="csoa_form.jsp"><span>CSOA Form</span></a></li>
 			<li><a href="#"><span>COSCA</span></a></li>
-			<li><span>sign in</span>
+			<li><span>sign out</span>
 				<ul>
-					<li class="first"> <a href="index.jsp">Log in</a> </li>
-					<li class="last"> <a href="#">Create Account</a> </li>
+					<li class="first"> <a href="index.jsp">Log out</a> </li>
+					<li class="last"> <a href="createAccount.jsp">Create Account</a> </li>
 				</ul>
 			</li>
 		</ul>
@@ -130,7 +133,8 @@
 				<ul>
 					<li>
 						<h2>Tracking</h2>
-						<p>
+						<p>You are currently logged in as: <br/>
+                                                    <center class ="accountname"><a href ="editAccount.jsp"><%=user.getName()%></a></center>
                                                 </p>
 					</li>
 					<li>

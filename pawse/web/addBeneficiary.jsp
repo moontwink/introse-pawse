@@ -96,7 +96,7 @@
 				<div class="post">
 					<h2 class="title"><a href="#"></a> Add Beneficiary </h2>
 					<p class="meta">Posted by <a href="#">COSCA</a> on March 28, 2013</p>
-					<div class="beneficiaryform">
+					<div class="entry">
                                             <form name ="addBeneficiary" action ="addBeneficiary" method="post">
                                             <table>
                                                 <tr>
@@ -105,7 +105,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Address</td>
-                                                    <td><textarea name ="address" rows ="4" cols ="40" required ="true"></textarea></td>
+                                                    <td><textarea name ="address" rows ="4" cols ="40" required ="true"/></textarea></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Telephone</td>

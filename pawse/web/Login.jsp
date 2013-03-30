@@ -67,15 +67,15 @@
                                                 <table align="center">
                                                     <tr>
                                                         <td>Username: </td>
-                                                        <td><input type="text" name="username" required ="required"><br/></td>
+                                                        <td><input type="text" name="username" required ="required"/><br/></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Password: </td>
-                                                        <td><input type="password" name="password" required ="required"><br/></td>
+                                                        <td><input type="password" name="password" required ="required"/><br/></td>
                                                     </tr>
                                                     <tr>
                                                         <td></td>
-                                                        <td><input type="submit" value="Submit"></td>
+                                                        <td><input type="submit" value="Submit"/></td>
                                                     </tr>
                                                 </table>
                                             </form>

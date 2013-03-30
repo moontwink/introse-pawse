@@ -92,7 +92,7 @@
 					<h2 class="title"><a href="#"></a> Community Service <br/>
                                             Outreach Activity Form</h2>
 					<p class="meta">Posted by <a href="#">COSCA</a> on March 28, 2013</p>
-					<div class="csoaform">
+					<div class="entry">
                                             
                                             <form>
                                             <table>

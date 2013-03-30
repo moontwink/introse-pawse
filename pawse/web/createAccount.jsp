@@ -67,15 +67,15 @@
                                                 <table align="center">
                                                     <tr>
                                                         <td>Organization Name </td>
-                                                        <td><input type="text" name="orgname" required ="required"><br/></td>
+                                                        <td><input type="text" name="orgname" required ="required"/><br/></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Username (limit to 16 chars) </td>
-                                                        <td><input type="text" name="orgusername" required ="required"><br/></td>
+                                                        <td><input type="text" name="orgusername" required ="required"/><br/></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Password: </td>
-                                                        <td><input type="password" name="orgpassword" required ="required"><br/></td>
+                                                        <td><input type="password" name="orgpassword" required ="required"/><br/></td>
                                                     </tr>
                                                     <tr>
                                                         <td></td>
@@ -85,7 +85,7 @@
                                             </form>
                                         </div>
 				</div>
-                                <!--START CREATE ACCOUNT FORM SECTION-->
+                                <!--END CREATE ACCOUNT FORM SECTION-->
 				<div style="clear: both;">&nbsp;</div>
 			</div>
 		</div>
