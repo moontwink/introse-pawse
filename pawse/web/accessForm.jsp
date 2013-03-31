@@ -142,10 +142,20 @@
                                                     <td class="formtable">End Time :</td>
                                                     <td> <%=f.getEndTime()%> </td>
                                                 </tr>
+                                                <tr><td><br/></td></tr>
+                                                
+                                                
                                                 <tr>
-                                                    <td></td>
-                                                    <td></td>
+                                                    <%
+                                                      if(f.getStatus().equals("PENDING")){
+                                                    %>
+                                                    <td><input type="submit" size="" value="REJECT"/></td>
+                                                    <td><input type="submit" value="APPROVE"/></td>
+                                                    <%}%>
                                                 </tr>
+                                                
+                                                
+                                                
                                             </table>
                                             
                                         </div>
