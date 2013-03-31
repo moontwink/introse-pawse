@@ -2,23 +2,24 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package Servlets;
+package Controller;
 
-import Models.Beneficiary;
 import DAO.BeneficiaryDAOsetter;
+import DAO.CSOA_FormDAOsetter;
+import DAO.StudentOrgDAOsetter;
+import Models.CSOA_Form;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author Nancy
  */
-public class addBeneficiary extends HttpServlet {
+public class addForm extends HttpServlet {
 
     /**
      * Processes requests for both HTTP
@@ -34,21 +35,35 @@ public class addBeneficiary extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        
         try {
-            Beneficiary beneficiary = new Beneficiary();
-            beneficiary.setName(request.getParameter("beneficiaryName"));
-            beneficiary.setAddress(request.getParameter("address"));
-            beneficiary.setTelephone(request.getParameter("telephone"));
+            CSOA_Form form = new CSOA_Form();
+            form.setActivityType(request.getParameter("actype"));
+            form.setDateFiled(request.getParameter("datefiled"));
             
-            BeneficiaryDAOsetter dao = new BeneficiaryDAOsetter();
-            if(dao.addBeneficiary(beneficiary)){
-                response.sendRedirect("error-msg/ExistingBeneficiary.jsp");
-            }
-            else{
-                response.sendRedirect("viewBeneficiary.jsp");
-            }
+            StudentOrgDAOsetter soDAO = new StudentOrgDAOsetter();
+            form.setSponsor(soDAO.findStudentOrg(request.getParameter("sponsororg")));
             
+            form.setActivityTitle(request.getParameter("actitle"));
+            form.setActivityDate(request.getParameter("actdate"));
+            
+            BeneficiaryDAOsetter bDAO = new BeneficiaryDAOsetter();
+            form.setBeneficiary(bDAO.findBeneficiary(request.getParameter("selbenefit")));
+
+            form.setExpense(Double.parseDouble(request.getParameter("expense")));
+            form.setFaculty_name(request.getParameter("faculty"));
+            form.setFaculty_cellno(request.getParameter("facultyno"));
+            form.setAccomplisher(request.getParameter("accomplisher"));
+            form.setAccomplisherDesignation(request.getParameter("designation"));
+            form.setAccomplisherNo(request.getParameter("accompNo"));
+            form.setAccomplisherEmail(request.getParameter("accompEmail"));
+            form.setObjectives(request.getParameter("objectives"));
+            form.setProgramFlow(request.getParameter("program"));
+            form.setBeginTime(request.getParameter("beginTime"));
+            form.setEndTime(request.getParameter("endTime"));
+            
+            CSOA_FormDAOsetter csoaDAO = new CSOA_FormDAOsetter();
+            csoaDAO.addCSOA_FormDAO(form);
+            response.sendRedirect("editAccount.jsp");
             
         } finally {            
             out.close();
