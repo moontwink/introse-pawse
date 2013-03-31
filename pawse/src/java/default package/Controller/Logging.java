@@ -65,7 +65,7 @@ public class Logging extends HttpServlet {
             
             else{
                 StudentOrgDAOsetter dao = new StudentOrgDAOsetter();
-                StudentOrganization so = dao.findStudentOrg(username);
+                StudentOrganization so = dao.findStudentOrgByUsername(username);
                 
                  if(so != null && password.equals(so.getPassword())) {
                     session.setAttribute("user", so);

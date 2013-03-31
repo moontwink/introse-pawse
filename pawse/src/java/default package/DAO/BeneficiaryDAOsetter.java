@@ -113,7 +113,7 @@ public class BeneficiaryDAOsetter extends BeneficiaryDAO {
         try{
             DBConnection myFactory = DBConnection.getInstance(SQLDAO.MYSQL);
             Connection connection =  myFactory.getConnection();
-            PreparedStatement ps = connection.prepareStatement("SELECT * FROM `beneficiary` WHERE username = ?");
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM `beneficiary` WHERE beneficiaryname = ?");
             ps.setString(1, beneficiaryname);
             
             ResultSet rs = ps.executeQuery();

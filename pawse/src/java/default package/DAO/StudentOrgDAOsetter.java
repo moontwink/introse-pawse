@@ -85,5 +85,31 @@ public class StudentOrgDAOsetter extends StudentOrgDAO {
         
         return so;
     }
+
+    @Override
+    public StudentOrganization findStudentOrgByName(String soName) {
+        StudentOrganization so = null;
+        
+        try{
+            DBConnection myFactory = DBConnection.getInstance(SQLDAO.MYSQL);
+            Connection connection =  myFactory.getConnection();
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM `studentorganization` WHERE orgname = ?");
+            ps.setString(1, soName);
+            
+            ResultSet rs = ps.executeQuery();
+            
+            while(rs.next()){
+                so = new StudentOrganization();
+                so.setName(rs.getString(1));
+                so.setUsername(rs.getString(2));
+                so.setPassword(rs.getString(3));
+            }
+            
+        }catch(SQLException ex){
+            Logger.getLogger(StudentOrgDAOsetter.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return so;
+    }
     
 }
