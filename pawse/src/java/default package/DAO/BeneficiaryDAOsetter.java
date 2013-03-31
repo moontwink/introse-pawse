@@ -32,6 +32,8 @@ public class BeneficiaryDAOsetter extends BeneficiaryDAO {
             pstmt.setString(2, beneficiary.getTelephone());
             pstmt.setString(3, beneficiary.getAddress());
             pstmt.executeUpdate();
+            
+            pstmt.close();
             conn.close();
             
            
@@ -54,6 +56,8 @@ public class BeneficiaryDAOsetter extends BeneficiaryDAO {
             pstmt.setString(2, beneficiary.getTelephone());
             pstmt.setString(3, beneficiary.getAddress());
             pstmt.executeUpdate();
+            
+            pstmt.close();
             conn.close();
            
         } catch (SQLException ex) {
@@ -81,6 +85,8 @@ public class BeneficiaryDAOsetter extends BeneficiaryDAO {
                 results.add(b);
             }
             
+            rs.close();
+            pstmt.close();
             conn.close();
            
         } catch (SQLException ex) {
@@ -99,6 +105,8 @@ public class BeneficiaryDAOsetter extends BeneficiaryDAO {
             PreparedStatement pstmt = conn.prepareStatement("DELETE FROM `beneficiary` where BeneficiaryName= ?");
             pstmt.setString(1, name);
             pstmt.executeUpdate();
+            
+            pstmt.close();
             conn.close();
            
         } catch (SQLException ex) {
@@ -125,6 +133,9 @@ public class BeneficiaryDAOsetter extends BeneficiaryDAO {
                 beneficiary.setAddress(rs.getString(3));
             }
             
+            rs.close();
+            ps.close();
+            connection.close();
             
         }catch(SQLException ex){
             Logger.getLogger(BeneficiaryDAOsetter.class.getName()).log(Level.SEVERE, null, ex);

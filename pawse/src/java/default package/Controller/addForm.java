@@ -66,7 +66,7 @@ public class addForm extends HttpServlet {
             
             CSOA_FormDAOsetter csoaDAO = new CSOA_FormDAOsetter();
             csoaDAO.addCSOA_FormDAO(form);
-            response.sendRedirect("SOindex.jsp");
+            response.sendRedirect("SOview_form.jsp");
             
             
         } finally {            

@@ -31,6 +31,8 @@ public class StudentOrgDAOsetter extends StudentOrgDAO {
             ps.setString(2, so.getUsername());
             ps.setString(3, so.getPassword());
             ps.executeUpdate();
+            
+            ps.close();
             connection.close();
             
         }catch(SQLException ex){
@@ -51,6 +53,8 @@ public class StudentOrgDAOsetter extends StudentOrgDAO {
             ps.setString(2, so.getPassword());
             ps.setString(3, so.getName());
             ps.executeUpdate();
+            
+            ps.close();
             connection.close();
             
         }catch(SQLException ex){
@@ -79,6 +83,10 @@ public class StudentOrgDAOsetter extends StudentOrgDAO {
                 so.setPassword(rs.getString(3));
             }
             
+            rs.close();
+            ps.close();
+            connection.close();
+            
         }catch(SQLException ex){
             Logger.getLogger(StudentOrgDAOsetter.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -104,6 +112,10 @@ public class StudentOrgDAOsetter extends StudentOrgDAO {
                 so.setUsername(rs.getString(2));
                 so.setPassword(rs.getString(3));
             }
+            
+            rs.close();
+            ps.close();
+            connection.close();
             
         }catch(SQLException ex){
             Logger.getLogger(StudentOrgDAOsetter.class.getName()).log(Level.SEVERE, null, ex);

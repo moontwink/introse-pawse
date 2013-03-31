@@ -8,7 +8,9 @@ import DB.DBConnection;
 import Models.CSOA_Form;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -21,7 +23,6 @@ public class CSOA_FormDAOsetter extends CSOA_FormDAO {
     @Override
     public void addCSOA_FormDAO(CSOA_Form csoa_form) {
        try {
-            // TODO code application logic here
             DBConnection myFactory = DBConnection.getInstance(SQLDAO.MYSQL);
             Connection conn = myFactory.getConnection();
             PreparedStatement pstmt = conn.prepareStatement("insert into `csoa_form` (ActivityType, Date_filed, SponsoringOrganization, TitleOfActivity, ActivityDate, Beneficiary, TotalProjectedExpense, Faculty, Faculty_Number, Accomplisher, Accomplisher_Designation, Accomplisher_Number, Accomplisher_Email, Objectives, ProgramFlow, beginTime, endTime) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);");
@@ -50,12 +51,68 @@ public class CSOA_FormDAOsetter extends CSOA_FormDAO {
             pstmt.setString(17, csoa_form.getEndTime());
             
             pstmt.executeUpdate();
+            
+            pstmt.close();
             conn.close();
            
         } catch (SQLException ex) {
-            ex.printStackTrace();
             Logger.getLogger(CSOA_FormDAOsetter.class.getName()).log(Level.SEVERE, null, ex);
         }        
+    }
+
+    @Override
+    public ArrayList<CSOA_Form> getAllForms() {
+        ArrayList<CSOA_Form> results = new ArrayList<CSOA_Form>();
+        CSOA_Form form;
+        
+        try{
+            DBConnection myFactory = DBConnection.getInstance(SQLDAO.MYSQL);
+            Connection connection = myFactory.getConnection();
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM `csoa_form`");
+            ResultSet rs = ps.executeQuery();
+            
+            while(rs.next()){
+                form = new CSOA_Form();
+                form.setIdCSF(rs.getInt("idCSF"));
+                form.setActivityType(rs.getString("ActivityType"));
+                form.setDateFiled(rs.getString("Date_filed"));
+                
+                StudentOrgDAOsetter SOdao = new StudentOrgDAOsetter();
+                form.setSponsor(SOdao.findStudentOrgByName(rs.getString("SponsoringOrganization")));
+                
+                form.setActivityTitle(rs.getString("TitleOfActivity"));
+                form.setActivityDate(rs.getString("ActivityDate"));
+                
+                BeneficiaryDAOsetter bDAO = new BeneficiaryDAOsetter();
+                form.setBeneficiary(bDAO.findBeneficiary(rs.getString("Beneficiary")));
+                
+                form.setExpense(rs.getDouble("TotalProjectedExpense"));
+                form.setFaculty_name(rs.getString("Faculty"));
+                form.setFaculty_cellno(rs.getString("Faculty_Number"));
+                form.setAccomplisher(rs.getString("Accomplisher"));
+                form.setAccomplisherDesignation(rs.getString("Accomplisher_Designation"));
+                form.setAccomplisherNo(rs.getString("Accomplisher_Number"));
+                form.setAccomplisherEmail(rs.getString("Accomplisher_Email"));
+                form.setObjectives(rs.getString("Objectives"));
+                form.setProgramFlow(rs.getString("ProgramFlow"));
+                form.setStatus(rs.getString("Status"));
+                form.setApprovedBy(rs.getString("Coordinator_ApprovedBy"));
+                form.setComments(rs.getString("Comments"));
+                form.setBeginTime(rs.getString("beginTime"));
+                form.setEndTime(rs.getString("endTime"));
+                
+                results.add(form);
+            }
+            
+            rs.close();
+            ps.close();
+            connection.close(); 
+            
+        }catch(SQLException ex){
+            Logger.getLogger(CSOA_FormDAOsetter.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return results;
     }
     
 }
