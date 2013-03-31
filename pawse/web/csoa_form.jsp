@@ -47,9 +47,9 @@
 			</li>
 			<li class="current_page_item"><a href="#"><span>CSOA Form</span></a></li>
 			<li><a href="#"><span>COSCA</span></a></li>
-			<li><span>sign in</span>
+			<li><span>sign out</span>
 				<ul>
-					<li class="first"> <a href="Login.jsp">Log in</a> </li>
+					<li class="first"> <a href="Login.jsp">Log out</a> </li>
 					<li class="last"> <a href="#">Create Account</a> </li>
 				</ul>
 			</li>
@@ -141,7 +141,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Sponsoring Organization</td>
-                                                    <td><input type ="text" value ="<%=user.getName()%>" readonly="true"/></td>
+                                                    <td><input type ="text" value ="<%=user.getName()%>" readonly="true" size="<%=user.getName().length()%>"/></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Title of Activity</td>
