@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Nancy
  */
-public class editAccount extends HttpServlet {
+public class EditAccount extends HttpServlet {
 
     /**
      * Processes requests for both HTTP

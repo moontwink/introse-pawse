@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Nancy
  */
-public class addForm extends HttpServlet {
+public class AddForm extends HttpServlet {
 
     /**
      * Processes requests for both HTTP
