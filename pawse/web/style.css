@@ -294,6 +294,7 @@ img.aligncenter {
 	clear: both;
 	padding-bottom: 10px;
 	border-bottom: 1px solid #DEDEDE;
+        overflow: auto;
 }
 
 .post .title {

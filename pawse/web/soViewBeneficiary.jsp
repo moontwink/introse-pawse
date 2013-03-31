@@ -116,7 +116,7 @@
                                                     for(Beneficiary p : s){
                                                 %>
                                                 <tr class ="benefitCol">
-                                                    <td class ="benefitCol"><%=s.indexOf(p)+1%></td>
+                                                    <td><%=s.indexOf(p)+1%></td>
                                                     <td><%=p.getName()%></td>
                                                     <td><%=p.getAddress()%></td>
                                                 </tr>

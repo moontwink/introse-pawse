@@ -4,9 +4,9 @@
     Author     : Nancy
 --%>
 
+<%@page import="Models.CSOA_Form"%>
+<%@page import="DAO.CSOA_FormDAOsetter"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="Models.Beneficiary"%>
-<%@page import="DAO.BeneficiaryDAOsetter"%>
 <%@page import="Models.StudentOrganization"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -101,123 +101,116 @@
 				<div class="post">
 					<h2 class="title"><a href="#"></a> Community Service <br/>
                                             Outreach Activity Form</h2>
-					<p class="meta">Posted by <a href="#">COSCA</a> on March 28, 2013</p>
+					<p class="meta">Previous Forms Submitted</p>
 					<div class="entry">
                                             
-                                            <form name ="csoaform" action="addForm" method="post">
+                                            <table align="center">
+                                                <tr class="benefitTable">
+                                                    <td>__File Date__</td>
+                                                    <td>____Activity Title____</td>
+                                                    <td>__Activity Date__</td>
+                                                    <td>______Beneficiary______</td>
+                                                    <td>___Status___</td>
+                                                </tr>
+                                                
+                                                <%
+                                                    CSOA_FormDAOsetter csDAO = new CSOA_FormDAOsetter();
+                                                    ArrayList<CSOA_Form> s = csDAO.getAllFormsByOrg(user.getName());
+                                                    for(CSOA_Form f : s){
+                                                %>
+                                                <tr class="benefitCol">
+                                                    <td><%=f.getDateFiled()%></td>
+                                                    <td><%=f.getActivityTitle()%></td>
+                                                    <td><%=f.getActivityDate()%></td>
+                                                    <td><%=f.getBeneficiary().getName()%></td>
+                                                    <td><%
+                                                        if(f.getStatus().equals("Rejected")){
+                                                        %>
+                                                        <a href="" title="Comment: <%=f.getComments()%>"><%=f.getStatus()%></a>
+                                                        <%}else{%>
+                                                            <%=f.getStatus()%>
+                                                            <%}%>
+                                                    </td>
+                                                </tr>
+                                                
+                                                <%}%>
+                                            </table>
+                                            
+                                            <%--
                                             <table>
                                                 <tr>
                                                     <td>Activity Type</td>
-                                                    <td><select name ="actype">
-                                                            <option value="Resource Mobilization" 
-                                                                    title="fund raising for a specific cause; donation of disaster relief items; donation of books and school supplies; cash/check donation; etc.">
-                                                                    Resource Mobilization</option>
-                                                            <option value ="Education for Youth"
-                                                                    title ="tutorial; values formation; skills enhancement; etc.">
-                                                                    Education for Youth</option>
-                                                            <option value ="Education for Adults"
-                                                                    title ="org dev't; local governance; adults literacy; etc.">
-                                                                    Education for Adults</option>
-                                                            <option value ="Advocacy Work"
-                                                                    title ="mass mobilizations; exhibit; forum; distribution of information materials; etc.">
-                                                                    Advocacy Work</option>
-                                                            <option value ="Immersion/Interaction with Institutions"
-                                                                    title ="orphanages; home for the aged; NGOs; etc.">
-                                                                    Immersion/Interaction with Institutions</option>
-                                                            <option value ="Immersion/Interaction with Communities"
-                                                                    title ="COMDEV priority sites; NSTP-CWTS-TRED Community Partners">
-                                                                    Immersion/Interaction with Communities</option>
-                                                            <option value ="Environmental Related"
-                                                                    title ="deforestation work; gathering of seedlings; etc.">
-                                                                    Environmental Related</option>
-                                                            <option value ="Health Related"
-                                                                    title ="medical/dental mission; etc.">
-                                                                    Health Related</option>
-                                                            <option value ="Disaster Response Related"
-                                                                    title ="relief operations; etc.">
-                                                                    Disaster Response Related</option>
-                                                            <option value ="Others">Others</option>
-                                                    </select></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Date Filled</td>
-                                                    <td><input name ="datefiled" type ="date"/></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Sponsoring Organization</td>
-                                                    <td><input name="sponsor" type ="text" value ="<%=user.getName()%>" readonly="true" size="<%=user.getName().length()%>"/></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Title of Activity</td>
-                                                    <td><input name="actitle" type = "text"/></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Date of Activity</td>
-                                                    <td><input name="actdate" type ="date"/></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Beneficiary</td>
-                                                    <td><select name ="selbenefit">
-                                                            <%
-                                                                BeneficiaryDAOsetter dao = new BeneficiaryDAOsetter();
-                                                                ArrayList<Beneficiary> results = dao.getAllBeneficiaries();
-                                                                for(Beneficiary b : results){
-                                                            %>
-                                                            <option value ="<%=b.getName()%>" title="<%=b.getAddress()%>"><%=b.getName()%></option>
-                                                            <%}%>
-                                                        </select>
+                                                    <td>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>Total Projected Expense</td>
-                                                    <td><input name="expense" type ="text"/></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Faculty</td>
-                                                    <td><input name ="faculty" type ="text"/></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Faculty Cellphone Number</td>
-                                                    <td><input name="facultyno" type ="text"/></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Accomplisher Name</td>
-                                                    <td><input name="accomplisher" type ="text"/></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Designation</td>
-                                                    <td><input name="designation" type ="text"/></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Cellphone Number</td>
-                                                    <td><input name="accompNo" type ="text"/></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td>E-mail Address</td>
-                                                    <td><input name="accompEmail" type ="email"/></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Objectives</td>
-                                                    <td><textarea name ="objectives" rows ="4" cols ="40"></textarea></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Program Flow</td>
-                                                    <td><textarea name ="program" rows ="4" cols ="40"></textarea></td>
+                                                    <td></td>
                                                 </tr>
-                                                <tr><td><label>Begin Time:</label></td><td><input name = "beginTime" type = 'time' value=""></td></tr>
-                                                <tr><td><label>End Time:</label></td><td><input name = "endTime" type = 'time' value=""></td></tr>
+                                                <tr><td><label>Begin Time:</label></td><td>
+                                                        
+                                                    </td></tr>
+                                                <tr><td><label>End Time:</label></td><td>
+                                                        
+                                                    </td></tr>
                                                 <tr>
                                                     <td></td>
                                                     <td></td>
                                                 </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td><input type ="submit"/></td>
-                                                </tr>
-                                                
-                                                
-                                            </table>      
-                                            </form>
+                                            </table>
+                                            --%>
                                             
                                         </div>
 				</div>

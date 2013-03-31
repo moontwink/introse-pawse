@@ -61,14 +61,16 @@ public class CSOA_FormDAOsetter extends CSOA_FormDAO {
     }
 
     @Override
-    public ArrayList<CSOA_Form> getAllForms() {
+    public ArrayList<CSOA_Form> getAllFormsByOrg(String sponsor) {
         ArrayList<CSOA_Form> results = new ArrayList<CSOA_Form>();
         CSOA_Form form;
         
         try{
             DBConnection myFactory = DBConnection.getInstance(SQLDAO.MYSQL);
             Connection connection = myFactory.getConnection();
-            PreparedStatement ps = connection.prepareStatement("SELECT * FROM `csoa_form`");
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM `csoa_form` WHERE SponsoringOrganization = ? ORDER BY Date_filed DESC");
+            ps.setString(1, sponsor);
+            
             ResultSet rs = ps.executeQuery();
             
             while(rs.next()){
