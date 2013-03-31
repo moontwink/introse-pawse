@@ -35,25 +35,25 @@
 	<!-- end #header -->
 	<div id="menu-wrapper">
 		<ul id="menu">
-			<li class="current_page_item"><a href="SOindex.jsp"><span>Homepage</span></a></li>
+			<li><a href="SOindex.jsp"><span>Homepage</span></a></li>
 			<li><span>Beneficiary</span>
 				<ul>
-					<li class="first"> <a href="soViewBeneficiary.jsp">View Beneficiaries</a> </li>
+					<li class="first"> <a href="SOviewBeneficiary.jsp">View Beneficiaries</a> </li>
 					<li> <a href="#">Search Beneficiary</a> </li>
 					<li class="last"> <a href="#">Feedback</a> </li>
 				</ul>
 			</li>
 			<li><span>CSOA Form</span>
                             <ul>
-                                <li class="first"><a href="csoa_form.jsp">Submit Form</a></li>
-                                <li class="last"><a href="view_form.jsp">View Previous Forms</a></li>
+                                <li class="first"><a href="SOcsoa_form.jsp">Submit Form</a></li>
+                                <li class="last"><a href="SOview_form.jsp">View Previous Forms</a></li>
                             </ul>
                         </li>
 			<li><a href="#"><span>COSCA</span></a></li>
 			<li><span>sign out</span>
 				<ul>
 					<li class="first"> <a href="Login.jsp">Log out</a> </li>
-					<li class="last"> <a href="editAccount.jsp">View/Edit Account</a> </li>
+					<li class="last"> <a href="SOeditAccount.jsp">View/Edit Account</a> </li>
 				</ul>
 			</li>
 		</ul>
