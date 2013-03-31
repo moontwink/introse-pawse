@@ -40,7 +40,7 @@
 			<li><a href="index.jsp"><span>Homepage</span></a></li>
 			<li><span>Beneficiary</span>
 				<ul>
-					<li class="first"> <a href="genViewBeneficiary.jsp">View Beneficiaries</a> </li>
+					<li class="first"> <a href="soViewBeneficiary.jsp">View Beneficiaries</a> </li>
 					<li> <a href="#">Search Beneficiary</a> </li>
 					<li class="last"> <a href="#">Feedback</a> </li>
 				</ul>
@@ -100,7 +100,7 @@
 					<p class="meta">Posted by <a href="#">COSCA</a> on March 28, 2013</p>
 					<div class="entry">
                                             
-                                            <form>
+                                            <form name ="csoaform" action="addForm" method="post">
                                             <table>
                                                 <tr>
                                                     <td>Activity Type</td>
@@ -137,23 +137,23 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Date Filled</td>
-                                                    <td><input type ="date"/></td>
+                                                    <td><input name ="datefiled" type ="date"/></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Sponsoring Organization</td>
-                                                    <td><input type ="text" value ="<%=user.getName()%>" readonly="true" size="<%=user.getName().length()%>"/></td>
+                                                    <td><input name="sponsororg" type ="text" value ="<%=user.getName()%>" readonly="true" size="<%=user.getName().length()%>"/></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Title of Activity</td>
-                                                    <td><input type = "text"/></td>
+                                                    <td><input name="actitle" type = "text"/></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Date of Activity</td>
-                                                    <td><input type ="date"/></td>
+                                                    <td><input name="actdate" type ="date"/></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Beneficiary</td>
-                                                    <td><select name ="studentorg">
+                                                    <td><select name ="selbenefit">
                                                             <%
                                                                 BeneficiaryDAOsetter dao = new BeneficiaryDAOsetter();
                                                                 ArrayList<Beneficiary> results = dao.getAllBeneficiaries();
@@ -166,31 +166,31 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Total Projected Expense</td>
-                                                    <td><input type ="text"/></td>
+                                                    <td><input name="expense" type ="text"/></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Faculty</td>
-                                                    <td><input type ="text"/></td>
+                                                    <td><input name ="faculty" type ="text"/></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Faculty Cellphone Number</td>
-                                                    <td><input type ="text"/></td>
+                                                    <td><input name="facultyno" type ="text"/></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Accomplisher Name</td>
-                                                    <td><input type ="text"/></td>
+                                                    <td><input name="accomplisher" type ="text"/></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Designation</td>
-                                                    <td><input type ="text"/></td>
+                                                    <td><input name="designation" type ="text"/></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Cellphone Number</td>
-                                                    <td><input type ="text"/></td>
+                                                    <td><input name="accompNo" type ="text"/></td>
                                                 </tr>
                                                 <tr>
                                                     <td>E-mail Address</td>
-                                                    <td><input type ="email"/></td>
+                                                    <td><input name="accompEmail" type ="email"/></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Objectives</td>
@@ -198,7 +198,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Program Flow</td>
-                                                    <td><textarea name ="objectives" rows ="4" cols ="40"></textarea></td>
+                                                    <td><textarea name ="program" rows ="4" cols ="40"></textarea></td>
                                                 </tr>
                                                 <tr><td><label>Begin Time:</label></td><td><input name = "beginTime" type = 'time' value=""></td></tr>
                                                 <tr><td><label>End Time:</label></td><td><input name = "endTime" type = 'time' value=""></td></tr>

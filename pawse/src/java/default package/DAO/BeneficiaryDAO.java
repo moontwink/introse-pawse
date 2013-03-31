@@ -17,5 +17,6 @@ public abstract class BeneficiaryDAO{
    public abstract void editBeneficiary(Beneficiary beneficiary);
    public abstract void deleteBeneficiary(String name);
    public abstract ArrayList<Beneficiary> getAllBeneficiaries();
+   public abstract Beneficiary findBeneficiary(String beneficiaryname);
    
 }

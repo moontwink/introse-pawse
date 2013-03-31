@@ -106,5 +106,32 @@ public class BeneficiaryDAOsetter extends BeneficiaryDAO {
         }
     }
 
+    @Override
+    public Beneficiary findBeneficiary(String beneficiaryname) {
+        Beneficiary beneficiary = null;
+        
+        try{
+            DBConnection myFactory = DBConnection.getInstance(SQLDAO.MYSQL);
+            Connection connection =  myFactory.getConnection();
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM `beneficiary` WHERE username = ?");
+            ps.setString(1, beneficiaryname);
+            
+            ResultSet rs = ps.executeQuery();
+            
+            while(rs.next()){
+                beneficiary = new Beneficiary();
+                beneficiary.setName(rs.getString(1));
+                beneficiary.setTelephone(rs.getString(2));
+                beneficiary.setAddress(rs.getString(3));
+            }
+            
+            
+        }catch(SQLException ex){
+            Logger.getLogger(BeneficiaryDAOsetter.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return beneficiary;
+    }
+
     
 }

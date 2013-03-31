@@ -13,24 +13,27 @@ import java.sql.Date;
 public class CSOA_Form {
     
     private int idCSF;
+    private String activityType;
     private String dateFiled;
     private StudentOrganization sponsor;
     private String activityTitle;
-    private String activityType;
     private String activityDate;
     private Beneficiary beneficiary;
     private double expense;
     private String faculty_name;
-    private int faculty_cellno;
+    private String faculty_cellno;
     
-    private String accomplisherDesignation;
     private String accomplisher;
+    private String accomplisherDesignation;
     private String accomplisherNo;
     private String accomplisherEmail;
     private String objectives;
     private String programFlow;
+    
     private String status;
     private Coordinator approvedBy;
+    private String comments;
+    
     private String beginTime;
     private String endTime;
 
@@ -149,14 +152,14 @@ public class CSOA_Form {
     /**
      * @return the faculty_cellno
      */
-    public int getFaculty_cellno() {
+    public String getFaculty_cellno() {
         return faculty_cellno;
     }
 
     /**
      * @param faculty_cellno the faculty_cellno to set
      */
-    public void setFaculty_cellno(int faculty_cellno) {
+    public void setFaculty_cellno(String faculty_cellno) {
         this.faculty_cellno = faculty_cellno;
     }
 
@@ -313,6 +316,20 @@ public class CSOA_Form {
      */
     public void setActivityDate(String activityDate) {
         this.activityDate = activityDate;
+    }
+
+    /**
+     * @return the comments
+     */
+    public String getComments() {
+        return comments;
+    }
+
+    /**
+     * @param comments the comments to set
+     */
+    public void setComments(String comments) {
+        this.comments = comments;
     }
 
    
