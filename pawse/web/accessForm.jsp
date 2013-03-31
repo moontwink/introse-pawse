@@ -135,11 +135,11 @@
                                                     <td> <%=f.getProgramFlow()%> </td>
                                                 </tr>
                                                 <tr>
-                                                    <td><label>Begin Time :</label></td>
+                                                    <td class="formtable">Begin Time :</td>
                                                     <td> <%=f.getBeginTime()%> </td>
                                                 </tr>
                                                 <tr>
-                                                    <td><label>End Time :</label></td>
+                                                    <td class="formtable">End Time :</td>
                                                     <td> <%=f.getEndTime()%> </td>
                                                 </tr>
                                                 <tr>
