@@ -61,7 +61,7 @@ public class StudentOrgDAOsetter extends StudentOrgDAO {
     }
 
     @Override
-    public StudentOrganization findStudentOrg(String username) {
+    public StudentOrganization findStudentOrgByUsername(String username) {
         StudentOrganization so = null;
         
         try{

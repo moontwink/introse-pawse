@@ -141,7 +141,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Sponsoring Organization</td>
-                                                    <td><input name="sponsororg" type ="text" value ="<%=user.getName()%>" readonly="true" size="<%=user.getName().length()%>"/></td>
+                                                    <td><input name="sponsor" type ="text" value ="<%=user.getName()%>" readonly="true" size="<%=user.getName().length()%>"/></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Title of Activity</td>
