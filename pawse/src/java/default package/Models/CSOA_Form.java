@@ -31,7 +31,7 @@ public class CSOA_Form {
     private String programFlow;
     
     private String status;
-    private Coordinator approvedBy;
+    private String approvedBy;
     private String comments;
     
     private String beginTime;
@@ -264,14 +264,14 @@ public class CSOA_Form {
     /**
      * @return the approvedBy
      */
-    public Coordinator getApprovedBy() {
+    public String getApprovedBy() {
         return approvedBy;
     }
 
     /**
      * @param approvedBy the approvedBy to set
      */
-    public void setApprovedBy(Coordinator approvedBy) {
+    public void setApprovedBy(String approvedBy) {
         this.approvedBy = approvedBy;
     }
 
