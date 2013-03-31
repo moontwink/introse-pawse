@@ -139,7 +139,7 @@
 					<li>
 						<h2>Tracking</h2>
 						<p>You are currently logged in as: <br/>
-                                                    <center class ="accountname"><a href ="editAccount.jsp"><%=user.getName()%></a></center>
+                                                    <center class ="accountname"><a href ="SOeditAccount.jsp"><%=user.getName()%></a></center>
                                                 </p>
 					</li>
 					<li>
