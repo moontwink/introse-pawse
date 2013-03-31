@@ -45,12 +45,17 @@
 					<li class="last"> <a href="#">Feedback</a> </li>
 				</ul>
 			</li>
-			<li><a href="csoa_form.jsp"><span>CSOA Form</span></a></li>
+			<li><span>CSOA Form</span>
+                            <ul>
+                                <li class="first"><a href="csoa_form.jsp">Submit Form</a></li>
+                                <li class="last"><a href="view_form.jsp">View Previous Forms</a></li>
+                            </ul>
+                        </li>
 			<li><a href="#"><span>COSCA</span></a></li>
 			<li><span>sign out</span>
 				<ul>
 					<li class="first"> <a href="index.jsp">Log out</a> </li>
-					<li class="last"> <a href="#">Create Account</a> </li>
+					<li class="last"> <a href="#">View/Edit Account</a> </li>
 				</ul>
 			</li>
 		</ul>
