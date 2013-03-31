@@ -109,7 +109,7 @@
                                                 %>
                                                 <tr class ="benefitCol">
                                                     <td class ="benefitCol"><%=s.indexOf(p)+1%></td>
-                                                    <td><%=p.getName()%></td>
+                                                    <td><a href="" title="Contact Number: <%=p.getTelephone()%>"><%=p.getName()%></a></td>
                                                     <td><%=p.getAddress()%></td>
                                                 </tr>
 

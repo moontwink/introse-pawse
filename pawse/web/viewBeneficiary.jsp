@@ -83,7 +83,7 @@
                                                 %>
                                                 <tr class ="benefitCol">
                                                     <td class ="benefitCol"><%=s.indexOf(p)+1%></td>
-                                                    <td><a href="<%=request.getContextPath()%>/editBeneficiary?benefitEdit=<%=p.getName()%>"><%=p.getName()%></a></td>
+                                                    <td><a href="<%=request.getContextPath()%>/SelectBeneficiary?benefitEdit=<%=p.getName()%>"><%=p.getName()%></a></td>
                                                     <td><%=p.getAddress()%></td>
                                                 </tr>
 
