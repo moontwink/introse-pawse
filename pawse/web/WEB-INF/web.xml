@@ -14,7 +14,7 @@
     </servlet>
     <servlet>
         <servlet-name>addBeneficiary</servlet-name>
-        <servlet-class>Servlets.addBeneficiary</servlet-class>
+        <servlet-class>Servlets.AddBeneficiary</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>HomeView</servlet-name>
@@ -22,19 +22,27 @@
     </servlet>
     <servlet>
         <servlet-name>delBeneficiary</servlet-name>
-        <servlet-class>Controller.delBeneficiary</servlet-class>
+        <servlet-class>Controller.DelBeneficiary</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>createAccount</servlet-name>
-        <servlet-class>Controller.createAccount</servlet-class>
+        <servlet-class>Controller.CreateAccount</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>editAccount</servlet-name>
-        <servlet-class>Controller.editAccount</servlet-class>
+        <servlet-class>Controller.EditAccount</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>addForm</servlet-name>
-        <servlet-class>Controller.addForm</servlet-class>
+        <servlet-class>Controller.AddForm</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>editBeneficiary</servlet-name>
+        <servlet-class>Controller.SelectBeneficiary</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EditBeneficiary</servlet-name>
+        <servlet-class>Controller.EditBeneficiary</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Logging</servlet-name>
@@ -71,6 +79,14 @@
     <servlet-mapping>
         <servlet-name>addForm</servlet-name>
         <url-pattern>/addForm</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>editBeneficiary</servlet-name>
+        <url-pattern>/editBeneficiary</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditBeneficiary</servlet-name>
+        <url-pattern>/EditBeneficiary</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

@@ -5,19 +5,20 @@
 package Controller;
 
 import DAO.BeneficiaryDAOsetter;
+import Models.Beneficiary;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author Nancy
  */
-public class DelBeneficiary extends HttpServlet {
+public class SelectBeneficiary extends HttpServlet {
 
     /**
      * Processes requests for both HTTP
@@ -33,14 +34,14 @@ public class DelBeneficiary extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        HttpSession session = request.getSession();
-        
         try {
-            String name = request.getParameter("delBenefit");
             
             BeneficiaryDAOsetter dao = new BeneficiaryDAOsetter();
-            dao.deleteBeneficiary(name);
-            response.sendRedirect("viewBeneficiary.jsp");
+            Beneficiary beneficiary = dao.findBeneficiary(request.getParameter("benefitEdit"));
+            
+            request.setAttribute("editingBenefit", beneficiary);
+            RequestDispatcher rd = request.getRequestDispatcher("editBeneficiary.jsp");
+            rd.forward(request, response);
             
         } finally {            
             out.close();

@@ -1,13 +1,12 @@
 <%-- 
-    Document   : viewBeneficiary
-    Created on : 03 28, 13, 11:43:12 PM
+    Document   : editBeneficiary
+    Created on : 03 31, 13, 10:28:27 PM
     Author     : Nancy
-    **Note: this is the viewBeneficiary for ADMIN (COSCA/Coordinator)
 --%>
 
 <%@page import="java.util.ArrayList"%>
-<%@page import="DAO.BeneficiaryDAOsetter"%>
 <%@page import="Models.Beneficiary"%>
+<%@page import="DAO.BeneficiaryDAOsetter"%>
 <%@page import="Models.Coordinator"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -52,7 +51,7 @@
 			<li><span>sign out</span>
 				<ul>
 					<li class="first"> <a href="index.jsp">Log out</a> </li>
-					<li class="last"> <a href="createAccount.jsp">Create Account</a> </li>
+					<li class="last"> <a href="#">Create Account</a> </li>
 				</ul>
 			</li>
 		</ul>
@@ -64,36 +63,39 @@
 	<div id="page">
 		<div id="content"><div class="ic"></div>
 			<div class="contentbg">
-				<!--START VIEW BENEFICIARY SECTION-->
+				<!--START BENEFICIARY FORM SECTION-->
 				<div class="post">
-					<h2 class="title"><a href="#"></a> View Beneficiaries </h2>
-					<p class="meta">Updated by <a href="#">COSCA</a> as of March 28, 2013</p>
+					<h2 class="title"><a href="#"></a> Edit Beneficiary </h2>
+					<p class="meta">**edit beneficiary information**</p>
 					<div class="entry">
-                                            
+                                            <form name ="editBeneficiary" action ="EditBeneficiary" method="post">
                                             <table>
-                                                <tr class ="benefitTable">
-                                                    <td>__#__</td>
-                                                    <td>_________BENEFICIARY NAME_________</td>
-                                                    <td>________________ADDRESS________________</td>
+                                                <tr>
+                                                    <%
+                                                    Beneficiary b = (Beneficiary)request.getAttribute("editingBenefit");
+                                                    %>
+                                                    <td>Beneficiary</td>
+                                                    <td>
+                                                        <input name="benefitname" type="text" readonly="true" size ="<%=b.getName().length()%>" value="<%=b.getName()%>"/>
+                                                    </td>
                                                 </tr>
-                                                <%
-                                                    BeneficiaryDAOsetter dao = new BeneficiaryDAOsetter();
-                                                    ArrayList<Beneficiary> s = dao.getAllBeneficiaries();
-                                                    for(Beneficiary p : s){
-                                                %>
-                                                <tr class ="benefitCol">
-                                                    <td class ="benefitCol"><%=s.indexOf(p)+1%></td>
-                                                    <td><a href="<%=request.getContextPath()%>/editBeneficiary?benefitEdit=<%=p.getName()%>"><%=p.getName()%></a></td>
-                                                    <td><%=p.getAddress()%></td>
+                                                <tr>
+                                                    <td>Address</td>
+                                                    <td><textarea name ="address" rows ="4" cols ="40" required ="true"/><%=b.getAddress()%></textarea></td>
                                                 </tr>
-
-                                                <%}%>
-                                                
-                                            </table>    
-                                            
+                                                <tr>
+                                                    <td>Telephone</td>
+                                                    <td><input name="telephone" type ="text" required="true" value="<%=b.getTelephone()%>"/></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type ="submit" value="Cancel"/></td>
+                                                    <td><input type ="submit" value="Edit"/></td>
+                                                </tr>
+                                            </table>      
+                                            </form>
                                         </div>
 				</div>
-                            <!--END VIEW BENEFICIARY SECTION-->
+                            <!--END BENEFICIARY FORM SECTION-->
                             
 				<div style="clear: both;">&nbsp;</div>
 			</div>

@@ -37,7 +37,7 @@
 	<!-- end #header -->
 	<div id="menu-wrapper">
 		<ul id="menu">
-			<li><a href="#"><span>Homepage</span></a></li>
+			<li><a href="Cindex.jsp"><span>Homepage</span></a></li>
 			<li class="current_page_item"><span>Beneficiary</span>
 				<ul>
 					<li class="first"> <a href="addBeneficiary.jsp">Add Beneficiary</a> </li>
@@ -51,7 +51,7 @@
 			<li><span>sign out</span>
 				<ul>
 					<li class="first"> <a href="index.jsp">Log out</a> </li>
-					<li class="last"> <a href="#">Create Account</a> </li>
+					<li class="last"> <a href="createAccount.jsp">Create Account</a> </li>
 				</ul>
 			</li>
 		</ul>
@@ -63,48 +63,14 @@
 	<div id="page">
 		<div id="content"><div class="ic"></div>
 			<div class="contentbg">
-                            <%--
-				<div id="slider">
-					<div class="viewer">
-						<div class="reel">
-							<div id="gallery">
-								<div class="slide"> <a href="images/pics01.jpg"><img src="images/pics01.jpg" width="590" height="300" alt="" /></a> </div>
-								<div class="slide"> <a href="images/pics02.jpg"><img src="images/pics02.jpg" width="590" height="300" alt="" /></a> </div>
-								<div class="slide"> <a href="images/pics03.jpg"><img src="images/pics03.jpg" width="590" height="300" alt="" /></a> </div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<script type="text/javascript">
-				$('#slider').slidertron({
-					viewerSelector: '.viewer',
-					reelSelector: '.viewer .reel',
-					slidesSelector: '.viewer .reel .slide',
-					advanceDelay: 3000,
-					speed: 'slow'
-				});
-			</script>
-				<script type="text/javascript">
-				$('#gallery').poptrox({
-					overlayColor: '#222222',
-					overlayOpacity: 0.75,
-					popupCloserBackgroundColor: '#560969',
-					popupBackgroundColor: '#FFFFFF',
-					popupTextColor: '#aaaaaa',
-					popupPadding: 20
-				});
-			</script>
-                            --%>
 				<!--START BENEFICIARY FORM SECTION-->
 				<div class="post">
 					<h2 class="title"><a href="#"></a> Remove Beneficiary </h2>
-					<p class="meta">Posted by <a href="#">COSCA</a> on March 28, 2013</p>
+					<p class="meta">**select a beneficiary to remove**</p>
 					<div class="entry">
                                             <form name ="delBeneficiary" action ="delBeneficiary" method="post">
-                                            <table>
-                                                <tr><td><strong>**select a beneficiary to remove**</strong></td></tr>
+                                            <table align="center">
                                                 <tr>
-                                                    
                                                     <td>Beneficiary</td>
                                                     <td>
                                                         <select name ="delBenefit">

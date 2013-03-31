@@ -18,7 +18,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author Nancy
  */
-public class addBeneficiary extends HttpServlet {
+public class AddBeneficiary extends HttpServlet {
 
     /**
      * Processes requests for both HTTP

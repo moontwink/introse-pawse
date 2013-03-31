@@ -51,10 +51,11 @@ public class BeneficiaryDAOsetter extends BeneficiaryDAO {
             // TODO code application logic here
             DBConnection myFactory = DBConnection.getInstance(SQLDAO.MYSQL);
             Connection conn = myFactory.getConnection();
-            PreparedStatement pstmt = conn.prepareStatement("update beneficiary set BeneficiaryName=?,BeneficiaryNumber=?,BeneficiaryAddress=? where BeneficiaryName=?");
-           pstmt.setString(1, beneficiary.getName());
-            pstmt.setString(2, beneficiary.getTelephone());
-            pstmt.setString(3, beneficiary.getAddress());
+            PreparedStatement pstmt = conn.prepareStatement("update beneficiary set BeneficiaryNumber=?,BeneficiaryAddress=? where BeneficiaryName=?");
+          
+            pstmt.setString(1, beneficiary.getTelephone());
+            pstmt.setString(2, beneficiary.getAddress());
+            pstmt.setString(3, beneficiary.getName());
             pstmt.executeUpdate();
             
             pstmt.close();

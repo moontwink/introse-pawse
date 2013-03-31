@@ -39,8 +39,8 @@
 			<li><span>Beneficiary</span>
 				<ul>
 					<li class="first"> <a href="addBeneficiary.jsp">Add Beneficiary</a> </li>
-					<li> <a href="delBeneficiary.jsp">Remove Beneficiary</a> </li>
-                                        <li> <a href="viewBeneficiary.jsp">View Beneficiaries</a> </li>
+					<li><a href="delBeneficiary.jsp">Remove Beneficiary</a> </li>
+                                        <li><a href="viewBeneficiary.jsp">View Beneficiaries</a> </li>
 					<li class="last"> <a href="#">Feedback</a> </li>
 				</ul>
 			</li>
