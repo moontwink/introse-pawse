@@ -37,12 +37,16 @@
         <servlet-class>Controller.AddForm</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>editBeneficiary</servlet-name>
+        <servlet-name>SelectBeneficiary</servlet-name>
         <servlet-class>Controller.SelectBeneficiary</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>EditBeneficiary</servlet-name>
         <servlet-class>Controller.EditBeneficiary</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SelectForm</servlet-name>
+        <servlet-class>Controller.SelectForm</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Logging</servlet-name>
@@ -81,12 +85,16 @@
         <url-pattern>/addForm</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>editBeneficiary</servlet-name>
-        <url-pattern>/editBeneficiary</url-pattern>
+        <servlet-name>SelectBeneficiary</servlet-name>
+        <url-pattern>/SelectBeneficiary</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>EditBeneficiary</servlet-name>
         <url-pattern>/EditBeneficiary</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SelectForm</servlet-name>
+        <url-pattern>/SelectForm</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

@@ -116,5 +116,227 @@ public class CSOA_FormDAOsetter extends CSOA_FormDAO {
         
         return results;
     }
+
+    @Override
+    public ArrayList<CSOA_Form> getAllFormsByPending() {
+        ArrayList<CSOA_Form> results = new ArrayList<CSOA_Form>();
+        CSOA_Form form;
+        
+        try{
+            DBConnection myFactory = DBConnection.getInstance(SQLDAO.MYSQL);
+            Connection connection = myFactory.getConnection();
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM `csoa_form` WHERE Status = 'Pending' ORDER BY Status, Date_filed, SponsoringOrganization");
+            
+            ResultSet rs = ps.executeQuery();
+            
+            while(rs.next()){
+                form = new CSOA_Form();
+                form.setIdCSF(rs.getInt("idCSF"));
+                form.setActivityType(rs.getString("ActivityType"));
+                form.setDateFiled(rs.getString("Date_filed"));
+                
+                StudentOrgDAOsetter SOdao = new StudentOrgDAOsetter();
+                form.setSponsor(SOdao.findStudentOrgByName(rs.getString("SponsoringOrganization")));
+                
+                form.setActivityTitle(rs.getString("TitleOfActivity"));
+                form.setActivityDate(rs.getString("ActivityDate"));
+                
+                BeneficiaryDAOsetter bDAO = new BeneficiaryDAOsetter();
+                form.setBeneficiary(bDAO.findBeneficiary(rs.getString("Beneficiary")));
+                
+                form.setExpense(rs.getDouble("TotalProjectedExpense"));
+                form.setFaculty_name(rs.getString("Faculty"));
+                form.setFaculty_cellno(rs.getString("Faculty_Number"));
+                form.setAccomplisher(rs.getString("Accomplisher"));
+                form.setAccomplisherDesignation(rs.getString("Accomplisher_Designation"));
+                form.setAccomplisherNo(rs.getString("Accomplisher_Number"));
+                form.setAccomplisherEmail(rs.getString("Accomplisher_Email"));
+                form.setObjectives(rs.getString("Objectives"));
+                form.setProgramFlow(rs.getString("ProgramFlow"));
+                form.setStatus(rs.getString("Status"));
+                form.setApprovedBy(rs.getString("Coordinator_ApprovedBy"));
+                form.setComments(rs.getString("Comments"));
+                form.setBeginTime(rs.getString("beginTime"));
+                form.setEndTime(rs.getString("endTime"));
+                
+                results.add(form);
+            }
+            
+            rs.close();
+            ps.close();
+            connection.close(); 
+            
+        }catch(SQLException ex){
+            Logger.getLogger(CSOA_FormDAOsetter.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return results;
+    }
+
+    @Override
+    public ArrayList<CSOA_Form> getAllForms() {
+        ArrayList<CSOA_Form> results = new ArrayList<CSOA_Form>();
+        CSOA_Form form;
+        
+        try{
+            DBConnection myFactory = DBConnection.getInstance(SQLDAO.MYSQL);
+            Connection connection = myFactory.getConnection();
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM `csoa_form` ORDER BY Status, Date_filed, SponsoringOrganization");
+            
+            ResultSet rs = ps.executeQuery();
+            
+            while(rs.next()){
+                form = new CSOA_Form();
+                form.setIdCSF(rs.getInt("idCSF"));
+                form.setActivityType(rs.getString("ActivityType"));
+                form.setDateFiled(rs.getString("Date_filed"));
+                
+                StudentOrgDAOsetter SOdao = new StudentOrgDAOsetter();
+                form.setSponsor(SOdao.findStudentOrgByName(rs.getString("SponsoringOrganization")));
+                
+                form.setActivityTitle(rs.getString("TitleOfActivity"));
+                form.setActivityDate(rs.getString("ActivityDate"));
+                
+                BeneficiaryDAOsetter bDAO = new BeneficiaryDAOsetter();
+                form.setBeneficiary(bDAO.findBeneficiary(rs.getString("Beneficiary")));
+                
+                form.setExpense(rs.getDouble("TotalProjectedExpense"));
+                form.setFaculty_name(rs.getString("Faculty"));
+                form.setFaculty_cellno(rs.getString("Faculty_Number"));
+                form.setAccomplisher(rs.getString("Accomplisher"));
+                form.setAccomplisherDesignation(rs.getString("Accomplisher_Designation"));
+                form.setAccomplisherNo(rs.getString("Accomplisher_Number"));
+                form.setAccomplisherEmail(rs.getString("Accomplisher_Email"));
+                form.setObjectives(rs.getString("Objectives"));
+                form.setProgramFlow(rs.getString("ProgramFlow"));
+                form.setStatus(rs.getString("Status"));
+                form.setApprovedBy(rs.getString("Coordinator_ApprovedBy"));
+                form.setComments(rs.getString("Comments"));
+                form.setBeginTime(rs.getString("beginTime"));
+                form.setEndTime(rs.getString("endTime"));
+                
+                results.add(form);
+            }
+            
+            rs.close();
+            ps.close();
+            connection.close(); 
+            
+        }catch(SQLException ex){
+            Logger.getLogger(CSOA_FormDAOsetter.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return results;
+    }
+
+    @Override
+    public ArrayList<CSOA_Form> getAllFormsByApproved() {
+        ArrayList<CSOA_Form> results = new ArrayList<CSOA_Form>();
+        CSOA_Form form;
+        
+        try{
+            DBConnection myFactory = DBConnection.getInstance(SQLDAO.MYSQL);
+            Connection connection = myFactory.getConnection();
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM `csoa_form` WHERE Status = 'Approved' ORDER BY Status, Date_filed, SponsoringOrganization");
+            
+            ResultSet rs = ps.executeQuery();
+            
+            while(rs.next()){
+                form = new CSOA_Form();
+                form.setIdCSF(rs.getInt("idCSF"));
+                form.setActivityType(rs.getString("ActivityType"));
+                form.setDateFiled(rs.getString("Date_filed"));
+                
+                StudentOrgDAOsetter SOdao = new StudentOrgDAOsetter();
+                form.setSponsor(SOdao.findStudentOrgByName(rs.getString("SponsoringOrganization")));
+                
+                form.setActivityTitle(rs.getString("TitleOfActivity"));
+                form.setActivityDate(rs.getString("ActivityDate"));
+                
+                BeneficiaryDAOsetter bDAO = new BeneficiaryDAOsetter();
+                form.setBeneficiary(bDAO.findBeneficiary(rs.getString("Beneficiary")));
+                
+                form.setExpense(rs.getDouble("TotalProjectedExpense"));
+                form.setFaculty_name(rs.getString("Faculty"));
+                form.setFaculty_cellno(rs.getString("Faculty_Number"));
+                form.setAccomplisher(rs.getString("Accomplisher"));
+                form.setAccomplisherDesignation(rs.getString("Accomplisher_Designation"));
+                form.setAccomplisherNo(rs.getString("Accomplisher_Number"));
+                form.setAccomplisherEmail(rs.getString("Accomplisher_Email"));
+                form.setObjectives(rs.getString("Objectives"));
+                form.setProgramFlow(rs.getString("ProgramFlow"));
+                form.setStatus(rs.getString("Status"));
+                form.setApprovedBy(rs.getString("Coordinator_ApprovedBy"));
+                form.setComments(rs.getString("Comments"));
+                form.setBeginTime(rs.getString("beginTime"));
+                form.setEndTime(rs.getString("endTime"));
+                
+                results.add(form);
+            }
+            
+            rs.close();
+            ps.close();
+            connection.close(); 
+            
+        }catch(SQLException ex){
+            Logger.getLogger(CSOA_FormDAOsetter.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return results;
+    }
+
+    @Override
+    public CSOA_Form findForm(int idCSF) {
+        CSOA_Form form = null;
+        
+        try{
+            DBConnection myFactory = DBConnection.getInstance(SQLDAO.MYSQL);
+            Connection connection =  myFactory.getConnection();
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM `csoa_form` WHERE idCSF = ?");
+            ps.setInt(1, idCSF);
+            
+            ResultSet rs = ps.executeQuery();
+            
+            while(rs.next()){
+                form = new CSOA_Form();
+                form.setIdCSF(rs.getInt("idCSF"));
+                form.setActivityType(rs.getString("ActivityType"));
+                form.setDateFiled(rs.getString("Date_filed"));
+                
+                StudentOrgDAOsetter SOdao = new StudentOrgDAOsetter();
+                form.setSponsor(SOdao.findStudentOrgByName(rs.getString("SponsoringOrganization")));
+                
+                form.setActivityTitle(rs.getString("TitleOfActivity"));
+                form.setActivityDate(rs.getString("ActivityDate"));
+                
+                BeneficiaryDAOsetter bDAO = new BeneficiaryDAOsetter();
+                form.setBeneficiary(bDAO.findBeneficiary(rs.getString("Beneficiary")));
+                
+                form.setExpense(rs.getDouble("TotalProjectedExpense"));
+                form.setFaculty_name(rs.getString("Faculty"));
+                form.setFaculty_cellno(rs.getString("Faculty_Number"));
+                form.setAccomplisher(rs.getString("Accomplisher"));
+                form.setAccomplisherDesignation(rs.getString("Accomplisher_Designation"));
+                form.setAccomplisherNo(rs.getString("Accomplisher_Number"));
+                form.setAccomplisherEmail(rs.getString("Accomplisher_Email"));
+                form.setObjectives(rs.getString("Objectives"));
+                form.setProgramFlow(rs.getString("ProgramFlow"));
+                form.setStatus(rs.getString("Status"));
+                form.setApprovedBy(rs.getString("Coordinator_ApprovedBy"));
+                form.setComments(rs.getString("Comments"));
+                form.setBeginTime(rs.getString("beginTime"));
+                form.setEndTime(rs.getString("endTime"));
+            }
+            
+            rs.close();
+            ps.close();
+            connection.close();
+            
+        }catch(SQLException ex){
+            Logger.getLogger(CSOA_FormDAOsetter.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return form;
+    }
     
 }

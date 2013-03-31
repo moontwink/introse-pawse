@@ -44,7 +44,13 @@
 					<li class="last"> <a href="#">Feedback</a> </li>
 				</ul>
 			</li>
-			<li><a href="csoa_form.jsp"><span>CSOA Form</span></a></li>
+			<li><a href="viewForm.jsp"><span>CSOA Form</span></a>
+                            <ul>
+                                <li class="first"><a href="">On Pending</a></li>
+                                <li><a href="">Approved</a></li>
+                                <li class="last"><a href="viewForm.jsp">Previously Submitted</a></li>
+                            </ul>
+                        </li>
 			<li><a href="#"><span>COSCA</span></a></li>
 			<li><span>sign out</span>
 				<ul>
