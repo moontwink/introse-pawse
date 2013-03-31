@@ -39,7 +39,7 @@ public class SelectForm extends HttpServlet {
             CSOA_Form form = dao.findForm(Integer.parseInt(request.getParameter("formAccess")));
             
             request.setAttribute("accessingForm", form);
-            RequestDispatcher rd = request.getRequestDispatcher(".jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("accessForm.jsp");
             rd.forward(request, response);
             
         } finally {            

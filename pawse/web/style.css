@@ -511,3 +511,12 @@ img.aligncenter {
     color: tomato;
     letter-spacing: 2px;
 }
+
+.formtable{
+    font-size: 13px;
+    color: tomato;
+    font-weight: bolder;
+    text-align: right;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}

@@ -1,6 +1,6 @@
 <%-- 
-    Document   : viewForm
-    Created on : 04 1, 13, 12:20:13 AM
+    Document   : accessForm
+    Created on : 04 1, 13, 1:37:04 AM
     Author     : Nancy
 --%>
 
@@ -64,122 +64,89 @@
 		<div id="content"><div class="ic"></div>
 			<div class="contentbg">
 				<!--START CSOA FORM SECTION-->
+                                <%
+                                    CSOA_Form f = (CSOA_Form)request.getAttribute("accessingForm");
+                                %>
 				<div class="post">
 					<h2 class="title"><a href="#"></a> Community Service <br/>
                                             Outreach Activity Form</h2>
-					<p class="meta">CSOA Forms Submitted By Student Organizations</p>
+					<p class="meta">CSOA Form ID <%=f.getIdCSF()%></p>
 					<div class="entry">
                                             
-                                            <table align="center">
-                                                <tr class="benefitTable">
-                                                    <td>__File Number__</td>
-                                                    <td>____Sponsoring Organization____</td>
-                                                    <td>__Activity Date__</td>
-                                                    <td>___Status___</td>
-                                                </tr>
-                                                
-                                                <%
-                                                    CSOA_FormDAOsetter csDAO = new CSOA_FormDAOsetter();
-                                                    ArrayList<CSOA_Form> s = csDAO.getAllForms();
-                                                    for(CSOA_Form f : s){
-                                                %>
-                                                <tr class="benefitCol">
-                                                    <td><a href="<%=request.getContextPath()%>/SelectForm?formAccess=<%=f.getIdCSF()%>"><%=f.getIdCSF()%></a></td>
-                                                    
-                                                    <td><%=f.getSponsor().getName()%></td>
-                                                    <td><%=f.getActivityDate()%></td>
-                                                    
-                                                    <td>
-                                                        <%
-                                                        if(f.getStatus().equals("Rejected")){
-                                                        %>
-                                                        <a href="" title="Comment: <%=f.getComments()%>"><%=f.getStatus()%></a>
-                                                        <%}else if(f.getStatus().equals("Approved")){%>
-                                                            <%=f.getStatus()%>
-                                                        <%}else{%>
-                                                            <%=f.getStatus()%>
-                                                        <%}%>
-                                                    </td>
-                                                </tr>
-                                                
-                                                <%}%>
-                                            </table>
-                                            
-                                            <%--
-                                            <table>
+                                            <table align ="center">
                                                 <tr>
-                                                    <td>Activity Type</td>
-                                                    <td></td>
+                                                    <td class="formtable">Activity Type :</td>
+                                                    <td> <%=f.getActivityType()%> </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Date Filled</td>
-                                                    <td></td>
+                                                    <td class="formtable">Date Filed :</td>
+                                                    <td> <%=f.getDateFiled()%> </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Sponsoring Organization</td>
-                                                    <td></td>
+                                                    <td class="formtable">Sponsoring Organization :</td>
+                                                    <td> <%=f.getSponsor().getName()%> </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Title of Activity</td>
-                                                    <td></td>
+                                                    <td class="formtable">Title of Activity :</td>
+                                                    <td> <%=f.getActivityTitle()%> </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Date of Activity</td>
-                                                    <td></td>
+                                                    <td class="formtable">Date of Activity :</td>
+                                                    <td> <%=f.getActivityDate()%> </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Beneficiary</td>
-                                                    <td>
-                                                    </td>
+                                                    <td class="formtable">Beneficiary :</td>
+                                                    <td> <%=f.getBeneficiary().getName()%> </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Total Projected Expense</td>
-                                                    <td></td>
+                                                    <td class="formtable">Total Projected Expense :</td>
+                                                    <td> <%=f.getExpense()%> </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Faculty</td>
-                                                    <td></td>
+                                                    <td class="formtable">Faculty :</td>
+                                                    <td> <%=f.getFaculty_name()%> </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Faculty Cellphone Number</td>
-                                                    <td></td>
+                                                    <td class="formtable">Faculty Cellphone Number :</td>
+                                                    <td> <%=f.getFaculty_cellno()%> </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Accomplisher Name</td>
-                                                    <td></td>
+                                                    <td class="formtable">Accomplisher Name :</td>
+                                                    <td> <%=f.getAccomplisher()%> </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Designation</td>
-                                                    <td></td>
+                                                    <td class="formtable">Designation :</td>
+                                                    <td> <%=f.getAccomplisherDesignation()%> </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Cellphone Number</td>
-                                                    <td></td>
+                                                    <td class="formtable">Cellphone Number :</td>
+                                                    <td> <%=f.getAccomplisherNo()%> </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>E-mail Address</td>
-                                                    <td></td>
+                                                    <td class="formtable">E-mail Address :</td>
+                                                    <td> <%=f.getAccomplisherEmail()%> </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Objectives</td>
-                                                    <td></td>
+                                                    <td class="formtable">Objectives :</td>
+                                                    <td> <%=f.getObjectives()%> </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Program Flow</td>
-                                                    <td></td>
+                                                    <td class="formtable">Program Flow :</td>
+                                                    <td> <%=f.getProgramFlow()%> </td>
                                                 </tr>
-                                                <tr><td><label>Begin Time:</label></td><td>
-                                                        
-                                                    </td></tr>
-                                                <tr><td><label>End Time:</label></td><td>
-                                                        
-                                                    </td></tr>
+                                                <tr>
+                                                    <td><label>Begin Time :</label></td>
+                                                    <td> <%=f.getBeginTime()%> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label>End Time :</label></td>
+                                                    <td> <%=f.getEndTime()%> </td>
+                                                </tr>
                                                 <tr>
                                                     <td></td>
                                                     <td></td>
                                                 </tr>
                                             </table>
-                                            --%>
                                             
                                         </div>
 				</div>
