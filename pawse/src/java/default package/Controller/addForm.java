@@ -36,12 +36,15 @@ public class addForm extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
+            out.println("<html><body>SERVLET /ADDFORM ..STRING..SPONSOR.."+request.getParameter("sponsor")+ "</body></html>");
+            
+            /*
             CSOA_Form form = new CSOA_Form();
             form.setActivityType(request.getParameter("actype"));
             form.setDateFiled(request.getParameter("datefiled"));
             
             StudentOrgDAOsetter soDAO = new StudentOrgDAOsetter();
-            form.setSponsor(soDAO.findStudentOrg(request.getParameter("sponsororg")));
+            form.setSponsor(soDAO.findStudentOrg(request.getParameter("sponsor")));
             
             form.setActivityTitle(request.getParameter("actitle"));
             form.setActivityDate(request.getParameter("actdate"));
@@ -63,7 +66,8 @@ public class addForm extends HttpServlet {
             
             CSOA_FormDAOsetter csoaDAO = new CSOA_FormDAOsetter();
             csoaDAO.addCSOA_FormDAO(form);
-            response.sendRedirect("editAccount.jsp");
+            response.sendRedirect("SOindex.jsp");
+            */
             
         } finally {            
             out.close();

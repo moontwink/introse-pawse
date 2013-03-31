@@ -53,6 +53,7 @@ public class CSOA_FormDAOsetter extends CSOA_FormDAO {
             conn.close();
            
         } catch (SQLException ex) {
+            ex.printStackTrace();
             Logger.getLogger(CSOA_FormDAOsetter.class.getName()).log(Level.SEVERE, null, ex);
         }        
     }
