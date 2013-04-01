@@ -45,7 +45,6 @@ public class ProcessForm extends HttpServlet {
             }else if(button.equals("Reject")){
                 form.setStatus("Rejected");
             }
-            
             dao.editCSOA_FormByProcess(form);
             response.sendRedirect("viewForm.jsp");
             
