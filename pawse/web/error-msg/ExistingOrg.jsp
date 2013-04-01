@@ -20,8 +20,6 @@
 <script type="text/javascript" src="../js/jquery.poptrox-1.0.js"></script>
 </head>
 <body>
-    
-    <%Coordinator c = (Coordinator)session.getAttribute("user");%>
 <div id="wrapper">
 	<div id="header-wrapper">
 		<div id="header">
@@ -34,21 +32,20 @@
 	<!-- end #header -->
 	<div id="menu-wrapper">
 		<ul id="menu">
-			<li><a href="../Cindex.jsp"><span>Homepage</span></a></li>
-			<li class="current_page_item"><span>Beneficiary</span>
+			<li class="current_page_item"><a href="index.jsp"><span>Homepage</span></a></li>
+			<li><span>Beneficiary</span>
 				<ul>
-					<li class="first"> <a href="../addBeneficiary.jsp">Add Beneficiary</a> </li>
-					<li> <a href="../delBeneficiary.jsp">Remove Beneficiary</a> </li>
-                                        <li> <a href="../viewBeneficiary.jsp">View Beneficiaries</a> </li>
+					<li class="first"> <a href="genViewBeneficiary.jsp">View Beneficiaries</a> </li>
+					<li> <a href="#">Search Beneficiary</a> </li>
 					<li class="last"> <a href="#">Feedback</a> </li>
 				</ul>
 			</li>
-			<li><a href=""><span>CSOA Form</span></a></li>
-			<li><a href="#"><span>COSCA</span></a></li>
-			<li><span>sign out</span>
+			<li><a href=""><span>feedback</span></a></li>
+			<li><a href="cosca.jsp"><span>COSCA</span></a></li>
+			<li><span>sign in</span>
 				<ul>
-					<li class="first"> <a href="../index.jsp">Log out</a> </li>
-					<li class="last"> <a href="../createAccount.jsp">Create Account</a> </li>
+					<li class="first"> <a href="Login.jsp">Log in</a> </li>
+					<li class="last"> <a href="createAccount.jsp">Create Account</a> </li>
 				</ul>
 			</li>
 		</ul>
@@ -132,9 +129,6 @@
 				<ul>
 					<li>
 						<h2>Tracking</h2>
-						<p>You are currently logged in as: 
-                                                    <strong><%=c.getUsername()%></strong>
-                                                </p>
 					</li>
 					<li>
 						<h2>Feedback</h2>

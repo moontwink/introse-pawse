@@ -1,11 +1,11 @@
 <%-- 
-    Document   : accessForm
-    Created on : 04 1, 13, 1:37:04 AM
+    Document   : SOaccessForm
+    Created on : 04 1, 13, 7:07:51 PM
     Author     : Nancy
 --%>
 
 <%@page import="Models.CSOA_Form"%>
-<%@page import="Models.Coordinator"%>
+<%@page import="Models.StudentOrganization"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -21,8 +21,7 @@
 <script type="text/javascript" src="./js/jquery.poptrox-1.0.js"></script>
 </head>
 <body>
-    
-    <%Coordinator c = (Coordinator)session.getAttribute("user");%>
+    <%StudentOrganization user = (StudentOrganization)session.getAttribute("user");%>
 <div id="wrapper">
 	<div id="header-wrapper">
 		<div id="header">
@@ -35,21 +34,25 @@
 	<!-- end #header -->
 	<div id="menu-wrapper">
 		<ul id="menu">
-			<li><a href="Cindex.jsp"><span>Homepage</span></a></li>
-			<li class="current_page_item"><span>Beneficiary</span>
+			<li><a href="SOindex.jsp"><span>Homepage</span></a></li>
+			<li><span>Beneficiary</span>
 				<ul>
-					<li class="first"> <a href="addBeneficiary.jsp">Add Beneficiary</a> </li>
-					<li> <a href="delBeneficiary.jsp">Remove Beneficiary</a> </li>
-                                        <li> <a href="viewBeneficiary.jsp">View Beneficiaries</a> </li>
+					<li class="first"> <a href="SOviewBeneficiary.jsp">View Beneficiaries</a> </li>
+					<li> <a href="#">Search Beneficiary</a> </li>
 					<li class="last"> <a href="#">Feedback</a> </li>
 				</ul>
 			</li>
-			<li><a href=""><span>CSOA Form</span></a></li>
+			<li><span>CSOA Form</span>
+                            <ul>
+                                <li class="first"><a href="SOcsoa_form.jsp">Submit Form</a></li>
+                                <li class="last"><a href="SOview_form.jsp">View Previous Forms</a></li>
+                            </ul>
+                        </li>
 			<li><a href="#"><span>COSCA</span></a></li>
 			<li><span>sign out</span>
 				<ul>
-					<li class="first"> <a href="index.jsp">Log out</a> </li>
-					<li class="last"> <a href="createAccount.jsp">Create Account</a> </li>
+					<li class="first"> <a href="Login.jsp">Log out</a> </li>
+					<li class="last"> <a href="SOeditAccount.jsp">View/Edit Account</a> </li>
 				</ul>
 			</li>
 		</ul>
@@ -148,33 +151,7 @@
                                                 </tr>
                                                 <tr><td><br/></td></tr>
                                             </table>
-                                                
-                                                <%
-                                                      if(f.getStatus().compareToIgnoreCase("Pending") == 0){
-                                                %>
-                                            <hr/>
-                                            <table align="center">    
-                                                <form name="formProcess" action="ProcessForm?formAccess=<%=f.getIdCSF()%>" method="post">
-                                                <tr>
-                                                    
-                                                    <td></td>
-                                                    <td><input type="submit" name="act" value="Reject"/></td>
-                                                    <td><input type="submit" name="act" value="Approve"/></td>
-                                                    <td></td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Coordinator in charge</td>
-                                                    <td><input name="incharge" type="text" required="true"/></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Comments</td>
-                                                    <td colspan="3"><textarea name="comments" cols="25" rows="2" placeholder="comments"></textarea></td>
-                                                </tr>
-                                                
-                                                </form>
-                                            </table>
-                                                <%}%>
+                                            
                                         </div>
 				</div>
                             <!--END CSOA FORM SECTION-->
@@ -188,8 +165,8 @@
 				<ul>
 					<li>
 						<h2>Tracking</h2>
-						<p>You are currently logged in as: 
-                                                    <strong><%=c.getUsername()%></strong>
+						<p>You are currently logged in as: <br/>
+                                                    <center class ="accountname"><a href ="SOeditAccount.jsp"><%=user.getName()%></a></center>
                                                 </p>
 					</li>
 					<li>
@@ -223,3 +200,4 @@
 <!-- end #footer -->
 </body>
 </html>
+

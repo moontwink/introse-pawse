@@ -5,9 +5,6 @@
 --%>
 
 <%@page import="Models.StudentOrganization"%>
-<%@page import="java.util.ArrayList"%>
-<%@page import="Models.Beneficiary"%>
-<%@page import="DAO.BeneficiaryDAOsetter"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -67,38 +64,6 @@
 	<div id="page">
 		<div id="content"><div class="ic"></div>
 			<div class="contentbg">
-                            <%--
-				<div id="slider">
-					<div class="viewer">
-						<div class="reel">
-							<div id="gallery">
-								<div class="slide"> <a href="images/pics01.jpg"><img src="images/pics01.jpg" width="590" height="300" alt="" /></a> </div>
-								<div class="slide"> <a href="images/pics02.jpg"><img src="images/pics02.jpg" width="590" height="300" alt="" /></a> </div>
-								<div class="slide"> <a href="images/pics03.jpg"><img src="images/pics03.jpg" width="590" height="300" alt="" /></a> </div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<script type="text/javascript">
-				$('#slider').slidertron({
-					viewerSelector: '.viewer',
-					reelSelector: '.viewer .reel',
-					slidesSelector: '.viewer .reel .slide',
-					advanceDelay: 3000,
-					speed: 'slow'
-				});
-			</script>
-				<script type="text/javascript">
-				$('#gallery').poptrox({
-					overlayColor: '#222222',
-					overlayOpacity: 0.75,
-					popupCloserBackgroundColor: '#560969',
-					popupBackgroundColor: '#FFFFFF',
-					popupTextColor: '#aaaaaa',
-					popupPadding: 20
-				});
-			</script>
-                            --%>
 				<!--START VIEW/EDIT ACCOUNT FORM SECTION-->
 				<div class="post">
 					<h2 class="title"><a href="#">View/Edit Account</a></h2>

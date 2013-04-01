@@ -347,7 +347,7 @@ public class CSOA_FormDAOsetter extends CSOA_FormDAO {
             DBConnection MyFactory = DBConnection.getInstance(SQLDAO.MYSQL);
             Connection connection = MyFactory.getConnection();
             PreparedStatement ps = connection.prepareStatement("UPDATE `csoa_form` "
-                    + "SET status = ?, coordinator_approvedby = ?, comments = ? WHERE idCSF = ?");
+                    + "SET Status = ?, Coordinator_ApprovedBy = ?, Comments = ? WHERE idCSF = ?");
             
             ps.setString(1, csoa_form.getStatus());
             ps.setString(2, csoa_form.getApprovedBy());

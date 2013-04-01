@@ -41,7 +41,7 @@ public class CreateAccount extends HttpServlet {
             
             StudentOrgDAOsetter dao = new StudentOrgDAOsetter();
             if(dao.addStudentOrganization(so)){
-                response.sendRedirect("ExistingOrg.jsp");
+                response.sendRedirect("error-msg/ExistingOrg.jsp");
             }else{
                 response.sendRedirect("index.jsp");
             }
