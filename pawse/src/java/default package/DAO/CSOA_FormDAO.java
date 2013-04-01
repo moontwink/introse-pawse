@@ -14,6 +14,7 @@ import java.util.ArrayList;
  */
 public abstract class CSOA_FormDAO{
     public abstract void addCSOA_FormDAO(CSOA_Form csoa_form);
+    public abstract void editCSOA_FormByProcess(CSOA_Form csoa_form);
     public abstract CSOA_Form findForm(int idCSF);
     public abstract ArrayList<CSOA_Form> getAllFormsByOrg(String sponsor);
     public abstract ArrayList<CSOA_Form> getAllForms();
