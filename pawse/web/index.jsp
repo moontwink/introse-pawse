@@ -33,16 +33,15 @@
 	<!-- end #header -->
 	<div id="menu-wrapper">
 		<ul id="menu">
-			<li class="current_page_item"><a href="#"><span>Homepage</span></a></li>
+			<li class="current_page_item"><a href="index.jsp"><span>Homepage</span></a></li>
 			<li><span>Beneficiary</span>
 				<ul>
 					<li class="first"> <a href="genViewBeneficiary.jsp">View Beneficiaries</a> </li>
-					<li> <a href="#">Search Beneficiary</a> </li>
-					<li class="last"> <a href="#">Feedback</a> </li>
+					<li class="last"> <a href="#">Search Beneficiary</a> </li>
 				</ul>
 			</li>
-			<li><a href="csoa_form.jsp"><span>CSOA Form</span></a></li>
-			<li><a href="#"><span>COSCA</span></a></li>
+			<li><a href=""><span>feedback</span></a></li>
+			<li><a href="cosca.jsp"><span>COSCA</span></a></li>
 			<li><span>sign in</span>
 				<ul>
 					<li class="first"> <a href="Login.jsp">Log in</a> </li>

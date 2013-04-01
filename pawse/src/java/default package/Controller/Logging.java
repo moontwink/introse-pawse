@@ -57,6 +57,7 @@ public class Logging extends HttpServlet {
             
             if(username.equals("admin") && password.equals("12345")){
                     Coordinator c = new Coordinator();
+                    c.setName("COSCA");
                     c.setUsername(username);
                     c.setPassword(password);
                     session.setAttribute("user", c);

@@ -37,17 +37,23 @@
 	<!-- end #header -->
 	<div id="menu-wrapper">
 		<ul id="menu">
-			<li><a href="Cindex.jsp"><span>Homepage</span></a></li>
-			<li class="current_page_item"><span>Beneficiary</span>
+			<li class="current_page_item"><a href="Cindex.jsp"><span>Homepage</span></a></li>
+			<li><span>Beneficiary</span>
 				<ul>
 					<li class="first"> <a href="addBeneficiary.jsp">Add Beneficiary</a> </li>
-					<li> <a href="delBeneficiary.jsp">Remove Beneficiary</a> </li>
-                                        <li> <a href="viewBeneficiary.jsp">View Beneficiaries</a> </li>
+					<li><a href="delBeneficiary.jsp">Remove Beneficiary</a> </li>
+                                        <li><a href="viewBeneficiary.jsp">View Beneficiaries</a> </li>
 					<li class="last"> <a href="#">Feedback</a> </li>
 				</ul>
 			</li>
-			<li><a href=""><span>CSOA Form</span></a></li>
-			<li><a href="#"><span>COSCA</span></a></li>
+			<li><span>CSOA Form</span>
+                            <ul>
+                                <li class="first"><a href="viewFormPending.jsp">On Pending</a></li>
+                                <li><a href="viewFormApproved.jsp">Approved</a></li>
+                                <li class="last"><a href="viewForm.jsp">Previously Submitted</a></li>
+                            </ul>
+                        </li>
+			<li><a href="cosca.jsp"><span>COSCA</span></a></li>
 			<li><span>sign out</span>
 				<ul>
 					<li class="first"> <a href="index.jsp">Log out</a> </li>

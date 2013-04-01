@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Nancy
  */
-public class ProcessForm extends HttpServlet {
+public class SOselectForm extends HttpServlet {
 
     /**
      * Processes requests for both HTTP
@@ -35,22 +35,12 @@ public class ProcessForm extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
-            String button = request.getParameter("act");
-            
             CSOA_FormDAOsetter dao = new CSOA_FormDAOsetter();
             CSOA_Form form = dao.findForm(Integer.parseInt(request.getParameter("formAccess")));
             
-            if(button.equals("Approve")){
-                form.setStatus("Approved");
-            }else if(button.equals("Reject")){
-                form.setStatus("Rejected");
-            }
-            form.setApprovedBy(request.getParameter("incharge"));
-            form.setComments(request.getParameter("comments"));
-            
-            dao.editCSOA_FormByProcess(form);
-            response.sendRedirect("viewForm.jsp");
-            
+            request.setAttribute("accessingForm", form);
+            RequestDispatcher rd = request.getRequestDispatcher("SOaccessForm.jsp");
+            rd.forward(request, response);
         } finally {            
             out.close();
         }

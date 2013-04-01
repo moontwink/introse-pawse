@@ -37,17 +37,23 @@
 	<!-- end #header -->
 	<div id="menu-wrapper">
 		<ul id="menu">
-			<li><a href="Cindex.jsp"><span>Homepage</span></a></li>
-			<li class="current_page_item"><span>Beneficiary</span>
+			<li class="current_page_item"><a href="Cindex.jsp"><span>Homepage</span></a></li>
+			<li><span>Beneficiary</span>
 				<ul>
 					<li class="first"> <a href="addBeneficiary.jsp">Add Beneficiary</a> </li>
-					<li> <a href="delBeneficiary.jsp">Remove Beneficiary</a> </li>
-                                        <li> <a href="viewBeneficiary.jsp">View Beneficiaries</a> </li>
+					<li><a href="delBeneficiary.jsp">Remove Beneficiary</a> </li>
+                                        <li><a href="viewBeneficiary.jsp">View Beneficiaries</a> </li>
 					<li class="last"> <a href="#">Feedback</a> </li>
 				</ul>
 			</li>
-			<li><a href=""><span>CSOA Form</span></a></li>
-			<li><a href="#"><span>COSCA</span></a></li>
+			<li><span>CSOA Form</span>
+                            <ul>
+                                <li class="first"><a href="viewFormPending.jsp">On Pending</a></li>
+                                <li><a href="viewFormApproved.jsp">Approved</a></li>
+                                <li class="last"><a href="viewForm.jsp">Previously Submitted</a></li>
+                            </ul>
+                        </li>
+			<li><a href="cosca.jsp"><span>COSCA</span></a></li>
 			<li><span>sign out</span>
 				<ul>
 					<li class="first"> <a href="index.jsp">Log out</a> </li>
@@ -66,8 +72,9 @@
 				<!--START CSOA FORM SECTION-->
 				<div class="post">
 					<h2 class="title"><a href="#"></a> Community Service <br/>
-                                            Outreach Activity Form</h2>
-					<p class="meta">CSOA Forms Submitted By Student Organizations</p>
+                                            Outreach Activity Forms</h2>
+					<p class="meta">CSOA Forms Submitted By Student Organizations<br/>
+                                            **listed according to earliest submitted**</p>
 					<div class="entry">
                                             
                                             <table align="center">
@@ -112,83 +119,6 @@
                                                 
                                                 <%}%>
                                             </table>
-                                            
-                                            <%--
-                                            <table>
-                                                <tr>
-                                                    <td>Activity Type</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Date Filled</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Sponsoring Organization</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Title of Activity</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Date of Activity</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Beneficiary</td>
-                                                    <td>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Total Projected Expense</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Faculty</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Faculty Cellphone Number</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Accomplisher Name</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Designation</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Cellphone Number</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>E-mail Address</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Objectives</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Program Flow</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr><td><label>Begin Time:</label></td><td>
-                                                        
-                                                    </td></tr>
-                                                <tr><td><label>End Time:</label></td><td>
-                                                        
-                                                    </td></tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                            </table>
-                                            --%>
-                                            
                                         </div>
 				</div>
                             <!--END CSOA FORM SECTION-->

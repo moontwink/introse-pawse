@@ -1,6 +1,6 @@
 <%-- 
-    Document   : viewFormPending
-    Created on : 04 1, 13, 12:47:18 AM
+    Document   : viewFormApproved
+    Created on : 04 1, 13, 6:11:38 PM
     Author     : Nancy
 --%>
 
@@ -71,7 +71,7 @@
 			<div class="contentbg">
 				<!--START CSOA FORM SECTION-->
 				<div class="post">
-					<h2 class="title"><a href="#"></a> Pending Community Service <br/>
+					<h2 class="title"><a href="#"></a> Approved Community Service <br/>
                                             Outreach Activity Forms</h2>
 					<p class="meta">CSOA Forms Submitted By Student Organizations<br/>
                                             **listed according to earliest submitted**</p>
@@ -87,7 +87,7 @@
                                                 
                                                 <%
                                                     CSOA_FormDAOsetter csDAO = new CSOA_FormDAOsetter();
-                                                    ArrayList<CSOA_Form> s = csDAO.getAllFormsByPending();
+                                                    ArrayList<CSOA_Form> s = csDAO.getAllFormsByApproved();
                                                     for(CSOA_Form f : s){
                                                 %>
                                                 <tr class="benefitCol">
@@ -151,4 +151,3 @@
 <!-- end #footer -->
 </body>
 </html>
-

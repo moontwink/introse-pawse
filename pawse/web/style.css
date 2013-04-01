@@ -484,6 +484,9 @@ img.aligncenter {
     color: red;
     font-weight: bolder;
     text-align: center;
+    margin: 2px;
+    overflow: auto;
+    
 }
 
 .benefitCol {
@@ -492,6 +495,7 @@ img.aligncenter {
     font-weight: lighter;
     text-align: center;
     letter-spacing: 1.5px;
+    overflow: auto;
 }
 
 .errormsg {

@@ -106,9 +106,9 @@
                                             
                                             <table align="center">
                                                 <tr class="benefitTable">
+                                                    <td>__File Number__</td>
                                                     <td>____Activity Title____</td>
                                                     <td>__Activity Date__</td>
-                                                    <td>______Beneficiary______</td>
                                                     <td>___Status___</td>
                                                 </tr>
                                                 
@@ -118,98 +118,35 @@
                                                     for(CSOA_Form f : s){
                                                 %>
                                                 <tr class="benefitCol">
+                                                    <td><a href="<%=request.getContextPath()%>/SOselectForm?formAccess=<%=f.getIdCSF()%>"><%=f.getIdCSF()%></a></td>
+                                                    
                                                     <td><%=f.getActivityTitle()%></td>
                                                     <td><%=f.getActivityDate()%></td>
-                                                    <td><%=f.getBeneficiary().getName()%></td>
-                                                    <td><%
-                                                        if(f.getStatus().equals("Rejected")){
+                                                    
+                                                    
+                                                    <td>
+                                                        <%
+                                                        if(f.getStatus().equals("Rejected") && (f.getComments() == null)){
                                                         %>
-                                                        <a href="" title="Comment: <%=f.getComments()%>"><%=f.getStatus()%></a>
+                                                            <a href="" title="No comment">
+                                                            <%=f.getStatus()%></a>
+                                                            
+                                                        <%
+                                                        } else if(f.getStatus().equals("Rejected") && !f.getComments().isEmpty()){
+                                                        %>
+                                                           <a href="" title="Comment: <%=f.getComments()%>">
+                                                           <%=f.getStatus()%></a>
+                                                            
+                                                        <%}else if(f.getStatus().equals("Approved")){%>
+                                                            <%=f.getStatus()%>
                                                         <%}else{%>
                                                             <%=f.getStatus()%>
-                                                            <%}%>
+                                                        <%}%>
                                                     </td>
                                                 </tr>
                                                 
                                                 <%}%>
                                             </table>
-                                            
-                                            <%--
-                                            <table>
-                                                <tr>
-                                                    <td>Activity Type</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Date Filled</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Sponsoring Organization</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Title of Activity</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Date of Activity</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Beneficiary</td>
-                                                    <td>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Total Projected Expense</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Faculty</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Faculty Cellphone Number</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Accomplisher Name</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Designation</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Cellphone Number</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>E-mail Address</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Objectives</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Program Flow</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr><td><label>Begin Time:</label></td><td>
-                                                        
-                                                    </td></tr>
-                                                <tr><td><label>End Time:</label></td><td>
-                                                        
-                                                    </td></tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                            </table>
-                                            --%>
-                                            
                                         </div>
 				</div>
                             <!--END CSOA FORM SECTION-->

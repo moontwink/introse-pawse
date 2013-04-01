@@ -44,18 +44,18 @@
 					<li class="last"> <a href="#">Feedback</a> </li>
 				</ul>
 			</li>
-			<li><a href="viewForm.jsp"><span>CSOA Form</span></a>
+			<li><span>CSOA Form</span>
                             <ul>
-                                <li class="first"><a href="">On Pending</a></li>
-                                <li><a href="">Approved</a></li>
+                                <li class="first"><a href="viewFormPending.jsp">On Pending</a></li>
+                                <li><a href="viewFormApproved.jsp">Approved</a></li>
                                 <li class="last"><a href="viewForm.jsp">Previously Submitted</a></li>
                             </ul>
                         </li>
-			<li><a href="#"><span>COSCA</span></a></li>
+			<li><a href="cosca.jsp"><span>COSCA</span></a></li>
 			<li><span>sign out</span>
 				<ul>
 					<li class="first"> <a href="index.jsp">Log out</a> </li>
-					<li class="last"> <a href="#">Create Account</a> </li>
+					<li class="last"> <a href="createAccount.jsp">Create Account</a> </li>
 				</ul>
 			</li>
 		</ul>
