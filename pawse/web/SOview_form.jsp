@@ -106,7 +106,6 @@
                                             
                                             <table align="center">
                                                 <tr class="benefitTable">
-                                                    <td>__File Date__</td>
                                                     <td>____Activity Title____</td>
                                                     <td>__Activity Date__</td>
                                                     <td>______Beneficiary______</td>
@@ -119,7 +118,6 @@
                                                     for(CSOA_Form f : s){
                                                 %>
                                                 <tr class="benefitCol">
-                                                    <td><%=f.getDateFiled()%></td>
                                                     <td><%=f.getActivityTitle()%></td>
                                                     <td><%=f.getActivityDate()%></td>
                                                     <td><%=f.getBeneficiary().getName()%></td>

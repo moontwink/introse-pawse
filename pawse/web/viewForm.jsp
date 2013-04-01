@@ -91,9 +91,17 @@
                                                     
                                                     <td>
                                                         <%
-                                                        if(f.getStatus().equals("Rejected")){
+                                                        if(f.getStatus().equals("Rejected") && (f.getComments() == null)){
                                                         %>
-                                                        <a href="" title="Comment: <%=f.getComments()%>"><%=f.getStatus()%></a>
+                                                            <a href="" title="No comment">
+                                                            <%=f.getStatus()%></a>
+                                                            
+                                                        <%
+                                                        } else if(f.getStatus().equals("Rejected") && !f.getComments().isEmpty()){
+                                                        %>
+                                                           <a href="" title="Comment: <%=f.getComments()%>">
+                                                           <%=f.getStatus()%></a>
+                                                            
                                                         <%}else if(f.getStatus().equals("Approved")){%>
                                                             <%=f.getStatus()%>
                                                         <%}else{%>

@@ -338,5 +338,29 @@ public class CSOA_FormDAOsetter extends CSOA_FormDAO {
         
         return form;
     }
+
+    @Override
+    public void editCSOA_FormByProcess(CSOA_Form csoa_form) {
+        //updates STATUS, COMMENTS, APPROVED_BY FIELDS (Coordinator Process)
+        
+        try {
+            DBConnection MyFactory = DBConnection.getInstance(SQLDAO.MYSQL);
+            Connection connection = MyFactory.getConnection();
+            PreparedStatement ps = connection.prepareStatement("UPDATE `csoa_form` "
+                    + "SET status = ?, coordinator_approvedby = ?, comments = ? WHERE idCSF = ?");
+            
+            ps.setString(1, csoa_form.getStatus());
+            ps.setString(2, csoa_form.getApprovedBy());
+            ps.setString(3, csoa_form.getComments());
+            ps.setInt(4, csoa_form.getIdCSF());
+            ps.executeUpdate();
+            
+            ps.close();
+            connection.close();
+           
+        } catch (SQLException ex) {
+            Logger.getLogger(CSOA_FormDAOsetter.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
     
 }
