@@ -135,7 +135,7 @@
 					<li>
 						<h2>Feedback</h2>
 						<ul>
-							<li><a href="#">View Feedback</a></li>
+							<li><a href="viewBeneficiary.jsp">View Feedback</a></li>
 							<li><a href="#">Submit Feedback</a></li>
 						</ul>
 					</li>
