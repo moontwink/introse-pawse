@@ -38,8 +38,7 @@
 			<li><span>Beneficiary</span>
 				<ul>
 					<li class="first"> <a href="genViewBeneficiary.jsp">View Beneficiaries</a> </li>
-					<li> <a href="#">Search Beneficiary</a> </li>
-					<li class="last"> <a href="#">Feedback</a> </li>
+					<li class="last"> <a href="#">Search Beneficiary</a> </li>
 				</ul>
 			</li>
 			<li><a href=""><span>feedback</span></a></li>

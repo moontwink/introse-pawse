@@ -56,6 +56,10 @@
         <servlet-name>SOselectForm</servlet-name>
         <servlet-class>Controller.SOselectForm</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>addFeedback</servlet-name>
+        <servlet-class>Controller.addFeedback</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Logging</servlet-name>
         <url-pattern>/Logging</url-pattern>
@@ -111,6 +115,10 @@
     <servlet-mapping>
         <servlet-name>SOselectForm</servlet-name>
         <url-pattern>/SOselectForm</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>addFeedback</servlet-name>
+        <url-pattern>/addFeedback</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

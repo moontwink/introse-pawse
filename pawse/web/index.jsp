@@ -34,13 +34,7 @@
 	<div id="menu-wrapper">
 		<ul id="menu">
 			<li class="current_page_item"><a href="index.jsp"><span>Homepage</span></a></li>
-			<li><span>Beneficiary</span>
-				<ul>
-					<li class="first"> <a href="genViewBeneficiary.jsp">View Beneficiaries</a> </li>
-					<li class="last"> <a href="#">Search Beneficiary</a> </li>
-				</ul>
-			</li>
-			<li><a href=""><span>feedback</span></a></li>
+			<li><a href="genViewBeneficiary.jsp"><span>Beneficiary</span></a></li>
 			<li><a href="cosca.jsp"><span>COSCA</span></a></li>
 			<li><span>sign in</span>
 				<ul>
@@ -120,13 +114,6 @@
 					<li>
 						<h2>Tracking</h2>
 						<p></p>
-					</li>
-					<li>
-						<h2>Feedback</h2>
-						<ul>
-							<li><a href="#">View Feedback</a></li>
-							<li><a href="#">Submit Feedback</a></li>
-						</ul>
 					</li>
 					<li>
 						<h2>Contact COSCA</h2>
