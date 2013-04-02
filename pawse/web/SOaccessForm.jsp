@@ -171,8 +171,8 @@
 					<li>
 						<h2>Feedback</h2>
 						<ul>
-							<li><a href="#">View Feedback</a></li>
-							<li><a href="#">Submit Feedback</a></li>
+							<li><a href="SOviewBeneficiary.jsp">View Feedback</a></li>
+							<li><a href="SOsubmitFeedback.jsp">Submit Feedback</a></li>
 						</ul>
 					</li>
 					<li>
