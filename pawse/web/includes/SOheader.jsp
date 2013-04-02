@@ -19,7 +19,6 @@
      
     <% StudentOrganization user = null;
         if(!(session.getAttribute("user") instanceof StudentOrganization)){
-        System.out.println("forwarding...");  
         %>
         <jsp:forward page="./Login.jsp"/>
         <%

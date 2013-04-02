@@ -1,12 +1,12 @@
 <%-- 
-    Document   : SOindex
+    Document   : Login
     Created on : 03 28, 13, 10:34:46 PM
     Author     : Nancy
-    **Note: this is the index for Student Organizations
 --%>
 
-<%@page import="Models.StudentOrganization"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<%@page import="Models.Coordinator"%>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="keywords" content="" />
@@ -22,16 +22,6 @@
 </head>
 <body>
     
-    <%
-    if(session.getAttribute("user") instanceof StudentOrganization){
-        StudentOrganization user = (StudentOrganization)session.getAttribute("user");
-    }
-    else if(session.getAttribute("user") == null){
-        StudentOrganization user = (StudentOrganization)session.getAttribute("user");
-    }
-    %>
-    <!--errors? make sure logged in.
-    //TODO: logged in check -->
 <div id="wrapper">
 	<div id="header-wrapper">
 		<div id="header">
@@ -44,24 +34,13 @@
 	<!-- end #header -->
 	<div id="menu-wrapper">
 		<ul id="menu">
-			<li><a href="SOindex.jsp"><span>Homepage</span></a></li>
-			<li><span>Beneficiary</span>
+			<li><a href="index.jsp"><span>Homepage</span></a></li>
+			<li><a href="genViewBeneficiary.jsp">Beneficiary</a></span></li>
+			<li><a href="cosca.jsp"><span>COSCA</span></a></li>
+			<li><span>sign in</span>
 				<ul>
-					<li class="first"> <a href="SOviewBeneficiary.jsp">View Beneficiaries</a> </li>
-					<li class="last"> <a href="#">Search Beneficiary</a> </li>
-				</ul>
-			</li>
-			<li><span>CSOA Form</span>
-                            <ul>
-                                <li class="first"><a href="SOcsoa_form.jsp">Submit Form</a></li>
-                                <li class="last"><a href="SOview_form.jsp">View Previous Forms</a></li>
-                            </ul>
-                        </li>
-			<li><a href="#"><span>COSCA</span></a></li>
-			<li><span>sign out</span>
-				<ul>
-					<li class="first"> <a href="Login.jsp">Log out</a> </li>
-					<li class="last"> <a href="SOeditAccount.jsp">View/Edit Account</a> </li>
+					<li class="first"> <a href="Login.jsp">Log in</a> </li>
+					<li class="last"> <a href="createAccount.jsp">Create Account</a> </li>
 				</ul>
 			</li>
 		</ul>
@@ -70,7 +49,7 @@
 		</script>
 	</div>
 	<!-- end #menu -->
-        
 	<div id="page">
 		<div id="content"><div class="ic"></div>
 			<div class="contentbg">
+				
