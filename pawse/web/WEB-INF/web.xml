@@ -64,6 +64,10 @@
         <servlet-name>SelectFeed</servlet-name>
         <servlet-class>Controller.SelectFeed</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>Controller.Logout</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Logging</servlet-name>
         <url-pattern>/Logging</url-pattern>
@@ -127,6 +131,10 @@
     <servlet-mapping>
         <servlet-name>SelectFeed</servlet-name>
         <url-pattern>/SelectFeed</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/Logout</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>
