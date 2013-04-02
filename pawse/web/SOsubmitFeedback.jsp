@@ -75,7 +75,7 @@
                                                     <tr>
                                                         <td>Beneficiary </td>
                                                         <td>
-                                                            <select name ="feedbenefit">
+                                                            <select name ="feedbackbenefit">
                                                             <%
                                                                 BeneficiaryDAOsetter dao = new BeneficiaryDAOsetter();
                                                                 ArrayList<Beneficiary> results = dao.getAllBeneficiaries();

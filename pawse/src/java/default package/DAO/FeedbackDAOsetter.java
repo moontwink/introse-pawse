@@ -25,7 +25,7 @@ public class FeedbackDAOsetter extends FeedbackDAO{
         try {
             DBConnection myFactory = DBConnection.getInstance(SQLDAO.MYSQL);
             Connection conn = myFactory.getConnection();
-            PreparedStatement pstmt = conn.prepareStatement("insert into `feedback` (Feedback, Beneficiary, Author) values (?,?,?);");
+            PreparedStatement pstmt = conn.prepareStatement("INSERT INTO `feedback` (Feedback, Beneficiary, Author) VALUES (?,?,?);");
      
             pstmt.setString(1, feedback.getFeedback());
             pstmt.setString(2, feedback.getBeneficiary().getName());
@@ -37,7 +37,7 @@ public class FeedbackDAOsetter extends FeedbackDAO{
             conn.close();
            
         } catch (SQLException ex) {
-            Logger.getLogger(CSOA_FormDAOsetter.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FeedbackDAOsetter.class.getName()).log(Level.SEVERE, null, ex);
         }   
     }
 
@@ -66,7 +66,7 @@ public class FeedbackDAOsetter extends FeedbackDAO{
             conn.close();
            
         } catch (SQLException ex) {
-            Logger.getLogger(BeneficiaryDAOsetter.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FeedbackDAOsetter.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         return results;
