@@ -37,19 +37,20 @@ public class addFeedback extends HttpServlet {
         try {
             BeneficiaryDAOsetter bDAO = new BeneficiaryDAOsetter();
             FeedbackDAOsetter fDAO = new FeedbackDAOsetter();
-            
+                    
             Feedback feedback = new Feedback();
             feedback.setFeedback(request.getParameter("feedback"));
-            feedback.setBeneficiary(bDAO.findBeneficiary("feedBenefit"));
+            feedback.setBeneficiary(bDAO.findBeneficiary(request.getParameter("feedbackbenefit")));
             feedback.setAuthor(request.getParameter("author"));
             
             fDAO.addFeedback(feedback);
             response.sendRedirect("SOviewFeedback.jsp");
+            
         } finally {            
             out.close();
         }
     }
-
+    
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP
