@@ -119,7 +119,7 @@
                                                     <td><input type="submit" value="VIEW"/></td>
                                                 </tr>
                                             </table>
-                                            <%-- I HAVE NO IDEAAA WHAT TOOO DOOOOOOOOOOOOOOOOOOOOOO LALALALA~
+                                            <%-- I HAVE NO IDEAAA WHAT TOOO DOOOOOOOOOOOOOOOOOOOOOO LALALALA --%>
                                             <table>
                                                 <%
                                                     FeedbackDAOsetter dao = new FeedbackDAOsetter();
@@ -129,21 +129,14 @@
                                                 <tr class ="feedbacksList">
                                                     <td><%=p.getBeneficiary().getName()%></td>
                                                     <td></td>
+                                                </tr>                               
+                                                <tr class ="benefitCol">                                                    
                                                 </tr>
-                                                
-                                                <tr class ="benefitCol">
-                                                    
-                                                </tr>
-
                                                 <%}%>
-                                                
                                             </table>    
-                                            --%>
-                                            
                                         </div>
 				</div>
                             <!--END VIEW FEEDBACK SECTION-->
-                            
 				<div style="clear: both;">&nbsp;</div>
 			</div>
 		</div>
