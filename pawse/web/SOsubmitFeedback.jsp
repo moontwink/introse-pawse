@@ -1,9 +1,12 @@
 <%-- 
-    Document   : editAccount
-    Created on : 03 31, 13, 12:19:08 AM
+    Document   : submitFeedback
+    Created on : 04 2, 13, 3:50:45 PM
     Author     : Nancy
 --%>
 
+<%@page import="java.util.ArrayList"%>
+<%@page import="Models.Beneficiary"%>
+<%@page import="DAO.BeneficiaryDAOsetter"%>
 <%@page import="Models.StudentOrganization"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -63,33 +66,44 @@
 	<div id="page">
 		<div id="content"><div class="ic"></div>
 			<div class="contentbg">
-				<!--START VIEW/EDIT ACCOUNT FORM SECTION-->
+				<!--START FEEDBACK FORM SECTION-->
 				<div class="post">
-					<h2 class="title"><a href="#">View/Edit Account</a></h2>
+					<h2 class="title"><a href="#">Submit Feedback</a></h2>
 					<div class="entry">
-						<form name="editaccount" action="editAccount" method="post">
+						<form name="formFeedback" action="addFeedback" method="post">
                                                 <table align="center">
                                                     <tr>
-                                                        <td>Organization Name </td>
-                                                        <td><input readonly="true" name="orgname" value="<%=user.getName()%>"/><br/></td>
+                                                        <td>Beneficiary </td>
+                                                        <td>
+                                                            <select name ="feedbenefit">
+                                                            <%
+                                                                BeneficiaryDAOsetter dao = new BeneficiaryDAOsetter();
+                                                                ArrayList<Beneficiary> results = dao.getAllBeneficiaries();
+                                                                for(Beneficiary b : results){
+                                                            %>
+                                                            <option value ="<%=b.getName()%>" title="<%=b.getAddress()%>"><%=b.getName()%></option>
+                                                            <%}%>
+                                                        </select>
+                                                        </td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Username (limit to 16 chars) </td>
-                                                        <td><input type="text" name="orgusername" required ="required" value="<%=user.getUsername()%>"/><br/></td>
-                                                    </tr>
+                                                        <td>Author </td>
+                                                        <td><input type="text" name="author"/><br/></td>
+                                                    </tr>    
                                                     <tr>
-                                                        <td>Password: </td>
-                                                        <td><input type="password" name="orgpassword" required ="required" value="<%=user.getPassword()%>"/><br/></td>
+                                                        <td>Feedback (limit to 180 chars)</td>
+                                                        <td><textarea name ="feedback" rows ="4" cols ="40"></textarea></td>
                                                     </tr>
+                                                    
                                                     <tr>
-                                                        <td><input type="submit" value="Cancel"/></td>
-                                                        <td><input type="submit" value="Edit"/></td>
+                                                        <td></td>
+                                                        <td><input type="submit" value="Submit"/></td>
                                                     </tr>
                                                 </table>
                                             </form>
                                         </div>
 				</div>
-                                <!--END VIEW/EDIT ACCOUNT FORM SECTION-->
+                                <!--END FEEDBACK FORM SECTION-->
                             
 				<div style="clear: both;">&nbsp;</div>
 			</div>
