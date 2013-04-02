@@ -116,14 +116,14 @@
                                                 %>
                                                 <tr class ="benefitCol">
                                                     <td><%=s.indexOf(p)+1%></td>
-                                                    <td><a href="" title="Contact Number: <%=p.getTelephone()%>"><%=p.getName()%></a></td>
+                                                    <td><a href="<%=request.getContextPath()%>/SelectFeed?benefitlist=<%=p.getName()%>" 
+                                                           title="Contact Number: <%=p.getTelephone()%>"><%=p.getName()%></a></td>
                                                     <td><%=p.getAddress()%></td>
                                                 </tr>
 
                                                 <%}%>
                                                 
                                             </table>    
-                                            
                                         </div>
 				</div>
                             <!--END VIEW BENEFICIARY SECTION-->

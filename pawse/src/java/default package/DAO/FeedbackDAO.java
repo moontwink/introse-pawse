@@ -4,7 +4,6 @@
  */
 package DAO;
 
-import Models.Beneficiary;
 import Models.Feedback;
 import java.util.ArrayList;
 
@@ -17,5 +16,6 @@ public abstract class FeedbackDAO {
     
    public abstract void addFeedback(Feedback feedback);
    public abstract ArrayList<Feedback> getAllFeedbacks();
+   public abstract ArrayList<Feedback> getAllFeedbacksByBeneficiary(String beneficiary);
     
 }

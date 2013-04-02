@@ -99,41 +99,33 @@
 				});
 			</script>
 				<!--START VIEW FEEDBACK SECTION-->
+                                <%
+                                    String benefitlist = (String)request.getAttribute("benefitlist");
+                                %>
 				<div class="post">
-					<h2 class="title"><a href="#"></a> View Feedback </h2>
+					<h2 class="title"><a href="#"></a><%=benefitlist%> feedbacks </h2>
 					<p class="meta"></p>
 					<div class="entry">
-                                            <table align="center">
-                                                <tr>
-                                                    <td>
-                                                        <select name ="benefitlist">
-                                                        <%
-                                                            BeneficiaryDAOsetter bDAO = new BeneficiaryDAOsetter();
-                                                            ArrayList<Beneficiary> results = bDAO.getAllBeneficiaries();
-                                                            for(Beneficiary b : results){
-                                                        %>
-                                                        <option value ="<%=b.getName()%>" title="<%=b.getAddress()%>"><%=b.getName()%></option>
-                                                        <%}%>
-                                                    </select>
-                                                    </td>
-                                                    <td><input type="submit" value="VIEW"/></td>
-                                                </tr>
-                                            </table>
-                                            <%-- I HAVE NO IDEAAA WHAT TOOO DOOOOOOOOOOOOOOOOOOOOOO LALALALA --%>
                                             <table>
+                                                <tr class="benefitTable">
+                                                    <td>AUTHOR</td>
+                                                    <td></td>
+                                                </tr>
                                                 <%
                                                     FeedbackDAOsetter dao = new FeedbackDAOsetter();
-                                                    ArrayList<Feedback> s = dao.getAllFeedbacks();
-                                                    for(Feedback p : s){
+                                                    ArrayList<Feedback> k = dao.getAllFeedbacksByBeneficiary(benefitlist);
+                                                    for(Feedback b : k){
                                                 %>
-                                                <tr class ="feedbacksList">
-                                                    <td><%=p.getBeneficiary().getName()%></td>
+                                                <tr class="benefitTable">
+                                                    <td><%=b.getAuthor()%></td>
                                                     <td></td>
-                                                </tr>                               
-                                                <tr class ="benefitCol">                                                    
+                                                </tr>
+                                                <tr class="benefitCol">
+                                                    <td></td>
+                                                    <td><%=b.getFeedback()%></td>
                                                 </tr>
                                                 <%}%>
-                                            </table>    
+                                            </table>
                                         </div>
 				</div>
                             <!--END VIEW FEEDBACK SECTION-->
