@@ -12,6 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Fuck World!</h1>
+        <h1>*censored* World!</h1>
     </body>
 </html>
