@@ -91,8 +91,8 @@
                                             
                                             <table>
                                                 <tr class ="benefitTable">
-                                                    <td>__#__</td>
-                                                    <td>_________BENEFICIARY NAME_________</td>
+                                                    <td class ="benefitTableRow">__#__</td>
+                                                    <td class ="benefitTableRow">_________BENEFICIARY NAME_________</td>
                                                     <td>________________ADDRESS________________</td>
                                                 </tr>
                                                 <%
@@ -101,9 +101,9 @@
                                                     for(Beneficiary p : s){
                                                 %>
                                                 <tr class ="benefitCol">
-                                                    <td class ="benefitCol"><%=s.indexOf(p)+1%></td>
-                                                    <td><a href="" title="Contact Number: <%=p.getTelephone()%>"><%=p.getName()%></a></td>
-                                                    <td><%=p.getAddress()%></td>
+                                                    <td class ="benefitTableRow"><%=s.indexOf(p)+1%></td>
+                                                    <td class ="benefitTableRow"><a href="" title="Contact Number: <%=p.getTelephone()%>"><%=p.getName()%></a></td>
+                                                    <td class ="benefitTableRow"><%=p.getAddress()%></td>
                                                 </tr>
 
                                                 <%}%>
