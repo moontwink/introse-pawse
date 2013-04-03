@@ -1,7 +1,7 @@
 <%@include file="includes/SOheader.jsp" %>
 				<!--START VIEW/EDIT ACCOUNT FORM SECTION-->
 				<div class="post">
-					<h2 class="title"><a href="#">View/Edit Account</a></h2>
+					<h2 class="title"><a href="javascript:void(0)">View/Edit Account</a></h2>
 					<div class="entry">
 						<form name="editaccount" action="editAccount" method="post">
                                                 <table align="center">
