@@ -26,7 +26,7 @@
 	<div id="header-wrapper">
 		<div id="header">
 			<div id="logo">
-				<h1><a href="#">Outracker</a> v.1</h1>
+				<h1><a href="index.jsp">Outracker</a> v.1</h1>
 				<p>web system by <a href="#">PAWSE</a></p>
 			</div>
 		</div>
@@ -35,7 +35,7 @@
 	<div id="menu-wrapper">
 		<ul id="menu">
 			<li><a href="index.jsp"><span>Homepage</span></a></li>
-			<li><a href="genViewBeneficiary.jsp">Beneficiary</a></span></li>
+			<li><a href="genViewBeneficiary.jsp"><span>Beneficiary</span></a></li>
 			<li><a href="cosca.jsp"><span>COSCA</span></a></li>
 			<li><span>sign in</span>
 				<ul>

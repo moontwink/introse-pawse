@@ -34,7 +34,7 @@
 	<div id="header-wrapper">
 		<div id="header">
 			<div id="logo">
-				<h1><a href="#">Outracker</a> v.1</h1>
+				<h1><a href="SOindex.jsp">Outracker</a> v.1</h1>
 				<p>web system by <a href="#">PAWSE</a></p>
 			</div>
 		</div>
@@ -55,7 +55,7 @@
                                 <li class="last"><a href="SOview_form.jsp">View Previous Forms</a></li>
                             </ul>
                         </li>
-			<li><a href="#"><span>COSCA</span></a></li>
+			<li><a href="SOcosca.jsp"><span>COSCA</span></a></li>
 			<li><span>sign out</span>
 				<ul>
 					<li class="first"> <a href="Logout">Log out</a> </li>
