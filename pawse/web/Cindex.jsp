@@ -23,9 +23,7 @@
                                                 </p>
 					</div>
 				</div>
-				<div style="clear: both;">&nbsp;</div>
-			</div>
-		</div>
+			
 		<!-- end #content -->
 		<%@include file="includes/Csidebar.jsp" %>
 		<!-- end #sidebar -->

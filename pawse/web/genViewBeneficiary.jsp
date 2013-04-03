@@ -5,9 +5,10 @@
     **Note: this is the viewBeneficiary for GENERAL USERS 
 --%>
 
+<%@page import="Models.Beneficiary"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="DAO.BeneficiaryDAOsetter"%>
-<%@include file="includes/Cheader.jsp" %>
+<%@include file="includes/header.jsp" %>
 <%@include file="includes/slider.jsp" %>				<!--START VIEW BENEFICIARY SECTION-->
 				<div class="post">
 					<h2 class="title"><a href="#"></a> View Beneficiaries </h2>
@@ -39,9 +40,7 @@
 				</div>
                             <!--END VIEW BENEFICIARY SECTION-->
                             
-				<div style="clear: both;">&nbsp;</div>
-			</div>
-		</div>
+			
 		<!-- end #content -->
-	<%@include file="includes/Csidebar.jsp" %>
-<%@include file="includes/Cfooter.jsp" %>
+	<%@include file="includes/sidebar.jsp" %>
+<%@include file="includes/footer.jsp" %>
