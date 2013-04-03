@@ -33,7 +33,7 @@
                                                     </tr>    
                                                     <tr>
                                                         <td>Feedback (limit to 180 chars)</td>
-                                                        <td><textarea name ="feedback" rows ="4" cols ="40"></textarea></td>
+                                                        <td><textarea name ="feedback" rows ="4" cols ="40" required="true"></textarea></td>
                                                     </tr>
                                                     
                                                     <tr>
@@ -45,5 +45,5 @@
                                         </div>
 				</div>
                                 <!--END FEEDBACK FORM SECTION-->
-                         
+<%@include file="includes/SOsidebar.jsp"%>                         
 <%@include file="includes/footer.jsp"%>

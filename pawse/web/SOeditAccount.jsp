@@ -27,13 +27,6 @@
 				</div>
                                 <!--END VIEW/EDIT ACCOUNT FORM SECTION-->
                             
-				<div style="clear: both;">&nbsp;</div>
-			</div>
-		</div>
-		<!-- end #content -->
-		<%@include file="includes/SOsidebar.jsp"%>
-		<!-- end #sidebar -->
-		<div style="clear: both;">&nbsp;</div>
-	</div>
-	<!-- end #page -->
+<%@include file="includes/SOsidebar.jsp"%>
+	
 <%@include file="includes/footer.jsp" %>

@@ -93,15 +93,7 @@
 				</div>
                             <!--END CSOA FORM SECTION-->
                             
-				<div style="clear: both;">&nbsp;</div>
-			</div>
-		</div>
-		<!-- end #content -->
-		<div id="sidebar-bg">
-			<%@include file="includes/SOsidebar.jsp" %>
-		</div>
-		<!-- end #sidebar -->
-		<div style="clear: both;">&nbsp;</div>
-	</div>
-	<!-- end #page -->
+<%@include file="includes/SOsidebar.jsp"%>
+	
 <%@include file="includes/footer.jsp" %>
+                      

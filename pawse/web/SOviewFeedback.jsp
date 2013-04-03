@@ -4,15 +4,10 @@
     Author     : Nancy
 --%>
 
-<%@page import="Models.Beneficiary"%>
-<%@page import="DAO.BeneficiaryDAOsetter"%>
 <%@page import="Models.Feedback"%>
 <%@page import="DAO.FeedbackDAOsetter"%>
 <%@page import="java.util.ArrayList"%>
-<%@include file="includes/header.jsp"%>
-	<div id="page">
-		<div id="content"><div class="ic"></div>
-			<div class="contentbg">
+<%@include file="includes/SOheader.jsp"%>
 				<%@include file="includes/slider.jsp"%>
 				<!--START VIEW FEEDBACK SECTION-->
                                 <%
@@ -46,5 +41,6 @@
 				</div>
                             <!--END VIEW FEEDBACK SECTION-->
 				
-			<%@include file="includes/SOsidebar.jsp"%>
+<%@include file="includes/SOsidebar.jsp"%>
+
 <%@include file="includes/footer.jsp"%>

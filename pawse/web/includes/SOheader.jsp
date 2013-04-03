@@ -27,7 +27,7 @@
     else {
        user = (StudentOrganization)session.getAttribute("user");
     }
-%>
+    %>
     <!--errors? make sure logged in.
     //TODO: logged in check -->
 <div id="wrapper">

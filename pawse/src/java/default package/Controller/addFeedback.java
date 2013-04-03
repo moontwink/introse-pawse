@@ -9,6 +9,7 @@ import DAO.FeedbackDAOsetter;
 import Models.Feedback;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -44,6 +45,7 @@ public class addFeedback extends HttpServlet {
             feedback.setAuthor(request.getParameter("author"));
             
             fDAO.addFeedback(feedback);
+            RequestDispatcher rd = request.getRequestDispatcher("");
             response.sendRedirect("SOviewFeedback.jsp");
             
         } finally {            
