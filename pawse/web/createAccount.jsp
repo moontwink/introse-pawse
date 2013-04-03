@@ -1,7 +1,7 @@
 <%@include file="includes/header.jsp" %>
 				<!--START CREATE ACCOUNT FORM SECTION-->
 				<div class="post">
-					<h2 class="title"><a href="#">Create Account</a></h2>
+					<h2 class="title"><a href="javascript:void(0)">Create Account</a></h2>
 					<div class="entry">
 						<form name="createaccount" action="createAccount" method="post">
                                                 <table align="center">

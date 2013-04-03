@@ -1,6 +1,6 @@
 <%@include file="includes/header.jsp" %>
 				<div class="post">
-					<h2 class="title"><a href="#">Login</a></h2>
+					<h2 class="title"><a href="javascript:void(0)">Login</a></h2>
 					<div class="entry">
 						<form name="login" action="Logging" method="post">
                                                 <table align="center">

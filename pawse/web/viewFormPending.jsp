@@ -10,8 +10,8 @@
 <%@include file="includes/Cheader.jsp" %>
 				<!--START CSOA FORM SECTION-->
 				<div class="post">
-					<h2 class="title"><a href="#"></a> Pending Community Service <br/>
-                                            Outreach Activity Forms</h2>
+					<h2 class="title"><a href="javascript:void(0)"> Pending Community Service <br/>
+                                            Outreach Activity Forms</a></h2>
 					<p class="meta">CSOA Forms Submitted By Student Organizations<br/>
                                             **listed according to earliest submitted**</p>
 					<div class="entry">
