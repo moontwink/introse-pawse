@@ -10,7 +10,7 @@
 <%@include file="includes/Cheader.jsp" %>
 				<!--START BENEFICIARY FORM SECTION-->
 				<div class="post">
-					<h2 class="title"><a href="#"></a> Remove Beneficiary </h2>
+					<h2 class="title"><a href="javascript:void(0)"> Remove Beneficiary </a></h2>
 					<p class="meta">**select a beneficiary to remove**</p>
 					<div class="entry">
                                             <form name ="delBeneficiary" action ="delBeneficiary" method="post">

@@ -1,7 +1,7 @@
 <%@include file="includes/Cheader.jsp" %>
 				<!--START BENEFICIARY FORM SECTION-->
 				<div class="post">
-					<h2 class="title"><a href="#"></a> Add Beneficiary </h2>
+					<h2 class="title"><a href="javascript:void(0)"> Add Beneficiary </a></h2>
 					<p class="meta">Posted by <a href="#">COSCA</a> on March 28, 2013</p>
 					<div class="entry">
                                             <form name ="addBeneficiary" action ="addBeneficiary" method="post">
@@ -27,6 +27,6 @@
                                         </div>
 				</div>
                             <!--END BENEFICIARY FORM SECTION-->                        
-<%@include file="includes/sidebar.jsp" %>
+<%@include file="includes/Csidebar.jsp" %>
 		<!-- end #sidebar -->
 <%@include file="includes/footer.jsp" %>
