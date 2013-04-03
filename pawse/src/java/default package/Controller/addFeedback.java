@@ -47,7 +47,14 @@ public class addFeedback extends HttpServlet {
             fDAO.addFeedback(feedback);
             
             request.setAttribute("benefitlist", request.getParameter("feedbackbenefit"));
-            RequestDispatcher rd = request.getRequestDispatcher("SOviewFeedback.jsp");
+            
+            RequestDispatcher rd;
+            if(request.getParameter("author").equalsIgnoreCase("cosca")){
+                rd = request.getRequestDispatcher("editBeneficiary.jsp");
+            }else{
+                rd = request.getRequestDispatcher("SOviewFeedback.jsp");
+            }
+            
             rd.forward(request, response);
             
         } finally {            

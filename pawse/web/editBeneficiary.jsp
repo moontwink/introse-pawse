@@ -4,14 +4,16 @@
     Author     : Nancy
 --%>
 
+<%@page import="Models.Feedback"%>
+<%@page import="DAO.FeedbackDAOsetter"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="Models.Beneficiary"%>
 <%@page import="DAO.BeneficiaryDAOsetter"%>
 <%@include file="includes/Cheader.jsp" %>
 
-				<!--START BENEFICIARY FORM SECTION-->
+				<!--START EDIT BENEFICIARY FORM SECTION-->
 				<div class="post">
-					<h2 class="title"><a href="#"></a> Edit Beneficiary </h2>
+					<h2 class="title"><a href="javascript:void(0)"> Edit Beneficiary </a></h2>
 					<p class="meta">**edit beneficiary information**</p>
 					<div class="entry">
                                             <form name ="editBeneficiary" action ="EditBeneficiary" method="post">
@@ -40,7 +42,35 @@
                                             </table>      
                                             </form>
                                         </div>
+				</div>             
+                            <!--END EDIT BENEFICIARY FORM SECTION-->
+                            <!--START VIEW FEEDBACK SECTION-->
+                            <div class="post">
+					<h2 class="title"><a href="javascript:void(0)"><%=b.getName()%> feedbacks</a> </h2>
+					<p class="meta"></p>
+					<div class="entry">
+                                            <table>
+                                                <tr class="benefitTable">
+                                                    <td>AUTHOR</td>
+                                                    <td></td>
+                                                </tr>
+                                                <%
+                                                    FeedbackDAOsetter dao = new FeedbackDAOsetter();
+                                                    ArrayList<Feedback> k = dao.getAllFeedbacksByBeneficiary(b.getName());
+                                                    for(Feedback f : k){
+                                                %>
+                                                <tr class="benefitTable">
+                                                    <td><%=f.getAuthor()%></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr class="benefitCol">
+                                                    <td></td>
+                                                    <td><%=f.getFeedback()%></td>
+                                                </tr>
+                                                <%}%>
+                                            </table>
+                                        </div>
 				</div>
-                            <!--END BENEFICIARY FORM SECTION-->
-                      			<%@include file="includes/Csidebar.jsp" %>
+                            <!--END VIEW FEEDBACK SECTION-->
+<%@include file="includes/Csidebar.jsp" %>
 <%@include file="includes/footer.jsp" %>
