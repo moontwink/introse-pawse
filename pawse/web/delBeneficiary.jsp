@@ -39,9 +39,7 @@
 				</div>
                             <!--END BENEFICIARY FORM SECTION-->
                             
-				<div style="clear: both;">&nbsp;</div>
-			</div>
-		</div>
+			
 		<!-- end #content -->
 		<%@include file="includes/Csidebar.jsp" %>
 		<%@include file="includes/footer.jsp" %>

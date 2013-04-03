@@ -1,9 +1,14 @@
+	<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+		<!-- end #content -->
 		<div id="sidebar-bg">
 			<div id="sidebar">
 				<ul>
 					<li>
 						<h2>Tracking</h2>
-						<p></p>
+						<p>
+                                                </p>
 					</li>
 					<li>
 						<h2>Contact COSCA</h2>
@@ -17,3 +22,4 @@
 				</ul>
 			</div>
 		</div>
+		<!-- end #sidebar -->
