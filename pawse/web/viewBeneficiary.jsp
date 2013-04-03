@@ -40,8 +40,5 @@
 				</div>
                             <!--END VIEW BENEFICIARY SECTION-->
                             
-				<div style="clear: both;">&nbsp;</div>
-			</div>
-		</div>
 		<%@include file="includes/Csidebar.jsp" %>
                 <%@include file="includes/footer.jsp" %>
