@@ -7,8 +7,8 @@
                             
                             <!--START CSOA FORM SECTION-->
 				<div class="post">
-					<h2 class="title"><a href="#"></a> Community Service <br/>
-                                            Outreach Activity Form</h2>
+					<h2 class="title"><a href="javascript:void(0)"> Community Service <br/>
+                                            Outreach Activity Form</a></h2>
 					<p class="meta">Posted by <a href="#">COSCA</a> on March 28, 2013</p>
 					<div class="entry">
                                             
