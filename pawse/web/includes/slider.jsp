@@ -2,9 +2,8 @@
 					<div class="viewer">
 						<div class="reel">
 							<div id="gallery">
-								<div class="slide"> <a href="images/pics01.jpg"><img src="images/pics01.jpg" width="590" height="300" alt="" /></a> </div>
-								<div class="slide"> <a href="images/pics02.jpg"><img src="images/pics02.jpg" width="590" height="300" alt="" /></a> </div>
-								<div class="slide"> <a href="images/pics03.jpg"><img src="images/pics03.jpg" width="590" height="300" alt="" /></a> </div>
+								<div class="slide"> <a href="images/cosca1.jpg"><img src="images/cosca1.jpg" width="590" height="300" alt="" /></a> </div>
+								<div class="slide"> <a href="images/cosca2.jpg"><img src="images/cosca2.jpg" width="590" height="300" alt="" /></a> </div>								
 							</div>
 						</div>
 					</div>

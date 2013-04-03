@@ -1,3 +1,7 @@
+
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
 <div id="sidebar-bg">
 			<div id="sidebar">
 				<ul>
