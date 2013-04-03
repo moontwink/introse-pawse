@@ -1,4 +1,4 @@
-<%@include file="includes/Cheader.jsp" %>
+<%@include file="includes/header.jsp" %>
 				<!--START CREATE ACCOUNT FORM SECTION-->
 				<div class="post">
 					<h2 class="title"><a href="#">Create Account</a></h2>
@@ -25,5 +25,5 @@
                                             </form>
                                         </div>
 				</div>
-<%@include file="includes/Csidebar.jsp" %>
+<%@include file="includes/sidebar.jsp" %>
 <%@include file="includes/footer.jsp" %>
