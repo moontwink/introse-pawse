@@ -21,7 +21,18 @@
 </head>
 <body>
     
-    <%Coordinator c = (Coordinator)session.getAttribute("user");%>
+    
+    <% Coordinator c = null;
+        if(!(session.getAttribute("user") instanceof Coordinator)){
+        %>
+        <jsp:forward page="./Login.jsp"/>
+        <%
+                
+    }
+    else {
+       c = (Coordinator)session.getAttribute("user");
+    }
+%>
 <div id="wrapper">
 	<div id="header-wrapper">
 		<div id="header">
@@ -52,7 +63,7 @@
 			<li><a href="cosca.jsp"><span>COSCA</span></a></li>
 			<li><span>sign out</span>
 				<ul>
-					<li class="first"> <a href="index.jsp">Log out</a> </li>
+					<li class="first"> <a href="Logout">Log out</a> </li>
 					<li class="last"> <a href="createAccount.jsp">Create Account</a> </li>
 				</ul>
 			</li>
