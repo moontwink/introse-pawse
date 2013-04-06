@@ -10,11 +10,12 @@
 <%@include file="includes/SOheader.jsp" %>
 				<div class="post">
 					<h2 class="title"><a href="#">Submit Feedback</a></h2>
+                                        <p class="meta">*required fields</p>
 					<div class="entry">
 						<form name="formFeedback" action="addFeedback" method="post">
                                                 <table align="center">
                                                     <tr>
-                                                        <td>Beneficiary </td>
+                                                        <td>*Beneficiary </td>
                                                         <td>
                                                             <select name ="feedbackbenefit">
                                                             <%
@@ -32,7 +33,7 @@
                                                         <td><input type="text" name="author"/><br/></td>
                                                     </tr>    
                                                     <tr>
-                                                        <td>Feedback (limit to 180 chars)</td>
+                                                        <td>*Feedback (limit to 180 chars)</td>
                                                         <td><textarea name ="feedback" rows ="4" cols ="40" required="true"></textarea></td>
                                                     </tr>
                                                     

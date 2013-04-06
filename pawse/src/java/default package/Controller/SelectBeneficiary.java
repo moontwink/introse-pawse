@@ -39,7 +39,7 @@ public class SelectBeneficiary extends HttpServlet {
             BeneficiaryDAOsetter dao = new BeneficiaryDAOsetter();
             Beneficiary beneficiary = dao.findBeneficiary(request.getParameter("benefitEdit"));
             
-            request.setAttribute("editingBenefit", beneficiary);
+            request.setAttribute("currentBenefit", beneficiary);
             RequestDispatcher rd = request.getRequestDispatcher("editBeneficiary.jsp");
             rd.forward(request, response);
             
