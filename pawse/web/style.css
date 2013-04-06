@@ -480,22 +480,40 @@ img.aligncenter {
 }
 
 .benefitTable {
-    font-size: 13px;
+    border-spacing: 10px;
+}
+
+.benefitTableHead {
+    font-size: 16px;
     color: red;
     font-weight: bolder;
     text-align: center;
     margin: 2px;
     overflow: auto;
-    
+    text-decoration: underline;
+    font-variant: small-caps;
+    border: solid black 1px;
 }
 
 .benefitCol {
-    font-size: 14px;
+    font-size: 15px;
     color: green;
     font-weight: lighter;
     text-align: center;
     letter-spacing: 1.5px;
     overflow: auto;
+    font-variant: small-caps;
+    border: solid black 1px;
+}
+
+.feedAuthor {
+    font-size: 16px;
+    color: darkorchid;
+    font-weight: bolder;
+    text-align: center;
+    margin: 2px;
+    overflow: auto;
+    font-variant: small-caps;
 }
 
 .errormsg {
