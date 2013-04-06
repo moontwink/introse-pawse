@@ -16,12 +16,12 @@
                                             **listed according to earliest submitted**</p>
 					<div class="entry">
                                             
-                                            <table align="center">
-                                                <tr class="benefitTable">
-                                                    <td>__File Number__</td>
-                                                    <td>____Sponsoring Organization____</td>
-                                                    <td>__Activity Date__</td>
-                                                    <td>___Status___</td>
+                                            <table class="benefitTable" align="center">
+                                                <tr class="benefitTableHead">
+                                                    <td>  File Number  </td>
+                                                    <td>     Sponsoring Organization     </td>
+                                                    <td>  Activity Date  </td>
+                                                    <td>   Status   </td>
                                                 </tr>
                                                 
                                                 <%

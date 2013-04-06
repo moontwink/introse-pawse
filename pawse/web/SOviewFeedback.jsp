@@ -19,7 +19,7 @@
 					<div class="entry">
                                             <table>
                                                 <tr class="benefitTable">
-                                                    <td>AUTHOR</td>
+                                                    <td><u>AUTHOR</u></td>
                                                     <td></td>
                                                 </tr>
                                                 <%
@@ -27,7 +27,7 @@
                                                     ArrayList<Feedback> k = dao.getAllFeedbacksByBeneficiary(benefitlist);
                                                     for(Feedback b : k){
                                                 %>
-                                                <tr class="benefitTable">
+                                                <tr class="feedAuthor">
                                                     <td><%=b.getAuthor()%></td>
                                                     <td></td>
                                                 </tr>
