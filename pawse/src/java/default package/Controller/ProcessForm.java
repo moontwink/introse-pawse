@@ -39,17 +39,23 @@ public class ProcessForm extends HttpServlet {
             
             CSOA_FormDAOsetter dao = new CSOA_FormDAOsetter();
             CSOA_Form form = dao.findForm(Integer.parseInt(request.getParameter("formAccess")));
+            String message = "";
             
             if(button.equals("Approve")){
                 form.setStatus("Approved");
+                message = "**form `"+form.getIdCSF()+"` has been APPROVED!**";
             }else if(button.equals("Reject")){
                 form.setStatus("Rejected");
+                message = "**form `"+form.getIdCSF()+"` has been REJECTED!**";
             }
             form.setApprovedBy(request.getParameter("incharge"));
             form.setComments(request.getParameter("comments"));
             
             dao.editCSOA_FormByProcess(form);
-            response.sendRedirect("viewForm.jsp");
+            
+            request.setAttribute("message", message);
+            RequestDispatcher rd = request.getRequestDispatcher("viewForm.jsp");
+            rd.forward(request, response);
             
         } finally {            
             out.close();

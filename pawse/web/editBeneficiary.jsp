@@ -50,8 +50,8 @@
 					<p class="meta"></p>
 					<div class="entry">
                                             <table>
-                                                <tr class="benefitTable">
-                                                    <td>AUTHOR</td>
+                                                <tr class="feedHead">
+                                                    <td><u>AUTHOR</u></td>
                                                     <td></td>
                                                 </tr>
                                                 <%
@@ -59,7 +59,7 @@
                                                     ArrayList<Feedback> k = dao.getAllFeedbacksByBeneficiary(b.getName());
                                                     for(Feedback f : k){
                                                 %>
-                                                <tr class="benefitTable">
+                                                <tr class="feedAuthor">
                                                     <td><%=f.getAuthor()%></td>
                                                     <td></td>
                                                 </tr>

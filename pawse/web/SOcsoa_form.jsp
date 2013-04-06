@@ -9,7 +9,7 @@
 				<div class="post">
 					<h2 class="title"><a href="javascript:void(0)"> Community Service <br/>
                                             Outreach Activity Form</a></h2>
-					<p class="meta">Posted by <a href="#">COSCA</a> on March 28, 2013</p>
+					<p class="meta">*all fields are required</p>
 					<div class="entry">
                                             
                                             <form name ="csoaform" action="addForm" method="post">

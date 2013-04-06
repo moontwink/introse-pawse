@@ -50,7 +50,7 @@ public class AddBeneficiary extends HttpServlet {
                 rd.forward(request, response);
             }
             else{
-                message = "**beneficiary '"+beneficiary.getName()+"' has been succesfully added!**";
+                message = "**beneficiary `"+beneficiary.getName()+"` has been succesfully added!**";
                 request.setAttribute("message", message);
                 RequestDispatcher rd = request.getRequestDispatcher("viewBeneficiary.jsp");
                 rd.forward(request, response);

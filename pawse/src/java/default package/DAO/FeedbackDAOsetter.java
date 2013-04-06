@@ -49,7 +49,7 @@ public class FeedbackDAOsetter extends FeedbackDAO{
         try {
             DBConnection myFactory = DBConnection.getInstance(SQLDAO.MYSQL);
             Connection conn = myFactory.getConnection();
-            PreparedStatement pstmt = conn.prepareStatement("Select * FROM `feedback` ORDER BY beneficiary");
+            PreparedStatement pstmt = conn.prepareStatement("Select * FROM `feedback` ORDER BY beneficiary, idFeedback DESC");
             ResultSet rs = pstmt.executeQuery();
             
             BeneficiaryDAOsetter dao = new BeneficiaryDAOsetter();
@@ -80,7 +80,7 @@ public class FeedbackDAOsetter extends FeedbackDAO{
         try {
             DBConnection myFactory = DBConnection.getInstance(SQLDAO.MYSQL);
             Connection conn = myFactory.getConnection();
-            PreparedStatement pstmt = conn.prepareStatement("Select * FROM `feedback` WHERE Beneficiary = ?");
+            PreparedStatement pstmt = conn.prepareStatement("Select * FROM `feedback` WHERE Beneficiary = ? ORDER BY idFeedback DESC");
             pstmt.setString(1, beneficiary);
             
             ResultSet rs = pstmt.executeQuery();
