@@ -14,7 +14,7 @@
     </servlet>
     <servlet>
         <servlet-name>addBeneficiary</servlet-name>
-        <servlet-class>Servlets.AddBeneficiary</servlet-class>
+        <servlet-class>Controller.AddBeneficiary</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>HomeView</servlet-name>

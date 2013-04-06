@@ -7,6 +7,12 @@
                                             <form name ="addBeneficiary" action ="addBeneficiary" method="post">
                                             <table>
                                                 <tr>
+                                                    <%String message = (String)request.getAttribute("message");
+                                                        if(message != null){
+                                                    %>
+                                                    <td class ="errormsg" colspan="2"><%=message%></td><%}%>
+                                                </tr>
+                                                <tr>
                                                     <td>Name</td>
                                                     <td><input name ="beneficiaryName" type = "text" required="true"/></td>
                                                 </tr>

@@ -8,6 +8,7 @@ import DAO.StudentOrgDAOsetter;
 import Models.StudentOrganization;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -40,8 +41,12 @@ public class CreateAccount extends HttpServlet {
             so.setPassword(request.getParameter("orgpassword"));
             
             StudentOrgDAOsetter dao = new StudentOrgDAOsetter();
+            String message = "";
             if(dao.addStudentOrganization(so)){
-                response.sendRedirect("error-msg/ExistingOrg.jsp");
+                message = "**that account already exists**";
+                request.setAttribute("message", message);
+                RequestDispatcher rd = request.getRequestDispatcher("createAccount.jsp");
+                rd.forward(request, response);
             }else{
                 response.sendRedirect("index.jsp");
             }

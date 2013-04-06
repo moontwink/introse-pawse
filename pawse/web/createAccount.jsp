@@ -6,6 +6,12 @@
 						<form name="createaccount" action="createAccount" method="post">
                                                 <table align="center">
                                                     <tr>
+                                                        <%String message = (String)request.getAttribute("message");
+                                                            if(message != null){
+                                                        %>
+                                                        <td class ="errormsg" colspan="2"><%=message%></td><%}%>
+                                                    </tr>
+                                                    <tr>
                                                         <td>Organization Name </td>
                                                         <td><input type="text" name="orgname" required ="required"/><br/></td>
                                                     </tr>

@@ -7,6 +7,7 @@ package Controller;
 import DAO.BeneficiaryDAOsetter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -40,7 +41,11 @@ public class DelBeneficiary extends HttpServlet {
             
             BeneficiaryDAOsetter dao = new BeneficiaryDAOsetter();
             dao.deleteBeneficiary(name);
-            response.sendRedirect("viewBeneficiary.jsp");
+            String message = "**beneficiary '"+name+"' has been succesfully deleted!**";
+            request.setAttribute("message", message);
+            RequestDispatcher rd = request.getRequestDispatcher("viewBeneficiary.jsp");
+            rd.forward(request, response);
+            //response.sendRedirect("viewBeneficiary.jsp");
             
         } finally {            
             out.close();

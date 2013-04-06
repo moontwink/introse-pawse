@@ -16,6 +16,13 @@
                                             <form name ="delBeneficiary" action ="delBeneficiary" method="post">
                                             <table align="center">
                                                 <tr>
+                                                    <tr>
+                                                        <%String message = (String)request.getAttribute("message");
+                                                            if(message != null){
+                                                        %>
+                                                        <td class ="successmsg" colspan="3"><%=message%>
+                                                            <br/><br/></td><%}%>
+                                                    </tr>
                                                     <td>Beneficiary</td>
                                                     <td>
                                                         <select name ="delBenefit">

@@ -16,6 +16,13 @@
 					<div class="entry">
                                             
                                             <table>
+                                                <tr>
+                                                    <%String message = (String)request.getAttribute("message");
+                                                        if(message != null){
+                                                    %>
+                                                    <td class ="successmsg" colspan="3"><%=message%>
+                                                        <br/><br/></td><%}%>
+                                                </tr>
                                                 <tr class ="benefitTable">
                                                     <td>__#__</td>
                                                     <td>_________BENEFICIARY NAME_________</td>

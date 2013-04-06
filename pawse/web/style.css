@@ -500,9 +500,18 @@ img.aligncenter {
 
 .errormsg {
     color: red;
-    font-size: 13px;
+    font-size: 16px;
     letter-spacing: 3px;
     font-weight: bolder;
+    font-variant: small-caps;
+}
+
+.successmsg {
+    color: blueviolet;
+    font-size: 16px;
+    letter-spacing: 3px;
+    font-weight: bolder;
+    font-variant: small-caps;
 }
 
 .accountname a{
