@@ -10,6 +10,7 @@ import DAO.StudentOrgDAOsetter;
 import Models.CSOA_Form;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -66,8 +67,11 @@ public class AddForm extends HttpServlet {
             
             CSOA_FormDAOsetter csoaDAO = new CSOA_FormDAOsetter();
             csoaDAO.addCSOA_FormDAO(form);
-            response.sendRedirect("SOview_form.jsp");
             
+            String message = "**form has been successfully submitted**";
+            request.setAttribute("message", message);
+            RequestDispatcher rd = request.getRequestDispatcher("SOview_form.jsp");
+            rd.forward(request, response);
             
         } finally {            
             out.close();

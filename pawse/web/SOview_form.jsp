@@ -18,12 +18,19 @@
 					<p class="meta">Previous Forms Submitted</p>
 					<div class="entry">
                                             
-                                            <table align="center">
-                                                <tr class="benefitTable">
-                                                    <td>__File Number__</td>
-                                                    <td>____Activity Title____</td>
-                                                    <td>__Activity Date__</td>
-                                                    <td>___Status___</td>
+                                            <table class="benefitTable" align="center">
+                                                <tr>
+                                                    <%String message = (String)request.getAttribute("message");
+                                                        if(message != null){
+                                                    %>
+                                                    <td class ="successmsg" colspan="4"><%=message%>
+                                                        <br/><br/></td><%}%>
+                                                </tr>
+                                                <tr class="benefitTableHead">
+                                                    <td>  File Number  </td>
+                                                    <td>     Activity Title    </td>
+                                                    <td>  Activity Date  </td>
+                                                    <td>   Status   </td>
                                                 </tr>
                                                 
                                                 <%

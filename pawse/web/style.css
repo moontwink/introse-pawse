@@ -492,7 +492,6 @@ img.aligncenter {
     overflow: auto;
     text-decoration: underline;
     font-variant: small-caps;
-    border: solid black 1px;
 }
 
 .benefitCol {
@@ -503,11 +502,21 @@ img.aligncenter {
     letter-spacing: 1.5px;
     overflow: auto;
     font-variant: small-caps;
-    border: solid black 1px;
+}
+
+.feedHead {
+    font-size: 13px;
+    color: red;
+    font-weight: bolder;
+    text-align: center;
+    margin: 2px;
+    overflow: auto;
+    text-decoration: underline;
+    font-variant: small-caps;
 }
 
 .feedAuthor {
-    font-size: 16px;
+    font-size: 14px;
     color: darkorchid;
     font-weight: bolder;
     text-align: center;

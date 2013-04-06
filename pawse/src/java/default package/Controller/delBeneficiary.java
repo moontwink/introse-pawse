@@ -41,7 +41,7 @@ public class DelBeneficiary extends HttpServlet {
             
             BeneficiaryDAOsetter dao = new BeneficiaryDAOsetter();
             dao.deleteBeneficiary(name);
-            String message = "**beneficiary '"+name+"' has been succesfully deleted!**";
+            String message = "**beneficiary `"+name+"` has been succesfully removed!**";
             request.setAttribute("message", message);
             RequestDispatcher rd = request.getRequestDispatcher("viewBeneficiary.jsp");
             rd.forward(request, response);

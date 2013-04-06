@@ -18,7 +18,7 @@
 					<p class="meta"></p>
 					<div class="entry">
                                             <table>
-                                                <tr class="benefitTable">
+                                                <tr class="feedHead">
                                                     <td><u>AUTHOR</u></td>
                                                     <td></td>
                                                 </tr>

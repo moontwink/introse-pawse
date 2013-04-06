@@ -16,11 +16,11 @@
 					<p class="meta">Posted by <a href="#">COSCA</a> as of March 28, 2013</p>
 					<div class="entry">
                                             
-                                            <table>
-                                                <tr class ="benefitTable">
-                                                    <td>__#__</td>
-                                                    <td>_________BENEFICIARY NAME_________</td>
-                                                    <td>________________ADDRESS________________</td>
+                                            <table class="benefitTable" align="center">
+                                                <tr class="benefitTableHead">
+                                                    <td>  No  </td>
+                                                    <td>Beneficiary Name</td>
+                                                    <td>Address</td>
                                                 </tr>
                                                 <%
                                                     BeneficiaryDAOsetter dao = new BeneficiaryDAOsetter();
