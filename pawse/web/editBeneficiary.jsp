@@ -20,7 +20,7 @@
                                             <table>
                                                 <tr>
                                                     <%
-                                                    Beneficiary b = (Beneficiary)request.getAttribute("editingBenefit");
+                                                    Beneficiary b = (Beneficiary)request.getAttribute("currentBenefit");
                                                     %>
                                                     <td>Beneficiary</td>
                                                     <td>
@@ -50,6 +50,13 @@
 					<p class="meta"></p>
 					<div class="entry">
                                             <table>
+                                                <tr>
+                                                    <%String message = (String)request.getAttribute("message");
+                                                        if(message != null){
+                                                    %>
+                                                    <td class ="successmsg" colspan="4"><%=message%>
+                                                        <br/><br/></td><%}%>
+                                                </tr>
                                                 <tr class="feedHead">
                                                     <td><u>AUTHOR</u></td>
                                                     <td></td>
