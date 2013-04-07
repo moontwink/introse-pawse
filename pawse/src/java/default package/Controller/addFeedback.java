@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Nancy
  */
-public class addFeedback extends HttpServlet {
+public class AddFeedback extends HttpServlet {
 
     /**
      * Processes requests for both HTTP
