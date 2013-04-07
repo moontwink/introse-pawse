@@ -4,6 +4,12 @@
 					<div class="entry">
 						<form name="login" action="Logging" method="post">
                                                 <table align="center">
+                                                <tr>
+                                                    <%String message = (String)request.getAttribute("message");
+                                                        if(message != null){
+                                                    %>
+                                                    <td class ="errormsg" colspan="2"><%=message%></td><%}%>
+                                                </tr>
                                                     <tr>
                                                         <td>Username: </td>
                                                         <td><input type="text" name="username" required ="required"/><br/></td>
