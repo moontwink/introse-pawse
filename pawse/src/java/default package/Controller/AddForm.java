@@ -67,6 +67,7 @@ public class AddForm extends HttpServlet {
             
             CSOA_FormDAOsetter csoaDAO = new CSOA_FormDAOsetter();
             csoaDAO.addCSOA_FormDAO(form);
+            response.sendRedirect("SOview_form.jsp");
             
             String message = "**form has been successfully submitted**";
             request.setAttribute("message", message);
