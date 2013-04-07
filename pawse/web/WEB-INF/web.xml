@@ -58,7 +58,7 @@
     </servlet>
     <servlet>
         <servlet-name>addFeedback</servlet-name>
-        <servlet-class>Controller.addFeedback</servlet-class>
+        <servlet-class>Controller.AddFeedback</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>SelectFeed</servlet-name>
