@@ -34,7 +34,7 @@
                                                     </tr>    
                                                     <tr>
                                                         <td>*Feedback (limit to 180 chars)</td>
-                                                        <td><textarea name ="feedback" rows ="4" cols ="40" required="true"></textarea></td>
+                                                        <td><textarea name ="feedback" rows ="4" cols ="40" required="true" maxlength="180"></textarea></td>
                                                     </tr>
                                                     
                                                     <tr>
