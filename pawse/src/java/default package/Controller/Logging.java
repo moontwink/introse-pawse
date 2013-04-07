@@ -18,6 +18,7 @@ import DAO.CoordinatorDAO; //For the mean time because only coordinator contains
 import DAO.SQLDAO;
 import DAO.StudentOrgDAOsetter;
 import Models.StudentOrganization;
+import javax.servlet.RequestDispatcher;
 
 
 /**
@@ -72,7 +73,12 @@ public class Logging extends HttpServlet {
                     session.setAttribute("user", so);
                     response.sendRedirect("SOindex.jsp");
                 } else {
-                    response.sendRedirect("Login.jsp");
+                String message = "Username or password error.";
+                request.setAttribute("message", message);
+                RequestDispatcher rd = request.getRequestDispatcher("viewBeneficiary.jsp");
+                rd.forward(request, response);
+                response.sendRedirect("Login.jsp");
+                    
                 }
             }
         } finally {            
