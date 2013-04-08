@@ -6,20 +6,27 @@
 						<form name="editaccount" action="editAccount" method="post">
                                                 <table align="center">
                                                     <tr>
+                                                        <%String message = (String)request.getAttribute("message");
+                                                            if(message != null){
+                                                        %>
+                                                        <td class ="successmsg" colspan="3"><%=message%>
+                                                            <br/><br/></td><%}%>
+                                                    </tr>
+                                                    <tr>
                                                         <td>Organization Name </td>
                                                         <td><input readonly="true" name="orgname" value="<%=user.getName()%>"/><br/></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Username (limit to 16 chars) </td>
-                                                        <td><input type="text" name="orgusername" required ="required" value="<%=user.getUsername()%>"/><br/></td>
+                                                        <td><input type="text" name="orgusername" value="<%=user.getUsername()%>"/><br/></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Password: </td>
-                                                        <td><input type="password" name="orgpassword" required ="required" value="<%=user.getPassword()%>"/><br/></td>
+                                                        <td><input type="password" name="orgpassword" value="<%=user.getPassword()%>"/><br/></td>
                                                     </tr>
                                                     <tr>
-                                                        <td><input type="submit" value="Cancel"/></td>
-                                                        <td><input type="submit" value="Edit"/></td>
+                                                        <td><input name ="button" type="submit" value="Cancel"/></td>
+                                                        <td><input name ="button" type="submit" value="Edit"/></td>
                                                     </tr>
                                                 </table>
                                             </form>

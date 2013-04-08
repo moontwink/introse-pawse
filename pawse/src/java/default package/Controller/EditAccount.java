@@ -8,6 +8,7 @@ import DAO.StudentOrgDAOsetter;
 import Models.StudentOrganization;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -34,17 +35,24 @@ public class EditAccount extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
-            StudentOrganization so = new StudentOrganization();
-            so.setName(request.getParameter("orgname"));
-            so.setUsername(request.getParameter("orgusername"));
-            so.setPassword(request.getParameter("orgpassword"));
+            String button = request.getParameter("button");
             
-            StudentOrgDAOsetter dao = new StudentOrgDAOsetter();
-            if(dao.editStudentOrganization(so)){
-                response.sendRedirect("ExistingOrg.jsp");
-            }else{
+            if(button.equals("Edit")){
+                StudentOrganization so = new StudentOrganization();
+                so.setName(request.getParameter("orgname"));
+                so.setUsername(request.getParameter("orgusername"));
+                so.setPassword(request.getParameter("orgpassword"));
+
+                StudentOrgDAOsetter dao = new StudentOrgDAOsetter();
+                if(dao.editStudentOrganization(so)){
+                    String message = "**account is not edited**";
+                    RequestDispatcher rd = request.getRequestDispatcher("SOeditAccount.jsp");
+                    rd.forward(request, response);
+                }
+            }else if(button.equals("Cancel")){
                 response.sendRedirect("SOindex.jsp");
             }
+            
         } finally {            
             out.close();
         }
