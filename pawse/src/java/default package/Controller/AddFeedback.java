@@ -49,7 +49,6 @@ public class AddFeedback extends HttpServlet {
             String message = "**feedback has been submitted**";
             request.setAttribute("message", message);
             
-            
             RequestDispatcher rd;
             if(request.getParameter("author").equalsIgnoreCase("cosca")){
                 request.setAttribute("currentBenefit", bDAO.findBeneficiary(request.getParameter("feedbackbenefit")));

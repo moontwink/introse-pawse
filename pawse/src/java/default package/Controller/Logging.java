@@ -73,11 +73,10 @@ public class Logging extends HttpServlet {
                     session.setAttribute("user", so);
                     response.sendRedirect("SOindex.jsp");
                 } else {
-                String message = "Username or password error.";
+                String message = "Username or Password error.";
                 request.setAttribute("message", message);
-                RequestDispatcher rd = request.getRequestDispatcher("viewBeneficiary.jsp");
+                RequestDispatcher rd = request.getRequestDispatcher("Login.jsp");
                 rd.forward(request, response);
-                response.sendRedirect("Login.jsp");
                     
                 }
             }

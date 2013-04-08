@@ -25,7 +25,6 @@ public class StudentOrgDAOsetter extends StudentOrgDAO {
             DBConnection myFactory = DBConnection.getInstance(SQLDAO.MYSQL);
             Connection connection =  myFactory.getConnection();
             PreparedStatement ps = connection.prepareStatement("INSERT INTO `studentorganization` VALUES (?,?,?);");
-            //INSERT INTO `studentorganization` VALUES (orgname, username, password);
             
             ps.setString(1, so.getName());
             ps.setString(2, so.getUsername());
