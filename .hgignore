@@ -1,0 +1,13 @@
+\.orig$
+\.orig\..*$
+\.chg\..*$
+\.rej$
+\.conflict\~$
+\.properties$
+\.mf$
+DBConnection\.java$
+build\.xml$
+ant-deploy\.xml$
+build\-impl\.xml$
+project\.xml$
+context\.xml$
