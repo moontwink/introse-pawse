@@ -46,7 +46,7 @@
 			<li><span>Beneficiary</span>
 				<ul>
 					<li class="first"> <a href="SOviewBeneficiary.jsp">View Beneficiaries</a> </li>
-					<li class="last"> <a href="#">Search Beneficiary</a> </li>
+					
 				</ul>
 			</li>
 			<li><span>CSOA Form</span>
