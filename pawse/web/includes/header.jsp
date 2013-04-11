@@ -26,7 +26,7 @@
 	<div id="header-wrapper">
 		<div id="header">
 			<div id="logo">
-				<h1><a href="index.jsp">Outracker</a> v.1</h1>
+				<h1><a href="index.jsp">Outracker</a> v1.5</h1>
 				<p>web system by <a href="#">PAWSE</a></p>
 			</div>
 		</div>

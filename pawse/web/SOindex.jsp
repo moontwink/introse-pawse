@@ -1,9 +1,9 @@
 <%@include file="includes/SOheader.jsp" %>
 			<%@include file="includes/slider.jsp"%>	
                             <div class="post">
-					<h2 class="title"><a href="#">Welcome to Outracker</a> v.1</h2>
+					<h2 class="title"><a href="#">Welcome to Outracker</a> v1.5</h2>
 					<div class="entry">
-						<p>This is <strong>Outracker</strong> v.1, 
+						<p>This is <strong>Outracker</strong> v1.5, 
                                                 tracking outreach activities of the different University Organizations from planning to execution; 
                                                 providing the students the necessary information they need to 
                                                 know for outreach activities as well as the requirements they need to do prior and posterior the outreach.
