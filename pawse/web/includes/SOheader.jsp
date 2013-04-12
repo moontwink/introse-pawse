@@ -43,12 +43,7 @@
 	<div id="menu-wrapper">
 		<ul id="menu">
 			<li><a href="SOindex.jsp"><span>Homepage</span></a></li>
-			<li><span>Beneficiary</span>
-				<ul>
-					<li class="first"> <a href="SOviewBeneficiary.jsp">View Beneficiaries</a> </li>
-					
-				</ul>
-			</li>
+			<li><a href="SOviewBeneficiary.jsp"><span>Beneficiary</span></a></li>
 			<li><span>CSOA Form</span>
                             <ul>
                                 <li class="first"><a href="SOcsoa_form.jsp">Submit Form</a></li>
